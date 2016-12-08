@@ -17,7 +17,7 @@ class VideoSectionView: UIView {
     var delegate : VideoSectionDelegate!
     public var videoIcon : UIImageView?
     public var containVideo : Bool?
-    public var videoURL : URL?
+    public var videoURL : URL? //Used to store selected video and preview it later.
 
     override init(frame: CGRect) {
         super.init(frame: frame)
