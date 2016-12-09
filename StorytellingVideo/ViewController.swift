@@ -19,6 +19,8 @@ class ViewController: UIViewController, VideoSectionDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.navigationItem.title = "Storyboard"
+        
         for index in 0...3 {
             //print("\(index) times 5 is \(index * 5)")
             
@@ -101,6 +103,4 @@ extension ViewController: UIImagePickerControllerDelegate{
 extension ViewController: UINavigationControllerDelegate{
     
 }
-
-
 
