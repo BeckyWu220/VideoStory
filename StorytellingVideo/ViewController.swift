@@ -18,7 +18,7 @@ class ViewController: UIViewController, VideoSectionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Storyboard"
         
         for index in 0...3 {
@@ -51,7 +51,10 @@ class ViewController: UIViewController, VideoSectionDelegate {
             self.presentMoviePlayerViewControllerAnimated(moviePlayer)
         }else{
             currentVideoSection = videoSection
-            startMediaBrowserFromViewController(viewController: self, usingDelegate: self)
+            //startMediaBrowserFromViewController(viewController: self, usingDelegate: self)
+            
+            let importController : SelectImportViewController = SelectImportViewController()
+            self.navigationController?.pushViewController(importController, animated: true)
         }
     }
     

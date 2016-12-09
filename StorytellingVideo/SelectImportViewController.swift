@@ -10,20 +10,20 @@ import UIKit
 
 class SelectImportViewController: UIViewController {
     
-    public var albumBtn: UIButton
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    public var albumBtn: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.white
 
         // Do any additional setup after loading the view.
         albumBtn = UIButton(frame: CGRect(x: (self.view.frame.size.width - 100)/2, y: (self.view.frame.size.height - 30)/2, width: 100, height: 30))
-        albumBtn.setTitle("Album", for: UIControlState.normal)
-        albumBtn.backgroundColor = UIColor.gray
-        self.view.addSubview(albumBtn)
+        albumBtn?.setTitle("Album", for: UIControlState.normal)
+        albumBtn?.addTarget(self, action: #selector(clickAlbumBtn), for: UIControlEvents.touchUpInside)
+        albumBtn?.backgroundColor = UIColor.gray
+        self.view.addSubview(albumBtn!)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,15 +31,8 @@ class SelectImportViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func clickAlbumBtn() -> Void {
+        print("Click Album")
     }
-    */
 
 }
