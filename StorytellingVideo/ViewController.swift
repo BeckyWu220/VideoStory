@@ -35,7 +35,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             print("\(row)")
             
-            if index % 2 == 1 {
+            if index % 2 != 1 {
                 videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 10) + 100, width: 100, height: 100)
             }else{
                 videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 10) + 100, width: 100, height: 100)
@@ -75,8 +75,6 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.currentVideoSection?.containVideo = true
         self.currentVideoSection?.videoURL = videoURL
         
-        firstAsset = AVAsset(url: videoURL)
-        secondAsset = AVAsset(url: videoURL)
     }
     
     func exportDidFinish(session: AVAssetExportSession) {
@@ -107,6 +105,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     func mergeVideos() {
         
+        firstAsset = AVAsset(url: (videoSectionArray.object(at: 0) as! VideoSectionView).videoURL!)
+        secondAsset = AVAsset(url: (videoSectionArray.object(at: 1) as! VideoSectionView).videoURL!)
         print("\(firstAsset) $$$ \(secondAsset)")
         
         let mixComposition = AVMutableComposition()
