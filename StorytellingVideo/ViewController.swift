@@ -58,8 +58,10 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         }
     }
     
-    func setThumbnailForVideoSection(image: UIImage) {
+    func setThumbnailForVideoSection(image: UIImage, videoURL: URL) {
         self.currentVideoSection?.videoIcon?.image = image
+        self.currentVideoSection?.containVideo = true
+        self.currentVideoSection?.videoURL = videoURL
     }
 
     override func didReceiveMemoryWarning() {
