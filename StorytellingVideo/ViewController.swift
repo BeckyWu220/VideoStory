@@ -14,6 +14,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     var videoSectionArray: NSMutableArray = []
     var currentVideoSection: VideoSectionView?
+    
+    var exportBtn: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,12 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             videoSection.delegate = self
             self.view.addSubview(videoSection)
             videoSectionArray.add(videoSection)
+            
+            exportBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
+            exportBtn?.setTitle("Export", for: UIControlState.normal)
+            //exportBtn?.addTarget(self, action: #selector(), for: UIControlEvents.touchUpInside)
+            exportBtn?.backgroundColor = UIColor.gray
+            self.view.addSubview(exportBtn!)
         }
         
     }
