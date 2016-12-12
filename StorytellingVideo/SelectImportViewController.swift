@@ -10,8 +10,13 @@ import UIKit
 import MediaPlayer
 import MobileCoreServices
 
+protocol SelectImportVCDelegate{
+    func setThumbnailForVideoSection(image: UIImage)
+}
+
 class SelectImportViewController: UIViewController {
     
+    var delegate: SelectImportVCDelegate!
     public var albumBtn: UIButton?
     public var cameraBtn: UIButton?
 
@@ -88,8 +93,13 @@ class SelectImportViewController: UIViewController {
             message = "Video failed to save"
         }
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: {action in self.dismissCurrentViewController()}))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func dismissCurrentViewController() {
+        self.navigationController?.popViewController(animated: true)
+        print("!!!")
     }
 
 }
@@ -98,8 +108,6 @@ extension SelectImportViewController: UIImagePickerControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
-        
-        
         
         dismiss(animated: true, completion: {
             if mediaType == kUTTypeMovie{
@@ -115,6 +123,8 @@ extension SelectImportViewController: UIImagePickerControllerDelegate{
                 let asset = AVURLAsset(url: (info[UIImagePickerControllerMediaURL] as! NSURL) as URL!)
                 let imgGenerator = AVAssetImageGenerator(asset: asset)
                 let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
+                
+                self.delegate.setThumbnailForVideoSection(image: image)
                 
                 //self.currentVideoSection?.initWithColor(color: UIColor.gray)
 //                self.currentVideoSection?.videoIcon?.image = image

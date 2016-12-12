@@ -10,7 +10,7 @@ import UIKit
 import MediaPlayer
 import MobileCoreServices
 
-class ViewController: UIViewController, VideoSectionDelegate {
+class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDelegate {
     
     var videoSectionArray: NSMutableArray = []
     var currentVideoSection: VideoSectionView?
@@ -53,8 +53,13 @@ class ViewController: UIViewController, VideoSectionDelegate {
             currentVideoSection = videoSection
             
             let importController : SelectImportViewController = SelectImportViewController()
+            importController.delegate = self
             self.navigationController?.pushViewController(importController, animated: true)
         }
+    }
+    
+    func setThumbnailForVideoSection(image: UIImage) {
+        self.currentVideoSection?.videoIcon?.image = image
     }
 
     override func didReceiveMemoryWarning() {
