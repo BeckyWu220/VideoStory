@@ -17,6 +17,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     var currentVideoSection: VideoSectionView?
     
     var exportBtn: UIButton?
+    var videoURL: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +72,16 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                     }else{
                         title = "Success"
                         message = "Video exported and saved"
+                        
+                        let previewController = PreviewViewController.init(videoURL: self.videoURL!)
+                        self.navigationController?.pushViewController(previewController, animated: true)
+                        
+                        for i in 0...(self.videoSectionArray.count-1) {
+                            let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
+                            videoSection.removeFromSuperview()
+                        }
+                        self.videoSectionArray.removeAllObjects()
+                        self.createVideoSections(number: 3)
                     }
                     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
@@ -79,12 +90,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             }
         }
         
-        for i in 0...(videoSectionArray.count-1) {
-            var videoSection = videoSectionArray.object(at: i) as! VideoSectionView
-            videoSection.removeFromSuperview()
-        }
-        videoSectionArray.removeAllObjects()
-        self.createVideoSections(number: 3)
+        
+    
     }
     
     func createVideoSections(number: Int) {
@@ -170,6 +177,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                 self.exportDidFinish(session: exporter)
             }
         }
+        
+        videoURL = exporter.outputURL
     }
     
     func orientationFromTransform(_ transform: CGAffineTransform) -> (orientation: UIImageOrientation, isPortrait: Bool) {

@@ -24,6 +24,7 @@ class SelectImportViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.white
+        self.navigationItem.title = "Import/Shoot Video"
 
         // Do any additional setup after loading the view.
         albumBtn = UIButton(frame: CGRect(x: (self.view.frame.size.width - 100)/2, y: (self.view.frame.size.height - 30)/2, width: 100, height: 30))

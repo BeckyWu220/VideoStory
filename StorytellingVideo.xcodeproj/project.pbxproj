@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */; };
+		45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E535311DFF7D100047FA9C /* PreviewViewController.swift */; };
 		45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4632D1DF8B00000CE87BE /* AppDelegate.swift */; };
 		45F463301DF8B00000CE87BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4632F1DF8B00000CE87BE /* ViewController.swift */; };
 		45F463331DF8B00000CE87BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F463311DF8B00000CE87BE /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImportViewController.swift; sourceTree = "<group>"; };
+		45E535311DFF7D100047FA9C /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		45F4632A1DF8B00000CE87BE /* StorytellingVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytellingVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F4632D1DF8B00000CE87BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45F4632F1DF8B00000CE87BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				45F4632F1DF8B00000CE87BE /* ViewController.swift */,
 				45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */,
 				45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */,
+				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
 				45F463411DF8B2C700CE87BE /* videoBg.png */,
 				45F463311DF8B00000CE87BE /* Main.storyboard */,
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				45F463301DF8B00000CE87BE /* ViewController.swift in Sources */,
 				45F463401DF8B05400CE87BE /* VideoSectionView.swift in Sources */,
 				45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */,
+				45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */,
 				45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
