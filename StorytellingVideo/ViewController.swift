@@ -17,9 +17,6 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     var currentVideoSection: VideoSectionView?
     
     var exportBtn: UIButton?
-    
-    var firstAsset: AVAsset?
-    var secondAsset: AVAsset?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,31 +24,13 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Storyboard"
         
-        for index in 0...3 {
-            //print("\(index) times 5 is \(index * 5)")
-            
-            var videoSectionFrame = CGRect()
-            let row : Int = index / 2
-            
-            print("\(row)")
-            
-            if index % 2 != 1 {
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 10) + 100, width: 100, height: 100)
-            }else{
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 10) + 100, width: 100, height: 100)
-            }
-            
-            let videoSection = VideoSectionView(frame: videoSectionFrame)
-            videoSection.delegate = self
-            self.view.addSubview(videoSection)
-            videoSectionArray.add(videoSection)
-            
-            exportBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
-            exportBtn?.setTitle("Export", for: UIControlState.normal)
-            exportBtn?.addTarget(self, action: #selector(mergeVideos), for: UIControlEvents.touchUpInside)
-            exportBtn?.backgroundColor = UIColor.gray
-            self.view.addSubview(exportBtn!)
-        }
+        self.createVideoSections(number: 3)
+        
+        exportBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
+        exportBtn?.setTitle("Export", for: UIControlState.normal)
+        exportBtn?.addTarget(self, action: #selector(mergeVideos), for: UIControlEvents.touchUpInside)
+        exportBtn?.backgroundColor = UIColor.gray
+        self.view.addSubview(exportBtn!)
         
     }
     
@@ -99,43 +78,73 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                 })
             }
         }
-        firstAsset = nil
-        secondAsset = nil
+        
+        for i in 0...(videoSectionArray.count-1) {
+            var videoSection = videoSectionArray.object(at: i) as! VideoSectionView
+            videoSection.removeFromSuperview()
+        }
+        videoSectionArray.removeAllObjects()
+        self.createVideoSections(number: 3)
+    }
+    
+    func createVideoSections(number: Int) {
+        for index in 0...(number - 1) {
+            //print("\(index) times 5 is \(index * 5)")
+            
+            var videoSectionFrame = CGRect()
+            let row : Int = index / 2
+            
+            print("\(row)")
+            
+            if index % 2 != 1 {
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 10) + 100, width: 100, height: 100)
+            }else{
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 10) + 100, width: 100, height: 100)
+            }
+            
+            let videoSection = VideoSectionView(frame: videoSectionFrame)
+            videoSection.delegate = self
+            self.view.addSubview(videoSection)
+            videoSectionArray.add(videoSection)
+        }
     }
     
     func mergeVideos() {
         
-        firstAsset = AVAsset(url: (videoSectionArray.object(at: 0) as! VideoSectionView).videoURL!)
-        secondAsset = AVAsset(url: (videoSectionArray.object(at: 1) as! VideoSectionView).videoURL!)
-        print("\(firstAsset) $$$ \(secondAsset)")
-        
         let mixComposition = AVMutableComposition()
+        let mainInstruction = AVMutableVideoCompositionInstruction()
         
-        let firstTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
-        do {
-            try firstTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, (self.firstAsset?.duration)!), of: (firstAsset?.tracks(withMediaType: AVMediaTypeVideo)[0])!, at: kCMTimeZero)
-        } catch _ {
-            print("Failed to load first track")
-        }
+        var videoLength = kCMTimeZero
         
-        let secondTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
-        do {
-            try secondTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, (self.secondAsset?.duration)!), of: (secondAsset?.tracks(withMediaType: AVMediaTypeVideo)[0])!, at: (firstAsset?.duration)!)
-        } catch _ {
-            print("Failed to load second track")
+        for i in 0...(videoSectionArray.count-1) {
+            
+            let videoSection = videoSectionArray.object(at: i) as! VideoSectionView
+            
+            if videoSection.containVideo != nil {
+                let videoAsset = AVAsset(url: videoSection.videoURL!)
+                print("\(videoAsset)")
+                
+                let videoTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
+                do {
+                    try videoTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, videoAsset.duration), of: videoAsset.tracks(withMediaType: AVMediaTypeVideo)[0], at: videoLength)
+                    videoLength = CMTimeAdd(videoLength, videoAsset.duration)
+                    
+                    let videoInstruction = videoCompositionInstructionForTrack(videoTrack, asset: videoAsset)
+                    videoInstruction.setOpacity(0.0, at: videoLength)
+                    
+                    mainInstruction.layerInstructions.append(videoInstruction)
+                    
+                } catch {
+                    print("Failed to load video track")
+                }
+            }
+            
         }
         
         // 2.1
-        let mainInstruction = AVMutableVideoCompositionInstruction()
-        mainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeAdd((firstAsset?.duration)!, (secondAsset?.duration)!))
-        
-        // 2.2
-        let firstInstruction = videoCompositionInstructionForTrack(firstTrack, asset: firstAsset!)
-        firstInstruction.setOpacity(0.0, at: (firstAsset?.duration)!)
-        let secondInstruction = videoCompositionInstructionForTrack(secondTrack, asset: secondAsset!)
+        mainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, videoLength)
         
         // 2.3
-        mainInstruction.layerInstructions = [firstInstruction, secondInstruction]
         let mainComposition = AVMutableVideoComposition()
         mainComposition.instructions = [mainInstruction]
         mainComposition.frameDuration = CMTimeMake(1, 30)
