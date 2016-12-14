@@ -43,7 +43,7 @@ class VideoSectionView: UIView {
         self.addGestureRecognizer(tapGesture)
         
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(VideoSectionView.handlePressGesture(gesture:)))
-        longPressGesture.minimumPressDuration = 1
+        //longPressGesture.minimumPressDuration = 1
         self.addGestureRecognizer(longPressGesture)
     }
     
@@ -63,10 +63,14 @@ class VideoSectionView: UIView {
                 print("Begin")
                 deleteBtn?.isHidden = false
                 
+                let panGesture = UIPanGestureRecognizer(target: self, action: #selector(VideoSectionView.beDragged(gesture:)))
+                self.addGestureRecognizer(panGesture)
+                
             }else if gesture.state == UIGestureRecognizerState.ended {
                 print("Ended")
                 //deleteBtn?.removeFromSuperview()
             }
+            
             self.delegate.switchToEditingMode()
         }
         
@@ -79,9 +83,11 @@ class VideoSectionView: UIView {
         deleteBtn?.isHidden = true
     }
     
-    func bePressed() {
-        print("Be Pressed")
-        
+    func beDragged(gesture: UIPanGestureRecognizer) {
+        print("Be Dragged")
+        let translation = gesture.translation(in: self.superview)
+        self.center = CGPoint(x: ((gesture.view?.center.x)! + translation.x), y: (gesture.view?.center.y)! + translation.y)
+        gesture.setTranslation(CGPoint.zero, in: self.superview)
     }
 
 }
