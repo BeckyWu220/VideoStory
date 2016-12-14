@@ -18,6 +18,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     var exportBtn: UIButton?
     var videoURL: URL?
+    var endEditingBtn: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +34,18 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         exportBtn?.backgroundColor = UIColor.gray
         self.view.addSubview(exportBtn!)
         
+        endEditingBtn = UIButton.init(frame: (exportBtn?.frame)!)
+        endEditingBtn?.setTitle("End Editing", for: UIControlState.normal)
+        endEditingBtn?.addTarget(self, action: #selector(endEditingMode), for: UIControlEvents.touchUpInside)
+        endEditingBtn?.backgroundColor = UIColor.gray
+        self.view.addSubview(endEditingBtn!)
+        endEditingBtn?.isHidden = true
     }
     
     func tappedVideoSection(videoSection: VideoSectionView) {
         print("???")
         
-        if videoSection.containVideo != nil {
+        if videoSection.containVideo {
             let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
             self.presentMoviePlayerViewControllerAnimated(moviePlayer)
         }else{
@@ -46,7 +53,28 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             let importController : SelectImportViewController = SelectImportViewController()
             importController.delegate = self
+            self.endEditingMode()
             self.navigationController?.pushViewController(importController, animated: true)
+        }
+    }
+    
+    func switchToEditingMode() {
+        exportBtn?.isHidden = true
+        endEditingBtn?.isHidden = false
+        
+        for i in 0...(self.videoSectionArray.count-1) {
+            let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
+            videoSection.deleteBtn?.isHidden = false
+        }
+    }
+    
+    func endEditingMode() {
+        exportBtn?.isHidden = false
+        endEditingBtn?.isHidden = true
+        
+        for i in 0...(self.videoSectionArray.count-1) {
+            let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
+            videoSection.deleteBtn?.isHidden = true
         }
     }
     
@@ -54,7 +82,6 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.currentVideoSection?.videoIcon?.image = image
         self.currentVideoSection?.containVideo = true
         self.currentVideoSection?.videoURL = videoURL
-        
     }
     
     func exportDidFinish(session: AVAssetExportSession) {
@@ -127,7 +154,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             let videoSection = videoSectionArray.object(at: i) as! VideoSectionView
             
-            if videoSection.containVideo != nil {
+            if videoSection.containVideo {
                 let videoAsset = AVAsset(url: videoSection.videoURL!)
                 print("\(videoAsset)")
                 
