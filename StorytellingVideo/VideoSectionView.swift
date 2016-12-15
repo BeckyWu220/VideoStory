@@ -11,8 +11,8 @@ import UIKit
 protocol VideoSectionDelegate {
     func tappedVideoSection(videoSection: VideoSectionView)
     func switchToEditingMode()
+    func draggedVideoSection(videoSection: VideoSectionView)
 }
-
 class VideoSectionView: UIView {
     
     var delegate : VideoSectionDelegate!
@@ -84,10 +84,16 @@ class VideoSectionView: UIView {
     }
     
     func beDragged(gesture: UIPanGestureRecognizer) {
-        print("Be Dragged")
+        //print("Be Dragged")
+        self.superview?.bringSubview(toFront: self)
         let translation = gesture.translation(in: self.superview)
         self.center = CGPoint(x: ((gesture.view?.center.x)! + translation.x), y: (gesture.view?.center.y)! + translation.y)
         gesture.setTranslation(CGPoint.zero, in: self.superview)
+        
+        if gesture.state == UIGestureRecognizerState.ended {
+            self.delegate.draggedVideoSection(videoSection: self)
+        }
+        
     }
 
 }

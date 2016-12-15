@@ -11,11 +11,13 @@ import UIKit
 class SlotView: UIView {
 
     override init(frame: CGRect){
+
         super.init(frame: frame)
         
         let bgImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         bgImageView.image = UIImage.init(named: "videoBg")
         self.addSubview(bgImageView)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

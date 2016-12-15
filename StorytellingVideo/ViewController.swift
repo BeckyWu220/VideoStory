@@ -11,9 +11,12 @@ import MediaPlayer
 import MobileCoreServices
 import AssetsLibrary
 
+
 class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDelegate {
     
     var videoSectionArray: NSMutableArray = []
+    var videoSlotArray: NSMutableArray = []
+    var slotRangeArray: NSMutableArray = []
     var currentVideoSection: VideoSectionView?
     
     var exportBtn: UIButton?
@@ -131,13 +134,21 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             print("\(row)")
             
             if index % 2 != 1 {
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 10) + 100, width: 100, height: 100)
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 50) + 100, width: 100, height: 100)
             }else{
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 10) + 100, width: 100, height: 100)
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 50) + 100, width: 100, height: 100)
             }
             
             let videoSlot = SlotView(frame: videoSectionFrame)
             self.view.addSubview(videoSlot)
+            videoSlotArray.add(videoSlot)
+            
+            let slotRange = UIView(frame: CGRect(x: 0, y: 0, width: videoSlot.frame.size.width * 1.5, height: videoSlot.frame.size.height * 1.5))
+            slotRange.center = videoSlot.center
+            slotRange.backgroundColor = UIColor.red
+            slotRange.alpha = 0.5
+            self.view.addSubview(slotRange)
+            slotRangeArray.add(slotRange)
             
             let videoSection = VideoSectionView(frame: videoSectionFrame)
             videoSection.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -149,6 +160,64 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             let videoSection = videoSectionArray.object(at: i) as! VideoSectionView
             self.view.addSubview(videoSection)
         }
+    }
+    
+    func draggedVideoSection(videoSection: VideoSectionView) {
+        print("Drag")
+        let intersectionArray : NSMutableArray = []
+        print("Elements: \(intersectionArray.count)")
+        for i in 0...(slotRangeArray.count-1) {
+            
+            let slotRange = slotRangeArray.object(at: i) as! UIView
+            
+            let intersection = slotRange.frame.intersection(videoSection.frame)
+            let intersectArea: CGFloat
+
+            
+            if intersection.isNull {
+                intersectArea = 0
+            }else{
+                intersectArea = intersection.width * intersection.height
+            }
+            
+            intersectionArray.add(intersectArea)
+        }
+        
+        var maxIntersectionSlot = 0
+        print("After Adding Elements: \(intersectionArray.count)")
+        
+        for j in 0...(intersectionArray.count-2) {
+            print("?")
+            if (intersectionArray.object(at: j) as! CGFloat) < (intersectionArray.object(at: j+1) as! CGFloat) {
+                maxIntersectionSlot = j+1
+            }
+        }
+        
+        for element in intersectionArray {
+            print(element)
+        }
+        print("MaxSlot: \(maxIntersectionSlot)")
+        let targetSlot = videoSlotArray.object(at: maxIntersectionSlot) as! SlotView
+        
+        let originSlotIndex = videoSectionArray.index(of: videoSection)
+        
+        let originSlot = videoSlotArray.object(at: originSlotIndex) as! SlotView
+        
+        let targetVideoSection = videoSectionArray.object(at: maxIntersectionSlot) as! VideoSectionView
+        
+        UIView.animate(withDuration: 0.3,
+                                   delay: 0.0,
+                                   options: .curveEaseInOut,
+                                   animations:
+        {
+            videoSection.center = targetSlot.center
+            targetVideoSection.center = originSlot.center
+        }, completion: { finished in
+            let tempVideoSection = self.videoSectionArray.object(at: originSlotIndex) as! VideoSectionView
+            
+            self.videoSectionArray.replaceObject(at: originSlotIndex, with: self.videoSectionArray.object(at: maxIntersectionSlot))
+            self.videoSectionArray.replaceObject(at: maxIntersectionSlot, with: tempVideoSection)
+        })
     }
     
     func mergeVideos() {
