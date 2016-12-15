@@ -27,7 +27,7 @@ class VideoSectionView: UIView {
         super.init(frame: frame)
         
         videoIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        videoIcon?.image = UIImage(named: "videoBg")
+        videoIcon?.backgroundColor = UIColor.darkGray
         self.addSubview(videoIcon!)
         
         deleteBtn = UIButton.init(frame: CGRect(x: 0, y: 0, width: self.frame.width/2.5, height: self.frame.width/2.5))
@@ -77,7 +77,7 @@ class VideoSectionView: UIView {
     }
     
     func deleteCurrentVideoSection() {
-        videoIcon?.image = UIImage(named: "videoBg")
+        videoIcon?.image = nil
         containVideo = false
         videoURL = nil
         deleteBtn?.isHidden = true

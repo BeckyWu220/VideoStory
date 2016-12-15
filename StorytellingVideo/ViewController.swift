@@ -136,10 +136,18 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                 videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 10) + 100, width: 100, height: 100)
             }
             
+            let videoSlot = SlotView(frame: videoSectionFrame)
+            self.view.addSubview(videoSlot)
+            
             let videoSection = VideoSectionView(frame: videoSectionFrame)
+            videoSection.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             videoSection.delegate = self
-            self.view.addSubview(videoSection)
             videoSectionArray.add(videoSection)
+        }
+        
+        for i in 0...(videoSectionArray.count-1) {
+            let videoSection = videoSectionArray.object(at: i) as! VideoSectionView
+            self.view.addSubview(videoSection)
         }
     }
     
