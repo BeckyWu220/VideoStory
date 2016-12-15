@@ -22,6 +22,15 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     var exportBtn: UIButton?
     var videoURL: URL?
     var endEditingBtn: UIButton?
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.createVideoSections(number: 3)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +38,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Storyboard"
         
-        self.createVideoSections(number: 3)
+        //self.createVideoSections(number: 3)
         
         exportBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
         exportBtn?.setTitle("Export", for: UIControlState.normal)
@@ -47,13 +56,11 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     func tappedVideoSection(videoSection: VideoSectionView) {
         print("???")
-        
+        currentVideoSection = videoSection
         if videoSection.containVideo {
             let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
             self.presentMoviePlayerViewControllerAnimated(moviePlayer)
         }else{
-            currentVideoSection = videoSection
-            
             let importController : SelectImportViewController = SelectImportViewController()
             importController.delegate = self
             self.endEditingMode()
@@ -106,12 +113,12 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                         let previewController = PreviewViewController.init(videoURL: self.videoURL!)
                         self.navigationController?.pushViewController(previewController, animated: true)
                         
-                        for i in 0...(self.videoSectionArray.count-1) {
+                        /*for i in 0...(self.videoSectionArray.count-1) {
                             let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
                             videoSection.removeFromSuperview()
-                        }
-                        self.videoSectionArray.removeAllObjects()
-                        self.createVideoSections(number: 3)
+                        }*/
+                        //self.videoSectionArray.removeAllObjects()
+                        //self.createVideoSections(number: 3)
                     }
                     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
@@ -233,7 +240,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             if videoSection.containVideo {
                 let videoAsset = AVAsset(url: videoSection.videoURL!)
-                print("\(videoAsset)")
+                print("??\(videoAsset)")
                 
                 let videoTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
                 do {
