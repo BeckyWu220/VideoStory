@@ -27,10 +27,12 @@ class VideoSectionView: UIView {
         super.init(frame: frame)
         
         videoIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        videoIcon?.backgroundColor = UIColor.darkGray
+        //videoIcon?.backgroundColor = UIColor.darkGray
+        videoIcon?.contentMode = .scaleAspectFill
+        videoIcon?.clipsToBounds = true
         self.addSubview(videoIcon!)
         
-        deleteBtn = UIButton.init(frame: CGRect(x: 0, y: 0, width: self.frame.width/2.5, height: self.frame.width/2.5))
+        deleteBtn = UIButton.init(frame: CGRect(x: -15, y: -15, width: self.frame.width/1.5, height: self.frame.width/1.5))
         deleteBtn?.setImage(UIImage.init(named: "crossBtn"), for: UIControlState.normal)
         deleteBtn?.center = CGPoint(x: 0, y: 0)
         deleteBtn?.addTarget(self, action: #selector(deleteCurrentVideoSection), for: UIControlEvents.touchUpInside)

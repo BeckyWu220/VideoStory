@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		450B9E681E02167D0066037E /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9E671E02167D0066037E /* SlotView.swift */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
+		45C569941E08678A00D9B0A8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569931E08678A00D9B0A8 /* arrow.png */; };
+		45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569951E086B4F00D9B0A8 /* arrow_0.png */; };
+		45C569991E086B4F00D9B0A8 /* arrow_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569961E086B4F00D9B0A8 /* arrow_1.png */; };
+		45C5699A1E086B4F00D9B0A8 /* arrow_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569971E086B4F00D9B0A8 /* arrow_2.png */; };
 		45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */; };
 		45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E535311DFF7D100047FA9C /* PreviewViewController.swift */; };
 		45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4632D1DF8B00000CE87BE /* AppDelegate.swift */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
+		45C569931E08678A00D9B0A8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		45C569951E086B4F00D9B0A8 /* arrow_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_0.png; sourceTree = "<group>"; };
+		45C569961E086B4F00D9B0A8 /* arrow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_1.png; sourceTree = "<group>"; };
+		45C569971E086B4F00D9B0A8 /* arrow_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_2.png; sourceTree = "<group>"; };
 		45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImportViewController.swift; sourceTree = "<group>"; };
 		45E535311DFF7D100047FA9C /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		45F4632A1DF8B00000CE87BE /* StorytellingVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytellingVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +80,10 @@
 				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
 				45F463411DF8B2C700CE87BE /* videoBg.png */,
 				45557FF31E01F9EC008714AD /* crossBtn.png */,
+				45C569931E08678A00D9B0A8 /* arrow.png */,
+				45C569951E086B4F00D9B0A8 /* arrow_0.png */,
+				45C569961E086B4F00D9B0A8 /* arrow_1.png */,
+				45C569971E086B4F00D9B0A8 /* arrow_2.png */,
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
 				45F463361DF8B00000CE87BE /* LaunchScreen.storyboard */,
 				45F463391DF8B00000CE87BE /* Info.plist */,
@@ -140,8 +152,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				45557FF41E01F9EC008714AD /* crossBtn.png in Resources */,
+				45C569991E086B4F00D9B0A8 /* arrow_1.png in Resources */,
+				45C5699A1E086B4F00D9B0A8 /* arrow_2.png in Resources */,
 				45F463381DF8B00000CE87BE /* LaunchScreen.storyboard in Resources */,
+				45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */,
 				45F463351DF8B00000CE87BE /* Assets.xcassets in Resources */,
+				45C569941E08678A00D9B0A8 /* arrow.png in Resources */,
 				45F463421DF8B2C700CE87BE /* videoBg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

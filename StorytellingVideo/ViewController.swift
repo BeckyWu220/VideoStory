@@ -25,7 +25,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.createVideoSections(number: 3)
+        self.createVideoSections(number: 4)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -74,7 +74,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         
         for i in 0...(self.videoSectionArray.count-1) {
             let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
-            videoSection.deleteBtn?.isHidden = false
+            if videoSection.containVideo {
+                videoSection.deleteBtn?.isHidden = false
+            }
         }
     }
     
@@ -140,11 +142,29 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             print("\(row)")
             
-            if index % 2 != 1 {
+            switch index {
+            case 0:
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: Int(row * (100 + 90) + 100), width: 100, height: 100)
+                break
+            case 1:
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 90) + 100, width: 100, height: 100)
+                break
+            case 2:
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 90) + 100, width: 100, height: 100)
+                break
+            case 3:
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 90) + 100, width: 100, height: 100)
+                break
+            default:
+                break
+            }
+            
+            
+            /*if index % 2 != 1 {
                 videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 50) + 100, width: 100, height: 100)
             }else{
                 videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 50) + 100, width: 100, height: 100)
-            }
+            }*/
             
             let videoSlot = SlotView(frame: videoSectionFrame)
             self.view.addSubview(videoSlot)
@@ -166,6 +186,25 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         for i in 0...(videoSectionArray.count-1) {
             let videoSection = videoSectionArray.object(at: i) as! VideoSectionView
             self.view.addSubview(videoSection)
+        }
+        
+        for j in 0...(videoSectionArray.count-2) {
+            let videoSection1 = videoSectionArray.object(at: j) as! VideoSectionView
+            let videoSection2 = videoSectionArray.object(at: j+1) as! VideoSectionView
+            
+            if j == 0 {
+                let arrow = UIImageView.init(image: UIImage.init(named: "arrow_0"))
+                arrow.center = CGPoint.init(x: (videoSection1.center.x + videoSection2.center.x)/2, y: videoSection1.center.y)
+                self.view.addSubview(arrow)
+            }else if j == 1 {
+                let arrow = UIImageView.init(image: UIImage.init(named: "arrow_1"))
+                arrow.center = CGPoint.init(x: videoSection1.center.x, y: (videoSection1.center.y + videoSection2.center.y)/2)
+                self.view.addSubview(arrow)
+            }else if j == 2 {
+                let arrow = UIImageView.init(image: UIImage.init(named: "arrow_2"))
+                arrow.center = CGPoint.init(x: (videoSection1.center.x + videoSection2.center.x)/2, y: videoSection1.center.y)
+                self.view.addSubview(arrow)
+            }
         }
     }
     

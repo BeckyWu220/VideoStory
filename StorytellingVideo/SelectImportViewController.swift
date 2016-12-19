@@ -123,6 +123,7 @@ extension SelectImportViewController: UIImagePickerControllerDelegate{
                 
                 let asset = AVURLAsset(url: (info[UIImagePickerControllerMediaURL] as! NSURL) as URL!)
                 let imgGenerator = AVAssetImageGenerator(asset: asset)
+                imgGenerator.appliesPreferredTrackTransform = true
                 let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
                 
                 self.delegate.setThumbnailForVideoSection(image: image, videoURL: (info[UIImagePickerControllerMediaURL] as! NSURL) as URL!)
