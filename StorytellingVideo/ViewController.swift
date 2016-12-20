@@ -23,6 +23,10 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     var videoURL: URL?
     var endEditingBtn: UIButton?
     
+    var loadIndicator: UIActivityIndicatorView?
+    
+    var tipLabel:UILabel?
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         self.createVideoSections(number: 4)
@@ -45,6 +49,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         exportBtn?.addTarget(self, action: #selector(mergeVideos), for: UIControlEvents.touchUpInside)
         exportBtn?.backgroundColor = UIColor.gray
         self.view.addSubview(exportBtn!)
+        exportBtn?.isHidden = true
         
         endEditingBtn = UIButton.init(frame: (exportBtn?.frame)!)
         endEditingBtn?.setTitle("End Editing", for: UIControlState.normal)
@@ -52,10 +57,16 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         endEditingBtn?.backgroundColor = UIColor.gray
         self.view.addSubview(endEditingBtn!)
         endEditingBtn?.isHidden = true
+        
+        tipLabel = UILabel.init(frame: CGRect(x: 0, y: self.view.frame.size.height - 100, width: self.view.frame.size.width, height: 100))
+        tipLabel?.text = "Click [+] to import video."
+        tipLabel?.textColor = UIColor.darkGray
+        tipLabel?.textAlignment = .center
+        tipLabel?.numberOfLines = 0
+        self.view.addSubview(tipLabel!)
     }
     
     func tappedVideoSection(videoSection: VideoSectionView) {
-        print("???")
         currentVideoSection = videoSection
         if videoSection.containVideo {
             let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
@@ -72,6 +83,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         exportBtn?.isHidden = true
         endEditingBtn?.isHidden = false
         
+        tipLabel?.text = "Click (x) to delete video. \n Drag loaded video around to adjust video sequence."
+        
         for i in 0...(self.videoSectionArray.count-1) {
             let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
             if videoSection.containVideo {
@@ -81,12 +94,17 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     }
     
     func endEditingMode() {
-        exportBtn?.isHidden = false
         endEditingBtn?.isHidden = true
+        
+        tipLabel?.text = "Import more videos or export a new video as the videos sequence above."
         
         for i in 0...(self.videoSectionArray.count-1) {
             let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
             videoSection.deleteBtn?.isHidden = true
+            
+            if videoSection.containVideo {
+                exportBtn?.isHidden = false
+            }
         }
     }
     
@@ -94,6 +112,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.currentVideoSection?.videoIcon?.image = image
         self.currentVideoSection?.containVideo = true
         self.currentVideoSection?.videoURL = videoURL
+        
+        exportBtn?.isHidden = false
+        tipLabel?.text = "Click loaded video to preview.\n Long press any loaded video to edit."
     }
     
     func exportDidFinish(session: AVAssetExportSession) {
@@ -114,6 +135,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                         
                         let previewController = PreviewViewController.init(videoURL: self.videoURL!)
                         self.navigationController?.pushViewController(previewController, animated: true)
+                        
+                        self.loadIndicator?.stopAnimating()
+                        self.loadIndicator?.removeFromSuperview()
                         
                         /*for i in 0...(self.videoSectionArray.count-1) {
                             let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
@@ -172,8 +196,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             let slotRange = UIView(frame: CGRect(x: 0, y: 0, width: videoSlot.frame.size.width * 1.5, height: videoSlot.frame.size.height * 1.5))
             slotRange.center = videoSlot.center
-            slotRange.backgroundColor = UIColor.red
-            slotRange.alpha = 0.5
+            //slotRange.backgroundColor = UIColor.red
+            //slotRange.alpha = 0.5
             self.view.addSubview(slotRange)
             slotRangeArray.add(slotRange)
             
@@ -268,6 +292,13 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     func mergeVideos() {
         
+        loadIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        loadIndicator?.color = UIColor.darkGray
+        loadIndicator?.center = CGPoint(x: self.view.center.x - (loadIndicator?.frame.size.width)!/2, y: self.view.center.y - 100)
+        loadIndicator?.frame = CGRect(x: (loadIndicator?.frame.origin.x)!, y: (loadIndicator?.frame.origin.y)!, width: (loadIndicator?.frame.size.width)!*2, height: (loadIndicator?.frame.size.height)!*2)
+        loadIndicator?.startAnimating()
+        self.view.addSubview(loadIndicator!)
+        
         let mixComposition = AVMutableComposition()
         let mainInstruction = AVMutableVideoCompositionInstruction()
         
@@ -355,13 +386,15 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         let transform = assetTrack.preferredTransform
         let assetInfo = orientationFromTransform(transform)
         
-        var scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.width
+        var scaleToFitRatio: CGFloat
+        
         if assetInfo.isPortrait {
             scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
             instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor),
                                      at: kCMTimeZero)
         } else {
+            scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.width
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
             var concat = assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.width / 2))
             if assetInfo.orientation == .down {

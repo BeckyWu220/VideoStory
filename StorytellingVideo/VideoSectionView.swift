@@ -39,8 +39,6 @@ class VideoSectionView: UIView {
         self.addSubview(deleteBtn!)
         deleteBtn?.isHidden = true
         
-        
-        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(VideoSectionView.beTapped))
         self.addGestureRecognizer(tapGesture)
         
