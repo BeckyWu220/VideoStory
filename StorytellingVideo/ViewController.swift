@@ -10,9 +10,10 @@ import UIKit
 import MediaPlayer
 import MobileCoreServices
 import AssetsLibrary
+import AVKit
+import AVFoundation
 
-
-class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDelegate {
+class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDelegate, UIVideoEditorControllerDelegate {
     
     var videoSectionArray: NSMutableArray = []
     var videoSlotArray: NSMutableArray = []
@@ -69,14 +70,49 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     func tappedVideoSection(videoSection: VideoSectionView) {
         currentVideoSection = videoSection
         if videoSection.containVideo {
-            let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
-            self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+            //let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
+            //self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+            
+            let editVideoViewController: UIVideoEditorController!
+            
+            if UIVideoEditorController.canEditVideo(atPath: (currentVideoSection?.videoPath)!) {
+                editVideoViewController = UIVideoEditorController()
+                editVideoViewController.delegate = self
+                editVideoViewController.videoPath = (currentVideoSection?.videoPath)!
+                editVideoViewController.videoQuality = .typeHigh
+                present(editVideoViewController, animated: true, completion: {
+                    
+                })
+            }
         }else{
             let importController : SelectImportViewController = SelectImportViewController()
             importController.delegate = self
             self.endEditingMode()
             self.navigationController?.pushViewController(importController, animated: true)
         }
+    }
+    
+    func videoEditorController(_ editor: UIVideoEditorController, didSaveEditedVideoToPath editedVideoPath: String) {
+        dismiss(animated: true, completion: {
+            self.currentVideoSection?.videoPath = editedVideoPath
+            self.currentVideoSection?.videoURL = URL(fileURLWithPath: editedVideoPath)
+            
+            let asset = AVURLAsset(url: (self.currentVideoSection?.videoURL)!)
+            let imgGenerator = AVAssetImageGenerator(asset: asset)
+            imgGenerator.appliesPreferredTrackTransform = true
+            let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
+            
+            self.setThumbnailForVideoSection(image: image, videoURL: (self.currentVideoSection?.videoURL)!, videoPath: (self.currentVideoSection?.videoPath)!)
+        })
+    }
+    
+    func videoEditorControllerDidCancel(_ editor: UIVideoEditorController) {
+        dismiss(animated: true, completion: {})
+    }
+    
+    func videoEditorController(_ editor: UIVideoEditorController, didFailWithError error: Error) {
+        print("error=\(error.localizedDescription)")
+        dismiss(animated: true, completion: {})
     }
     
     func switchToEditingMode() {
@@ -108,10 +144,13 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         }
     }
     
-    func setThumbnailForVideoSection(image: UIImage, videoURL: URL) {
+    func setThumbnailForVideoSection(image: UIImage, videoURL: URL, videoPath: String) {
         self.currentVideoSection?.videoIcon?.image = image
         self.currentVideoSection?.containVideo = true
         self.currentVideoSection?.videoURL = videoURL
+        self.currentVideoSection?.videoPath = videoPath
+        
+        print("Path:\(videoPath)")
         
         exportBtn?.isHidden = false
         tipLabel?.text = "Click loaded video to preview.\n Long press any loaded video to edit."

@@ -19,6 +19,7 @@ class VideoSectionView: UIView {
     public var videoIcon : UIImageView?
     public var containVideo : Bool
     public var videoURL : URL? //Used to store selected video and preview it later.
+    public var videoPath: String!
     var deleteBtn : UIButton?
 
     override init(frame: CGRect) {
@@ -80,6 +81,7 @@ class VideoSectionView: UIView {
         videoIcon?.image = nil
         containVideo = false
         videoURL = nil
+        videoPath = nil
         deleteBtn?.isHidden = true
     }
     

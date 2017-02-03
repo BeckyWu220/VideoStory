@@ -11,7 +11,7 @@ import MediaPlayer
 import MobileCoreServices
 
 protocol SelectImportVCDelegate{
-    func setThumbnailForVideoSection(image: UIImage, videoURL: URL)
+    func setThumbnailForVideoSection(image: UIImage, videoURL: URL, videoPath: String)
 }
 
 class SelectImportViewController: UIViewController {
@@ -126,7 +126,7 @@ extension SelectImportViewController: UIImagePickerControllerDelegate{
                 imgGenerator.appliesPreferredTrackTransform = true
                 let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
                 
-                self.delegate.setThumbnailForVideoSection(image: image, videoURL: (info[UIImagePickerControllerMediaURL] as! NSURL) as URL!)
+                self.delegate.setThumbnailForVideoSection(image: image, videoURL: (info[UIImagePickerControllerMediaURL] as! NSURL) as URL!, videoPath: path)
                 
                 //self.currentVideoSection?.initWithColor(color: UIColor.gray)
 //                self.currentVideoSection?.videoIcon?.image = image

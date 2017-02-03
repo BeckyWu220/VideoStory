@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StorytellingVideo/ViewController.swift"
-            timestampString = "503894430.93428"
+            timestampString = "506488458.925063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
             landmarkName = "mergeVideos()"
             landmarkType = "7">
          </BreakpointContent>
