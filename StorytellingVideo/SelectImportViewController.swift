@@ -117,8 +117,14 @@ extension SelectImportViewController: UIImagePickerControllerDelegate{
                     return
                 }
                 
-                if UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(path){
-                    UISaveVideoAtPathToSavedPhotosAlbum(path, self, #selector(SelectImportViewController.video(videoPath:didFinishSavingWithError:contextInfo:)), nil)
+                if picker.sourceType == .camera {
+                    if UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(path){
+                        UISaveVideoAtPathToSavedPhotosAlbum(path, self, #selector(SelectImportViewController.video(videoPath:didFinishSavingWithError:contextInfo:)), nil)
+                    }
+                } else {
+                    let alert2 = UIAlertController(title: "Success", message: "Video was imported", preferredStyle: .alert)
+                    alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: {action in self.dismissCurrentViewController()}))
+                    self.present(alert2, animated: true, completion: nil)
                 }
                 
                 let asset = AVURLAsset(url: (info[UIImagePickerControllerMediaURL] as! NSURL) as URL!)
