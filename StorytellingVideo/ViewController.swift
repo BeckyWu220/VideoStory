@@ -375,7 +375,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         let mainComposition = AVMutableVideoComposition()
         mainComposition.instructions = [mainInstruction]
         mainComposition.frameDuration = CMTimeMake(1, 30)
-        mainComposition.renderSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        mainComposition.renderSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
         
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         let dateFormatter = DateFormatter()
@@ -425,7 +425,21 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         let transform = assetTrack.preferredTransform
         let assetInfo = orientationFromTransform(transform)
         
-        var scaleToFitRatio: CGFloat
+        var scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
+        
+        var orientation = "";
+        if assetInfo.orientation == .left {
+            orientation = "left"
+        }else if assetInfo.orientation == .right {
+            orientation = "right"
+        }else if assetInfo.orientation == .up {
+            orientation = "up"
+        }else if assetInfo.orientation == .down {
+            orientation = "down"
+        }else {
+            orientation = "N/A"
+        }
+        print("Orientation: \(orientation)")
         
         if assetInfo.isPortrait {
             scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
@@ -433,9 +447,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor),
                                      at: kCMTimeZero)
         } else {
-            scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.width
+
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
-            var concat = assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.width / 2))
+            var concat = assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(CGAffineTransform(translationX: 0, y: 0))
             if assetInfo.orientation == .down {
                 let fixUpsideDown = CGAffineTransform(rotationAngle: CGFloat(M_PI))
                 let windowBounds = UIScreen.main.bounds

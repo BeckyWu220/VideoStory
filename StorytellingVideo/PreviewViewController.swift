@@ -35,7 +35,7 @@ class PreviewViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Preview"
         
-        thumbnailImageView = UIImageView.init(frame: CGRect(x: (self.view.frame.size.width - 300)/2, y: 50, width: 300, height: 300))
+        thumbnailImageView = UIImageView.init(frame: CGRect(x: (self.view.frame.size.width - 300)/2, y: 100, width: 300, height: 300))
         thumbnailImageView?.image = thumbnailImage
         thumbnailImageView?.isUserInteractionEnabled = true
         self.view.addSubview(thumbnailImageView!)
