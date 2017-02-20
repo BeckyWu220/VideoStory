@@ -13,6 +13,280 @@
 		45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569951E086B4F00D9B0A8 /* arrow_0.png */; };
 		45C569991E086B4F00D9B0A8 /* arrow_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569961E086B4F00D9B0A8 /* arrow_1.png */; };
 		45C5699A1E086B4F00D9B0A8 /* arrow_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569971E086B4F00D9B0A8 /* arrow_2.png */; };
+		45DAC79C1E5B79E900BDA350 /* FilterChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAC79B1E5B79E900BDA350 /* FilterChain.swift */; };
+		45DAC9761E5B7B3F00BDA350 /* compile-LinuxGL.sh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC79E1E5B7B3E00BDA350 /* compile-LinuxGL.sh */; };
+		45DAC9771E5B7B3F00BDA350 /* compile-LinuxRPi.sh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC79F1E5B7B3E00BDA350 /* compile-LinuxRPi.sh */; };
+		45DAC9781E5B7B3F00BDA350 /* LinuxCompilationGenerator.sh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC7A31E5B7B3E00BDA350 /* LinuxCompilationGenerator.sh */; };
+		45DAC9E21E5B7B3F00BDA350 /* lookup.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8221E5B7B3E00BDA350 /* lookup.png */; };
+		45DAC9E31E5B7B3F00BDA350 /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8231E5B7B3E00BDA350 /* lookup_amatorka.png */; };
+		45DAC9E41E5B7B3F00BDA350 /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8241E5B7B3E00BDA350 /* lookup_miss_etikate.png */; };
+		45DAC9E51E5B7B3F00BDA350 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8251E5B7B3E00BDA350 /* lookup_soft_elegance_1.png */; };
+		45DAC9E61E5B7B3F00BDA350 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8261E5B7B3E00BDA350 /* lookup_soft_elegance_2.png */; };
+		45DACA021E5B7B3F00BDA350 /* AdaptiveThreshold_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8431E5B7B3E00BDA350 /* AdaptiveThreshold_GL.fsh */; };
+		45DACA031E5B7B3F00BDA350 /* AdaptiveThreshold_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8441E5B7B3E00BDA350 /* AdaptiveThreshold_GLES.fsh */; };
+		45DACA041E5B7B3F00BDA350 /* AddBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8451E5B7B3E00BDA350 /* AddBlend_GL.fsh */; };
+		45DACA051E5B7B3F00BDA350 /* AddBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8461E5B7B3E00BDA350 /* AddBlend_GLES.fsh */; };
+		45DACA061E5B7B3F00BDA350 /* AlphaBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8471E5B7B3E00BDA350 /* AlphaBlend_GL.fsh */; };
+		45DACA071E5B7B3F00BDA350 /* AlphaBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8481E5B7B3E00BDA350 /* AlphaBlend_GLES.fsh */; };
+		45DACA081E5B7B3F00BDA350 /* AlphaTest_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8491E5B7B3E00BDA350 /* AlphaTest_GL.fsh */; };
+		45DACA091E5B7B3F00BDA350 /* AlphaTest_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC84A1E5B7B3E00BDA350 /* AlphaTest_GLES.fsh */; };
+		45DACA0A1E5B7B3F00BDA350 /* AverageColor.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC84B1E5B7B3E00BDA350 /* AverageColor.vsh */; };
+		45DACA0B1E5B7B3F00BDA350 /* AverageColor_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC84C1E5B7B3E00BDA350 /* AverageColor_GL.fsh */; };
+		45DACA0C1E5B7B3F00BDA350 /* AverageColor_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC84D1E5B7B3E00BDA350 /* AverageColor_GLES.fsh */; };
+		45DACA0D1E5B7B3F00BDA350 /* AverageLuminance_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC84E1E5B7B3E00BDA350 /* AverageLuminance_GL.fsh */; };
+		45DACA0E1E5B7B3F00BDA350 /* AverageLuminance_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC84F1E5B7B3E00BDA350 /* AverageLuminance_GLES.fsh */; };
+		45DACA0F1E5B7B3F00BDA350 /* BilateralBlur.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8501E5B7B3E00BDA350 /* BilateralBlur.vsh */; };
+		45DACA101E5B7B3F00BDA350 /* BilateralBlur_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8511E5B7B3E00BDA350 /* BilateralBlur_GL.fsh */; };
+		45DACA111E5B7B3F00BDA350 /* BilateralBlur_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8521E5B7B3E00BDA350 /* BilateralBlur_GLES.fsh */; };
+		45DACA121E5B7B3F00BDA350 /* Brightness_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8531E5B7B3E00BDA350 /* Brightness_GL.fsh */; };
+		45DACA131E5B7B3F00BDA350 /* Brightness_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8541E5B7B3E00BDA350 /* Brightness_GLES.fsh */; };
+		45DACA141E5B7B3F00BDA350 /* BulgeDistortion_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8551E5B7B3F00BDA350 /* BulgeDistortion_GL.fsh */; };
+		45DACA151E5B7B3F00BDA350 /* BulgeDistortion_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8561E5B7B3F00BDA350 /* BulgeDistortion_GLES.fsh */; };
+		45DACA161E5B7B3F00BDA350 /* CGAColorspace_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8571E5B7B3F00BDA350 /* CGAColorspace_GL.fsh */; };
+		45DACA171E5B7B3F00BDA350 /* CGAColorspace_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8581E5B7B3F00BDA350 /* CGAColorspace_GLES.fsh */; };
+		45DACA181E5B7B3F00BDA350 /* ChromaKey_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8591E5B7B3F00BDA350 /* ChromaKey_GL.fsh */; };
+		45DACA191E5B7B3F00BDA350 /* ChromaKey_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC85A1E5B7B3F00BDA350 /* ChromaKey_GLES.fsh */; };
+		45DACA1A1E5B7B3F00BDA350 /* ChromaKeyBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC85B1E5B7B3F00BDA350 /* ChromaKeyBlend_GL.fsh */; };
+		45DACA1B1E5B7B3F00BDA350 /* ChromaKeyBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC85C1E5B7B3F00BDA350 /* ChromaKeyBlend_GLES.fsh */; };
+		45DACA1C1E5B7B3F00BDA350 /* Circle.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC85D1E5B7B3F00BDA350 /* Circle.vsh */; };
+		45DACA1D1E5B7B3F00BDA350 /* Circle_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC85E1E5B7B3F00BDA350 /* Circle_GL.fsh */; };
+		45DACA1E1E5B7B3F00BDA350 /* Circle_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC85F1E5B7B3F00BDA350 /* Circle_GLES.fsh */; };
+		45DACA1F1E5B7B3F00BDA350 /* ColorBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8601E5B7B3F00BDA350 /* ColorBlend_GL.fsh */; };
+		45DACA201E5B7B3F00BDA350 /* ColorBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8611E5B7B3F00BDA350 /* ColorBlend_GLES.fsh */; };
+		45DACA211E5B7B3F00BDA350 /* ColorBurnBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8621E5B7B3F00BDA350 /* ColorBurnBlend_GL.fsh */; };
+		45DACA221E5B7B3F00BDA350 /* ColorBurnBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8631E5B7B3F00BDA350 /* ColorBurnBlend_GLES.fsh */; };
+		45DACA231E5B7B3F00BDA350 /* ColorDodgeBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8641E5B7B3F00BDA350 /* ColorDodgeBlend_GL.fsh */; };
+		45DACA241E5B7B3F00BDA350 /* ColorDodgeBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8651E5B7B3F00BDA350 /* ColorDodgeBlend_GLES.fsh */; };
+		45DACA251E5B7B3F00BDA350 /* ColorInvert_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8661E5B7B3F00BDA350 /* ColorInvert_GL.fsh */; };
+		45DACA261E5B7B3F00BDA350 /* ColorInvert_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8671E5B7B3F00BDA350 /* ColorInvert_GLES.fsh */; };
+		45DACA271E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8681E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GL.fsh */; };
+		45DACA281E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8691E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GLES.fsh */; };
+		45DACA291E5B7B3F00BDA350 /* ColorMatrix_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC86A1E5B7B3F00BDA350 /* ColorMatrix_GL.fsh */; };
+		45DACA2A1E5B7B3F00BDA350 /* ColorMatrix_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC86B1E5B7B3F00BDA350 /* ColorMatrix_GLES.fsh */; };
+		45DACA2B1E5B7B3F00BDA350 /* ColorSwizzling_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC86C1E5B7B3F00BDA350 /* ColorSwizzling_GL.fsh */; };
+		45DACA2C1E5B7B3F00BDA350 /* ColorSwizzling_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC86D1E5B7B3F00BDA350 /* ColorSwizzling_GLES.fsh */; };
+		45DACA2D1E5B7B3F00BDA350 /* ColourFASTDecriptor.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC86E1E5B7B3F00BDA350 /* ColourFASTDecriptor.vsh */; };
+		45DACA2E1E5B7B3F00BDA350 /* ColourFASTDecriptor_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC86F1E5B7B3F00BDA350 /* ColourFASTDecriptor_GL.fsh */; };
+		45DACA2F1E5B7B3F00BDA350 /* ColourFASTDecriptor_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8701E5B7B3F00BDA350 /* ColourFASTDecriptor_GLES.fsh */; };
+		45DACA301E5B7B3F00BDA350 /* Contrast_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8711E5B7B3F00BDA350 /* Contrast_GL.fsh */; };
+		45DACA311E5B7B3F00BDA350 /* Contrast_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8721E5B7B3F00BDA350 /* Contrast_GLES.fsh */; };
+		45DACA341E5B7B3F00BDA350 /* Convolution3x3_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8751E5B7B3F00BDA350 /* Convolution3x3_GL.fsh */; };
+		45DACA351E5B7B3F00BDA350 /* Convolution3x3_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8761E5B7B3F00BDA350 /* Convolution3x3_GLES.fsh */; };
+		45DACA361E5B7B3F00BDA350 /* Crosshair.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8771E5B7B3F00BDA350 /* Crosshair.vsh */; };
+		45DACA371E5B7B3F00BDA350 /* Crosshair_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8781E5B7B3F00BDA350 /* Crosshair_GL.fsh */; };
+		45DACA381E5B7B3F00BDA350 /* Crosshair_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8791E5B7B3F00BDA350 /* Crosshair_GLES.fsh */; };
+		45DACA391E5B7B3F00BDA350 /* Crosshatch_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC87A1E5B7B3F00BDA350 /* Crosshatch_GL.fsh */; };
+		45DACA3A1E5B7B3F00BDA350 /* Crosshatch_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC87B1E5B7B3F00BDA350 /* Crosshatch_GLES.fsh */; };
+		45DACA3B1E5B7B3F00BDA350 /* DarkenBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC87C1E5B7B3F00BDA350 /* DarkenBlend_GL.fsh */; };
+		45DACA3C1E5B7B3F00BDA350 /* DarkenBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC87D1E5B7B3F00BDA350 /* DarkenBlend_GLES.fsh */; };
+		45DACA3D1E5B7B3F00BDA350 /* DifferenceBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC87E1E5B7B3F00BDA350 /* DifferenceBlend_GL.fsh */; };
+		45DACA3E1E5B7B3F00BDA350 /* DifferenceBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC87F1E5B7B3F00BDA350 /* DifferenceBlend_GLES.fsh */; };
+		45DACA3F1E5B7B3F00BDA350 /* Dilation1_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8801E5B7B3F00BDA350 /* Dilation1_GL.fsh */; };
+		45DACA401E5B7B3F00BDA350 /* Dilation1_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8811E5B7B3F00BDA350 /* Dilation1_GLES.fsh */; };
+		45DACA411E5B7B3F00BDA350 /* Dilation2_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8821E5B7B3F00BDA350 /* Dilation2_GL.fsh */; };
+		45DACA421E5B7B3F00BDA350 /* Dilation2_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8831E5B7B3F00BDA350 /* Dilation2_GLES.fsh */; };
+		45DACA431E5B7B3F00BDA350 /* Dilation3_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8841E5B7B3F00BDA350 /* Dilation3_GL.fsh */; };
+		45DACA441E5B7B3F00BDA350 /* Dilation3_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8851E5B7B3F00BDA350 /* Dilation3_GLES.fsh */; };
+		45DACA451E5B7B3F00BDA350 /* Dilation4_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8861E5B7B3F00BDA350 /* Dilation4_GL.fsh */; };
+		45DACA461E5B7B3F00BDA350 /* Dilation4_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8871E5B7B3F00BDA350 /* Dilation4_GLES.fsh */; };
+		45DACA471E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8881E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GL.fsh */; };
+		45DACA481E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8891E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GLES.fsh */; };
+		45DACA491E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC88A1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GL.fsh */; };
+		45DACA4A1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC88B1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GLES.fsh */; };
+		45DACA4B1E5B7B3F00BDA350 /* DissolveBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC88C1E5B7B3F00BDA350 /* DissolveBlend_GL.fsh */; };
+		45DACA4C1E5B7B3F00BDA350 /* DissolveBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC88D1E5B7B3F00BDA350 /* DissolveBlend_GLES.fsh */; };
+		45DACA4D1E5B7B3F00BDA350 /* DivideBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC88E1E5B7B3F00BDA350 /* DivideBlend_GL.fsh */; };
+		45DACA4E1E5B7B3F00BDA350 /* DivideBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC88F1E5B7B3F00BDA350 /* DivideBlend_GLES.fsh */; };
+		45DACA4F1E5B7B3F00BDA350 /* Erosion1_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8901E5B7B3F00BDA350 /* Erosion1_GL.fsh */; };
+		45DACA501E5B7B3F00BDA350 /* Erosion1_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8911E5B7B3F00BDA350 /* Erosion1_GLES.fsh */; };
+		45DACA511E5B7B3F00BDA350 /* Erosion2_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8921E5B7B3F00BDA350 /* Erosion2_GL.fsh */; };
+		45DACA521E5B7B3F00BDA350 /* Erosion2_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8931E5B7B3F00BDA350 /* Erosion2_GLES.fsh */; };
+		45DACA531E5B7B3F00BDA350 /* Erosion3_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8941E5B7B3F00BDA350 /* Erosion3_GL.fsh */; };
+		45DACA541E5B7B3F00BDA350 /* Erosion3_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8951E5B7B3F00BDA350 /* Erosion3_GLES.fsh */; };
+		45DACA551E5B7B3F00BDA350 /* Erosion4_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8961E5B7B3F00BDA350 /* Erosion4_GL.fsh */; };
+		45DACA561E5B7B3F00BDA350 /* Erosion4_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8971E5B7B3F00BDA350 /* Erosion4_GLES.fsh */; };
+		45DACA571E5B7B3F00BDA350 /* ErosionDilation1.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8981E5B7B3F00BDA350 /* ErosionDilation1.vsh */; };
+		45DACA581E5B7B3F00BDA350 /* ErosionDilation2.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8991E5B7B3F00BDA350 /* ErosionDilation2.vsh */; };
+		45DACA591E5B7B3F00BDA350 /* ErosionDilation3.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC89A1E5B7B3F00BDA350 /* ErosionDilation3.vsh */; };
+		45DACA5A1E5B7B3F00BDA350 /* ErosionDilation4.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC89B1E5B7B3F00BDA350 /* ErosionDilation4.vsh */; };
+		45DACA5B1E5B7B3F00BDA350 /* ExclusionBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC89C1E5B7B3F00BDA350 /* ExclusionBlend_GL.fsh */; };
+		45DACA5C1E5B7B3F00BDA350 /* ExclusionBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC89D1E5B7B3F00BDA350 /* ExclusionBlend_GLES.fsh */; };
+		45DACA5D1E5B7B3F00BDA350 /* Exposure_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC89E1E5B7B3F00BDA350 /* Exposure_GL.fsh */; };
+		45DACA5E1E5B7B3F00BDA350 /* Exposure_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC89F1E5B7B3F00BDA350 /* Exposure_GLES.fsh */; };
+		45DACA5F1E5B7B3F00BDA350 /* FalseColor_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A01E5B7B3F00BDA350 /* FalseColor_GL.fsh */; };
+		45DACA601E5B7B3F00BDA350 /* FalseColor_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A11E5B7B3F00BDA350 /* FalseColor_GLES.fsh */; };
+		45DACA611E5B7B3F00BDA350 /* FiveInput.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A21E5B7B3F00BDA350 /* FiveInput.vsh */; };
+		45DACA621E5B7B3F00BDA350 /* FourInput.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A31E5B7B3F00BDA350 /* FourInput.vsh */; };
+		45DACA631E5B7B3F00BDA350 /* Gamma_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A41E5B7B3F00BDA350 /* Gamma_GL.fsh */; };
+		45DACA641E5B7B3F00BDA350 /* Gamma_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A51E5B7B3F00BDA350 /* Gamma_GLES.fsh */; };
+		45DACA651E5B7B3F00BDA350 /* GlassSphere_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A61E5B7B3F00BDA350 /* GlassSphere_GL.fsh */; };
+		45DACA661E5B7B3F00BDA350 /* GlassSphere_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A71E5B7B3F00BDA350 /* GlassSphere_GLES.fsh */; };
+		45DACA671E5B7B3F00BDA350 /* Halftone_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A81E5B7B3F00BDA350 /* Halftone_GL.fsh */; };
+		45DACA681E5B7B3F00BDA350 /* Halftone_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8A91E5B7B3F00BDA350 /* Halftone_GLES.fsh */; };
+		45DACA691E5B7B3F00BDA350 /* HardLightBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8AA1E5B7B3F00BDA350 /* HardLightBlend_GL.fsh */; };
+		45DACA6A1E5B7B3F00BDA350 /* HardLightBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8AB1E5B7B3F00BDA350 /* HardLightBlend_GLES.fsh */; };
+		45DACA6B1E5B7B3F00BDA350 /* HarrisCornerDetector_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8AC1E5B7B3F00BDA350 /* HarrisCornerDetector_GL.fsh */; };
+		45DACA6C1E5B7B3F00BDA350 /* HarrisCornerDetector_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8AD1E5B7B3F00BDA350 /* HarrisCornerDetector_GLES.fsh */; };
+		45DACA6D1E5B7B3F00BDA350 /* Haze_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8AE1E5B7B3F00BDA350 /* Haze_GL.fsh */; };
+		45DACA6E1E5B7B3F00BDA350 /* Haze_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8AF1E5B7B3F00BDA350 /* Haze_GLES.fsh */; };
+		45DACA6F1E5B7B3F00BDA350 /* HighlightShadow_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B01E5B7B3F00BDA350 /* HighlightShadow_GL.fsh */; };
+		45DACA701E5B7B3F00BDA350 /* HighlightShadow_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B11E5B7B3F00BDA350 /* HighlightShadow_GLES.fsh */; };
+		45DACA711E5B7B3F00BDA350 /* HighlightShadowTint_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B21E5B7B3F00BDA350 /* HighlightShadowTint_GL.fsh */; };
+		45DACA721E5B7B3F00BDA350 /* HighlightShadowTint_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B31E5B7B3F00BDA350 /* HighlightShadowTint_GLES.fsh */; };
+		45DACA731E5B7B3F00BDA350 /* HistogramAccumulation_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B41E5B7B3F00BDA350 /* HistogramAccumulation_GL.fsh */; };
+		45DACA741E5B7B3F00BDA350 /* HistogramAccumulation_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B51E5B7B3F00BDA350 /* HistogramAccumulation_GLES.fsh */; };
+		45DACA751E5B7B3F00BDA350 /* HistogramBlueSampling.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B61E5B7B3F00BDA350 /* HistogramBlueSampling.vsh */; };
+		45DACA761E5B7B3F00BDA350 /* HistogramDisplay.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B71E5B7B3F00BDA350 /* HistogramDisplay.vsh */; };
+		45DACA771E5B7B3F00BDA350 /* HistogramDisplay_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B81E5B7B3F00BDA350 /* HistogramDisplay_GL.fsh */; };
+		45DACA781E5B7B3F00BDA350 /* HistogramDisplay_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8B91E5B7B3F00BDA350 /* HistogramDisplay_GLES.fsh */; };
+		45DACA791E5B7B3F00BDA350 /* HistogramEqualizationBlue_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8BA1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GL.fsh */; };
+		45DACA7A1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8BB1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GLES.fsh */; };
+		45DACA7B1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8BC1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GL.fsh */; };
+		45DACA7C1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8BD1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GLES.fsh */; };
+		45DACA7D1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8BE1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GL.fsh */; };
+		45DACA7E1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8BF1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GLES.fsh */; };
+		45DACA7F1E5B7B3F00BDA350 /* HistogramEqualizationRed_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C01E5B7B3F00BDA350 /* HistogramEqualizationRed_GL.fsh */; };
+		45DACA801E5B7B3F00BDA350 /* HistogramEqualizationRed_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C11E5B7B3F00BDA350 /* HistogramEqualizationRed_GLES.fsh */; };
+		45DACA811E5B7B3F00BDA350 /* HistogramEqualizationRGB_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C21E5B7B3F00BDA350 /* HistogramEqualizationRGB_GL.fsh */; };
+		45DACA821E5B7B3F00BDA350 /* HistogramEqualizationRGB_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C31E5B7B3F00BDA350 /* HistogramEqualizationRGB_GLES.fsh */; };
+		45DACA831E5B7B3F00BDA350 /* HistogramGreenSampling.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C41E5B7B3F00BDA350 /* HistogramGreenSampling.vsh */; };
+		45DACA841E5B7B3F00BDA350 /* HistogramLuminanceSampling.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C51E5B7B3F00BDA350 /* HistogramLuminanceSampling.vsh */; };
+		45DACA851E5B7B3F00BDA350 /* HistogramRedSampling.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C61E5B7B3F00BDA350 /* HistogramRedSampling.vsh */; };
+		45DACA861E5B7B3F00BDA350 /* Hue_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C71E5B7B3F00BDA350 /* Hue_GL.fsh */; };
+		45DACA871E5B7B3F00BDA350 /* Hue_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C81E5B7B3F00BDA350 /* Hue_GLES.fsh */; };
+		45DACA881E5B7B3F00BDA350 /* HueBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8C91E5B7B3F00BDA350 /* HueBlend_GL.fsh */; };
+		45DACA891E5B7B3F00BDA350 /* HueBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8CA1E5B7B3F00BDA350 /* HueBlend_GLES.fsh */; };
+		45DACA8A1E5B7B3F00BDA350 /* Kuwahara_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8CB1E5B7B3F00BDA350 /* Kuwahara_GL.fsh */; };
+		45DACA8B1E5B7B3F00BDA350 /* Kuwahara_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8CC1E5B7B3F00BDA350 /* Kuwahara_GLES.fsh */; };
+		45DACA8C1E5B7B3F00BDA350 /* KuwaharaRadius3_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8CD1E5B7B3F00BDA350 /* KuwaharaRadius3_GL.fsh */; };
+		45DACA8D1E5B7B3F00BDA350 /* KuwaharaRadius3_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8CE1E5B7B3F00BDA350 /* KuwaharaRadius3_GLES.fsh */; };
+		45DACA8E1E5B7B3F00BDA350 /* LanczosResampling.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8CF1E5B7B3F00BDA350 /* LanczosResampling.vsh */; };
+		45DACA8F1E5B7B3F00BDA350 /* LanczosResampling_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D01E5B7B3F00BDA350 /* LanczosResampling_GL.fsh */; };
+		45DACA901E5B7B3F00BDA350 /* LanczosResampling_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D11E5B7B3F00BDA350 /* LanczosResampling_GLES.fsh */; };
+		45DACA911E5B7B3F00BDA350 /* Laplacian_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D21E5B7B3F00BDA350 /* Laplacian_GL.fsh */; };
+		45DACA921E5B7B3F00BDA350 /* Laplacian_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D31E5B7B3F00BDA350 /* Laplacian_GLES.fsh */; };
+		45DACA931E5B7B3F00BDA350 /* Levels_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D41E5B7B3F00BDA350 /* Levels_GL.fsh */; };
+		45DACA941E5B7B3F00BDA350 /* Levels_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D51E5B7B3F00BDA350 /* Levels_GLES.fsh */; };
+		45DACA951E5B7B3F00BDA350 /* LightenBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D61E5B7B3F00BDA350 /* LightenBlend_GL.fsh */; };
+		45DACA961E5B7B3F00BDA350 /* LightenBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D71E5B7B3F00BDA350 /* LightenBlend_GLES.fsh */; };
+		45DACA971E5B7B3F00BDA350 /* Line.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D81E5B7B3F00BDA350 /* Line.vsh */; };
+		45DACA981E5B7B3F00BDA350 /* Line_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8D91E5B7B3F00BDA350 /* Line_GL.fsh */; };
+		45DACA991E5B7B3F00BDA350 /* Line_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8DA1E5B7B3F00BDA350 /* Line_GLES.fsh */; };
+		45DACA9A1E5B7B3F00BDA350 /* LinearBurnBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8DB1E5B7B3F00BDA350 /* LinearBurnBlend_GL.fsh */; };
+		45DACA9B1E5B7B3F00BDA350 /* LinearBurnBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8DC1E5B7B3F00BDA350 /* LinearBurnBlend_GLES.fsh */; };
+		45DACA9C1E5B7B3F00BDA350 /* LocalBinaryPattern_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8DD1E5B7B3F00BDA350 /* LocalBinaryPattern_GL.fsh */; };
+		45DACA9D1E5B7B3F00BDA350 /* LocalBinaryPattern_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8DE1E5B7B3F00BDA350 /* LocalBinaryPattern_GLES.fsh */; };
+		45DACA9E1E5B7B3F00BDA350 /* Lookup_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8DF1E5B7B3F00BDA350 /* Lookup_GL.fsh */; };
+		45DACA9F1E5B7B3F00BDA350 /* Lookup_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E01E5B7B3F00BDA350 /* Lookup_GLES.fsh */; };
+		45DACAA01E5B7B3F00BDA350 /* Luminance_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E11E5B7B3F00BDA350 /* Luminance_GL.fsh */; };
+		45DACAA11E5B7B3F00BDA350 /* Luminance_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E21E5B7B3F00BDA350 /* Luminance_GLES.fsh */; };
+		45DACAA21E5B7B3F00BDA350 /* LuminanceRange_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E31E5B7B3F00BDA350 /* LuminanceRange_GL.fsh */; };
+		45DACAA31E5B7B3F00BDA350 /* LuminanceRange_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E41E5B7B3F00BDA350 /* LuminanceRange_GLES.fsh */; };
+		45DACAA41E5B7B3F00BDA350 /* LuminanceThreshold_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E51E5B7B3F00BDA350 /* LuminanceThreshold_GL.fsh */; };
+		45DACAA51E5B7B3F00BDA350 /* LuminanceThreshold_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E61E5B7B3F00BDA350 /* LuminanceThreshold_GLES.fsh */; };
+		45DACAA61E5B7B3F00BDA350 /* LuminosityBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E71E5B7B3F00BDA350 /* LuminosityBlend_GL.fsh */; };
+		45DACAA71E5B7B3F00BDA350 /* LuminosityBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E81E5B7B3F00BDA350 /* LuminosityBlend_GLES.fsh */; };
+		45DACAA81E5B7B3F00BDA350 /* Median_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8E91E5B7B3F00BDA350 /* Median_GL.fsh */; };
+		45DACAA91E5B7B3F00BDA350 /* Median_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8EA1E5B7B3F00BDA350 /* Median_GLES.fsh */; };
+		45DACAAA1E5B7B3F00BDA350 /* Monochrome_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8EB1E5B7B3F00BDA350 /* Monochrome_GL.fsh */; };
+		45DACAAB1E5B7B3F00BDA350 /* Monochrome_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8EC1E5B7B3F00BDA350 /* Monochrome_GLES.fsh */; };
+		45DACAAC1E5B7B3F00BDA350 /* MotionBlur.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8ED1E5B7B3F00BDA350 /* MotionBlur.vsh */; };
+		45DACAAD1E5B7B3F00BDA350 /* MotionBlur_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8EE1E5B7B3F00BDA350 /* MotionBlur_GL.fsh */; };
+		45DACAAE1E5B7B3F00BDA350 /* MotionBlur_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8EF1E5B7B3F00BDA350 /* MotionBlur_GLES.fsh */; };
+		45DACAAF1E5B7B3F00BDA350 /* MotionComparison_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F01E5B7B3F00BDA350 /* MotionComparison_GL.fsh */; };
+		45DACAB01E5B7B3F00BDA350 /* MotionComparison_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F11E5B7B3F00BDA350 /* MotionComparison_GLES.fsh */; };
+		45DACAB11E5B7B3F00BDA350 /* MultiplyBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F21E5B7B3F00BDA350 /* MultiplyBlend_GL.fsh */; };
+		45DACAB21E5B7B3F00BDA350 /* MultiplyBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F31E5B7B3F00BDA350 /* MultiplyBlend_GLES.fsh */; };
+		45DACAB31E5B7B3F00BDA350 /* NearbyTexelSampling.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F41E5B7B3F00BDA350 /* NearbyTexelSampling.vsh */; };
+		45DACAB41E5B7B3F00BDA350 /* NobleCornerDetector_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F51E5B7B3F00BDA350 /* NobleCornerDetector_GL.fsh */; };
+		45DACAB51E5B7B3F00BDA350 /* NobleCornerDetector_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F61E5B7B3F00BDA350 /* NobleCornerDetector_GLES.fsh */; };
+		45DACAB61E5B7B3F00BDA350 /* NormalBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F71E5B7B3F00BDA350 /* NormalBlend_GL.fsh */; };
+		45DACAB71E5B7B3F00BDA350 /* NormalBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F81E5B7B3F00BDA350 /* NormalBlend_GLES.fsh */; };
+		45DACAB81E5B7B3F00BDA350 /* OneInput.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8F91E5B7B3F00BDA350 /* OneInput.vsh */; };
+		45DACAB91E5B7B3F00BDA350 /* Opacity_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8FA1E5B7B3F00BDA350 /* Opacity_GL.fsh */; };
+		45DACABA1E5B7B3F00BDA350 /* Opacity_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8FB1E5B7B3F00BDA350 /* Opacity_GLES.fsh */; };
+		45DACABB1E5B7B3F00BDA350 /* OverlayBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8FC1E5B7B3F00BDA350 /* OverlayBlend_GL.fsh */; };
+		45DACABC1E5B7B3F00BDA350 /* OverlayBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8FD1E5B7B3F00BDA350 /* OverlayBlend_GLES.fsh */; };
+		45DACABD1E5B7B3F00BDA350 /* Passthrough_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8FE1E5B7B3F00BDA350 /* Passthrough_GL.fsh */; };
+		45DACABE1E5B7B3F00BDA350 /* Passthrough_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC8FF1E5B7B3F00BDA350 /* Passthrough_GLES.fsh */; };
+		45DACABF1E5B7B3F00BDA350 /* PinchDistortion_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9001E5B7B3F00BDA350 /* PinchDistortion_GL.fsh */; };
+		45DACAC01E5B7B3F00BDA350 /* PinchDistortion_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9011E5B7B3F00BDA350 /* PinchDistortion_GLES.fsh */; };
+		45DACAC11E5B7B3F00BDA350 /* Pixellate_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9021E5B7B3F00BDA350 /* Pixellate_GL.fsh */; };
+		45DACAC21E5B7B3F00BDA350 /* Pixellate_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9031E5B7B3F00BDA350 /* Pixellate_GLES.fsh */; };
+		45DACAC31E5B7B3F00BDA350 /* PolarPixellate_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9041E5B7B3F00BDA350 /* PolarPixellate_GL.fsh */; };
+		45DACAC41E5B7B3F00BDA350 /* PolarPixellate_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9051E5B7B3F00BDA350 /* PolarPixellate_GLES.fsh */; };
+		45DACAC51E5B7B3F00BDA350 /* PolkaDot_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9061E5B7B3F00BDA350 /* PolkaDot_GL.fsh */; };
+		45DACAC61E5B7B3F00BDA350 /* PolkaDot_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9071E5B7B3F00BDA350 /* PolkaDot_GLES.fsh */; };
+		45DACAC71E5B7B3F00BDA350 /* Posterize_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9081E5B7B3F00BDA350 /* Posterize_GL.fsh */; };
+		45DACAC81E5B7B3F00BDA350 /* Posterize_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9091E5B7B3F00BDA350 /* Posterize_GLES.fsh */; };
+		45DACAC91E5B7B3F00BDA350 /* PrewittEdgeDetection_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC90A1E5B7B3F00BDA350 /* PrewittEdgeDetection_GL.fsh */; };
+		45DACACA1E5B7B3F00BDA350 /* PrewittEdgeDetection_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC90B1E5B7B3F00BDA350 /* PrewittEdgeDetection_GLES.fsh */; };
+		45DACACB1E5B7B3F00BDA350 /* RGBAdjustment_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC90C1E5B7B3F00BDA350 /* RGBAdjustment_GL.fsh */; };
+		45DACACC1E5B7B3F00BDA350 /* RGBAdjustment_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC90D1E5B7B3F00BDA350 /* RGBAdjustment_GLES.fsh */; };
+		45DACACD1E5B7B3F00BDA350 /* Saturation_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC90E1E5B7B3F00BDA350 /* Saturation_GL.fsh */; };
+		45DACACE1E5B7B3F00BDA350 /* Saturation_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC90F1E5B7B3F00BDA350 /* Saturation_GLES.fsh */; };
+		45DACACF1E5B7B3F00BDA350 /* SaturationBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9101E5B7B3F00BDA350 /* SaturationBlend_GL.fsh */; };
+		45DACAD01E5B7B3F00BDA350 /* SaturationBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9111E5B7B3F00BDA350 /* SaturationBlend_GLES.fsh */; };
+		45DACAD11E5B7B3F00BDA350 /* ScreenBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9121E5B7B3F00BDA350 /* ScreenBlend_GL.fsh */; };
+		45DACAD21E5B7B3F00BDA350 /* ScreenBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9131E5B7B3F00BDA350 /* ScreenBlend_GLES.fsh */; };
+		45DACAD31E5B7B3F00BDA350 /* ShaderConverter.sh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9141E5B7B3F00BDA350 /* ShaderConverter.sh */; };
+		45DACAD41E5B7B3F00BDA350 /* Sharpen.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9151E5B7B3F00BDA350 /* Sharpen.vsh */; };
+		45DACAD51E5B7B3F00BDA350 /* Sharpen_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9161E5B7B3F00BDA350 /* Sharpen_GL.fsh */; };
+		45DACAD61E5B7B3F00BDA350 /* Sharpen_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9171E5B7B3F00BDA350 /* Sharpen_GLES.fsh */; };
+		45DACAD71E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9181E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GL.fsh */; };
+		45DACAD81E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9191E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GLES.fsh */; };
+		45DACAD91E5B7B3F00BDA350 /* Sketch_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC91A1E5B7B3F00BDA350 /* Sketch_GL.fsh */; };
+		45DACADA1E5B7B3F00BDA350 /* Sketch_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC91B1E5B7B3F00BDA350 /* Sketch_GLES.fsh */; };
+		45DACADB1E5B7B3F00BDA350 /* SobelEdgeDetection_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC91C1E5B7B3F00BDA350 /* SobelEdgeDetection_GL.fsh */; };
+		45DACADC1E5B7B3F00BDA350 /* SobelEdgeDetection_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC91D1E5B7B3F00BDA350 /* SobelEdgeDetection_GLES.fsh */; };
+		45DACADD1E5B7B3F00BDA350 /* SoftLightBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC91E1E5B7B3F00BDA350 /* SoftLightBlend_GL.fsh */; };
+		45DACADE1E5B7B3F00BDA350 /* SoftLightBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC91F1E5B7B3F00BDA350 /* SoftLightBlend_GLES.fsh */; };
+		45DACADF1E5B7B3F00BDA350 /* Solarize_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9201E5B7B3F00BDA350 /* Solarize_GL.fsh */; };
+		45DACAE01E5B7B3F00BDA350 /* Solarize_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9211E5B7B3F00BDA350 /* Solarize_GLES.fsh */; };
+		45DACAE11E5B7B3F00BDA350 /* SourceOverBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9221E5B7B3F00BDA350 /* SourceOverBlend_GL.fsh */; };
+		45DACAE21E5B7B3F00BDA350 /* SourceOverBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9231E5B7B3F00BDA350 /* SourceOverBlend_GLES.fsh */; };
+		45DACAE31E5B7B3F00BDA350 /* SphereRefraction_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9241E5B7B3F00BDA350 /* SphereRefraction_GL.fsh */; };
+		45DACAE41E5B7B3F00BDA350 /* SphereRefraction_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9251E5B7B3F00BDA350 /* SphereRefraction_GLES.fsh */; };
+		45DACAE51E5B7B3F00BDA350 /* StretchDistortion_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9261E5B7B3F00BDA350 /* StretchDistortion_GL.fsh */; };
+		45DACAE61E5B7B3F00BDA350 /* StretchDistortion_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9271E5B7B3F00BDA350 /* StretchDistortion_GLES.fsh */; };
+		45DACAE71E5B7B3F00BDA350 /* SubtractBlend_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9281E5B7B3F00BDA350 /* SubtractBlend_GL.fsh */; };
+		45DACAE81E5B7B3F00BDA350 /* SubtractBlend_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9291E5B7B3F00BDA350 /* SubtractBlend_GLES.fsh */; };
+		45DACAE91E5B7B3F00BDA350 /* Swirl_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC92A1E5B7B3F00BDA350 /* Swirl_GL.fsh */; };
+		45DACAEA1E5B7B3F00BDA350 /* Swirl_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC92B1E5B7B3F00BDA350 /* Swirl_GLES.fsh */; };
+		45DACAEB1E5B7B3F00BDA350 /* ThreeInput.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC92C1E5B7B3F00BDA350 /* ThreeInput.vsh */; };
+		45DACAEC1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC92D1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GL.fsh */; };
+		45DACAED1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC92E1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GLES.fsh */; };
+		45DACAEE1E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC92F1E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GL.fsh */; };
+		45DACAEF1E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9301E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GLES.fsh */; };
+		45DACAF01E5B7B3F00BDA350 /* ThresholdSketch_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9311E5B7B3F00BDA350 /* ThresholdSketch_GL.fsh */; };
+		45DACAF11E5B7B3F00BDA350 /* ThresholdSketch_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9321E5B7B3F00BDA350 /* ThresholdSketch_GLES.fsh */; };
+		45DACAF21E5B7B3F00BDA350 /* TiltShift_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9331E5B7B3F00BDA350 /* TiltShift_GL.fsh */; };
+		45DACAF31E5B7B3F00BDA350 /* TiltShift_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9341E5B7B3F00BDA350 /* TiltShift_GLES.fsh */; };
+		45DACAF41E5B7B3F00BDA350 /* Toon_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9351E5B7B3F00BDA350 /* Toon_GL.fsh */; };
+		45DACAF51E5B7B3F00BDA350 /* Toon_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9361E5B7B3F00BDA350 /* Toon_GLES.fsh */; };
+		45DACAF61E5B7B3F00BDA350 /* Transform.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9371E5B7B3F00BDA350 /* Transform.vsh */; };
+		45DACAF71E5B7B3F00BDA350 /* TwoInput.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9381E5B7B3F00BDA350 /* TwoInput.vsh */; };
+		45DACAF81E5B7B3F00BDA350 /* UnsharpMask_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9391E5B7B3F00BDA350 /* UnsharpMask_GL.fsh */; };
+		45DACAF91E5B7B3F00BDA350 /* UnsharpMask_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC93A1E5B7B3F00BDA350 /* UnsharpMask_GLES.fsh */; };
+		45DACAFA1E5B7B3F00BDA350 /* Vibrance_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC93B1E5B7B3F00BDA350 /* Vibrance_GL.fsh */; };
+		45DACAFB1E5B7B3F00BDA350 /* Vibrance_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC93C1E5B7B3F00BDA350 /* Vibrance_GLES.fsh */; };
+		45DACAFC1E5B7B3F00BDA350 /* Vignette_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC93D1E5B7B3F00BDA350 /* Vignette_GL.fsh */; };
+		45DACAFD1E5B7B3F00BDA350 /* Vignette_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC93E1E5B7B3F00BDA350 /* Vignette_GLES.fsh */; };
+		45DACAFE1E5B7B3F00BDA350 /* WeakPixelInclusion_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC93F1E5B7B3F00BDA350 /* WeakPixelInclusion_GL.fsh */; };
+		45DACAFF1E5B7B3F00BDA350 /* WeakPixelInclusion_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9401E5B7B3F00BDA350 /* WeakPixelInclusion_GLES.fsh */; };
+		45DACB001E5B7B3F00BDA350 /* WhiteBalance_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9411E5B7B3F00BDA350 /* WhiteBalance_GL.fsh */; };
+		45DACB011E5B7B3F00BDA350 /* WhiteBalance_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9421E5B7B3F00BDA350 /* WhiteBalance_GLES.fsh */; };
+		45DACB021E5B7B3F00BDA350 /* XYDerivative_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9431E5B7B3F00BDA350 /* XYDerivative_GL.fsh */; };
+		45DACB031E5B7B3F00BDA350 /* XYDerivative_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9441E5B7B3F00BDA350 /* XYDerivative_GLES.fsh */; };
+		45DACB041E5B7B3F00BDA350 /* YUVConversionFullRange_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9451E5B7B3F00BDA350 /* YUVConversionFullRange_GL.fsh */; };
+		45DACB051E5B7B3F00BDA350 /* YUVConversionFullRange_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9461E5B7B3F00BDA350 /* YUVConversionFullRange_GLES.fsh */; };
+		45DACB061E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9471E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GL.fsh */; };
+		45DACB071E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9481E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GLES.fsh */; };
+		45DACB081E5B7B3F00BDA350 /* YUVConversionVideoRange_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC9491E5B7B3F00BDA350 /* YUVConversionVideoRange_GL.fsh */; };
+		45DACB091E5B7B3F00BDA350 /* YUVConversionVideoRange_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC94A1E5B7B3F00BDA350 /* YUVConversionVideoRange_GLES.fsh */; };
+		45DACB0A1E5B7B3F00BDA350 /* ZoomBlur_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC94B1E5B7B3F00BDA350 /* ZoomBlur_GL.fsh */; };
+		45DACB0B1E5B7B3F00BDA350 /* ZoomBlur_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC94C1E5B7B3F00BDA350 /* ZoomBlur_GLES.fsh */; };
+		45DACB401E5B7BA700BDA350 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DACB3D1E5B7B4000BDA350 /* GPUImage.framework */; };
 		45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */; };
 		45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E535311DFF7D100047FA9C /* PreviewViewController.swift */; };
 		45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4632D1DF8B00000CE87BE /* AppDelegate.swift */; };
@@ -23,6 +297,37 @@
 		45F463421DF8B2C700CE87BE /* videoBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F463411DF8B2C700CE87BE /* videoBg.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		45DACB381E5B7B4000BDA350 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45DAC7A01E5B7B3E00BDA350 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC6E7CAB1C39A9D8006DF678;
+			remoteInfo = GPUImage_macOS;
+		};
+		45DACB3A1E5B7B4000BDA350 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45DAC7A01E5B7B3E00BDA350 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC6E7CB51C39A9D8006DF678;
+			remoteInfo = GPUImageTests_macOS;
+		};
+		45DACB3C1E5B7B4000BDA350 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45DAC7A01E5B7B3E00BDA350 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9E34E91E524A2200B8604F;
+			remoteInfo = GPUImage_iOS;
+		};
+		45DACB3E1E5B7B4000BDA350 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45DAC7A01E5B7B3E00BDA350 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9E34F11E524A2200B8604F;
+			remoteInfo = GPUImageTests_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
@@ -30,6 +335,463 @@
 		45C569951E086B4F00D9B0A8 /* arrow_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_0.png; sourceTree = "<group>"; };
 		45C569961E086B4F00D9B0A8 /* arrow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_1.png; sourceTree = "<group>"; };
 		45C569971E086B4F00D9B0A8 /* arrow_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_2.png; sourceTree = "<group>"; };
+		45DAC79B1E5B79E900BDA350 /* FilterChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterChain.swift; path = FilterChain/FilterChain.swift; sourceTree = "<group>"; };
+		45DAC79E1E5B7B3E00BDA350 /* compile-LinuxGL.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "compile-LinuxGL.sh"; sourceTree = "<group>"; };
+		45DAC79F1E5B7B3E00BDA350 /* compile-LinuxRPi.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "compile-LinuxRPi.sh"; sourceTree = "<group>"; };
+		45DAC7A01E5B7B3E00BDA350 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GPUImage.xcodeproj; sourceTree = "<group>"; };
+		45DAC7A31E5B7B3E00BDA350 /* LinuxCompilationGenerator.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = LinuxCompilationGenerator.sh; sourceTree = "<group>"; };
+		45DAC7A41E5B7B3E00BDA350 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		45DAC7A71E5B7B3E00BDA350 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		45DAC7A81E5B7B3E00BDA350 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		45DAC7A91E5B7B3E00BDA350 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		45DAC7AB1E5B7B3E00BDA350 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		45DAC7AC1E5B7B3E00BDA350 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		45DAC7AD1E5B7B3E00BDA350 /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proto.h; sourceTree = "<group>"; };
+		45DAC7AF1E5B7B3E00BDA350 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		45DAC7B01E5B7B3E00BDA350 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		45DAC7B21E5B7B3E00BDA350 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		45DAC7B31E5B7B3E00BDA350 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		45DAC7B41E5B7B3E00BDA350 /* stubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stubs.h; sourceTree = "<group>"; };
+		45DAC7B61E5B7B3E00BDA350 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		45DAC7B71E5B7B3E00BDA350 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		45DAC7B91E5B7B3E00BDA350 /* BasicOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicOperation.swift; sourceTree = "<group>"; };
+		45DAC7BA1E5B7B3E00BDA350 /* CameraConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraConversion.swift; sourceTree = "<group>"; };
+		45DAC7BB1E5B7B3E00BDA350 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		45DAC7BC1E5B7B3E00BDA350 /* FillMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillMode.swift; sourceTree = "<group>"; };
+		45DAC7BD1E5B7B3E00BDA350 /* Framebuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Framebuffer.swift; sourceTree = "<group>"; };
+		45DAC7BE1E5B7B3E00BDA350 /* FramebufferCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FramebufferCache.swift; sourceTree = "<group>"; };
+		45DAC7BF1E5B7B3E00BDA350 /* ImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		45DAC7C01E5B7B3E00BDA350 /* ImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOrientation.swift; sourceTree = "<group>"; };
+		45DAC7C21E5B7B3E00BDA350 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		45DAC7C31E5B7B3E00BDA350 /* GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImage.h; sourceTree = "<group>"; };
+		45DAC7C41E5B7B3E00BDA350 /* MovieInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInput.swift; sourceTree = "<group>"; };
+		45DAC7C51E5B7B3E00BDA350 /* MovieOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieOutput.swift; sourceTree = "<group>"; };
+		45DAC7C61E5B7B3E00BDA350 /* OpenGLContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLContext.swift; sourceTree = "<group>"; };
+		45DAC7C71E5B7B3E00BDA350 /* PictureInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureInput.swift; sourceTree = "<group>"; };
+		45DAC7C81E5B7B3E00BDA350 /* PictureOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureOutput.swift; sourceTree = "<group>"; };
+		45DAC7C91E5B7B3E00BDA350 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		45DAC7CB1E5B7B3E00BDA350 /* GLUTRenderWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLUTRenderWindow.swift; sourceTree = "<group>"; };
+		45DAC7CC1E5B7B3E00BDA350 /* OpenGLContext-RPi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OpenGLContext-RPi.swift"; sourceTree = "<group>"; };
+		45DAC7CD1E5B7B3E00BDA350 /* OpenGLContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLContext.swift; sourceTree = "<group>"; };
+		45DAC7CE1E5B7B3E00BDA350 /* RPiRenderWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPiRenderWindow.swift; sourceTree = "<group>"; };
+		45DAC7CF1E5B7B3E00BDA350 /* V4LCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V4LCamera.swift; sourceTree = "<group>"; };
+		45DAC7D01E5B7B3E00BDA350 /* v4lfuncs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = v4lfuncs.c; sourceTree = "<group>"; };
+		45DAC7D11E5B7B3E00BDA350 /* v4lfuncs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v4lfuncs.h; sourceTree = "<group>"; };
+		45DAC7D31E5B7B3E00BDA350 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		45DAC7D41E5B7B3E00BDA350 /* MovieInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInput.swift; sourceTree = "<group>"; };
+		45DAC7D51E5B7B3E00BDA350 /* MovieOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieOutput.swift; sourceTree = "<group>"; };
+		45DAC7D61E5B7B3E00BDA350 /* OpenGLContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLContext.swift; sourceTree = "<group>"; };
+		45DAC7D71E5B7B3E00BDA350 /* PictureInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureInput.swift; sourceTree = "<group>"; };
+		45DAC7D81E5B7B3E00BDA350 /* PictureOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureOutput.swift; sourceTree = "<group>"; };
+		45DAC7D91E5B7B3E00BDA350 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		45DAC7DA1E5B7B3E00BDA350 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		45DAC7DB1E5B7B3E00BDA350 /* OpenGLContext_Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLContext_Shared.swift; sourceTree = "<group>"; };
+		45DAC7DC1E5B7B3E00BDA350 /* OpenGLRendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLRendering.swift; sourceTree = "<group>"; };
+		45DAC7DD1E5B7B3E00BDA350 /* OperationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationGroup.swift; sourceTree = "<group>"; };
+		45DAC7DF1E5B7B3E00BDA350 /* AdaptiveThreshold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveThreshold.swift; sourceTree = "<group>"; };
+		45DAC7E01E5B7B3E00BDA350 /* AddBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBlend.swift; sourceTree = "<group>"; };
+		45DAC7E11E5B7B3E00BDA350 /* AlphaBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaBlend.swift; sourceTree = "<group>"; };
+		45DAC7E21E5B7B3E00BDA350 /* AmatorkaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmatorkaFilter.swift; sourceTree = "<group>"; };
+		45DAC7E31E5B7B3E00BDA350 /* AverageColorExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AverageColorExtractor.swift; sourceTree = "<group>"; };
+		45DAC7E41E5B7B3E00BDA350 /* AverageLuminanceExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AverageLuminanceExtractor.swift; sourceTree = "<group>"; };
+		45DAC7E51E5B7B3E00BDA350 /* AverageLuminanceThreshold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AverageLuminanceThreshold.swift; sourceTree = "<group>"; };
+		45DAC7E61E5B7B3E00BDA350 /* BilateralBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BilateralBlur.swift; sourceTree = "<group>"; };
+		45DAC7E71E5B7B3E00BDA350 /* BoxBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxBlur.swift; sourceTree = "<group>"; };
+		45DAC7E81E5B7B3E00BDA350 /* BrightnessAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightnessAdjustment.swift; sourceTree = "<group>"; };
+		45DAC7E91E5B7B3E00BDA350 /* BulgeDistortion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulgeDistortion.swift; sourceTree = "<group>"; };
+		45DAC7EA1E5B7B3E00BDA350 /* CannyEdgeDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CannyEdgeDetection.swift; sourceTree = "<group>"; };
+		45DAC7EB1E5B7B3E00BDA350 /* CGAColorspaceFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAColorspaceFilter.swift; sourceTree = "<group>"; };
+		45DAC7EC1E5B7B3E00BDA350 /* ChromaKeyBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromaKeyBlend.swift; sourceTree = "<group>"; };
+		45DAC7ED1E5B7B3E00BDA350 /* ChromaKeying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromaKeying.swift; sourceTree = "<group>"; };
+		45DAC7EE1E5B7B3E00BDA350 /* CircleGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGenerator.swift; sourceTree = "<group>"; };
+		45DAC7EF1E5B7B3E00BDA350 /* ClosingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosingFilter.swift; sourceTree = "<group>"; };
+		45DAC7F01E5B7B3E00BDA350 /* ColorBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorBlend.swift; sourceTree = "<group>"; };
+		45DAC7F11E5B7B3E00BDA350 /* ColorBurnBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorBurnBlend.swift; sourceTree = "<group>"; };
+		45DAC7F21E5B7B3E00BDA350 /* ColorDodgeBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDodgeBlend.swift; sourceTree = "<group>"; };
+		45DAC7F31E5B7B3E00BDA350 /* ColorInversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorInversion.swift; sourceTree = "<group>"; };
+		45DAC7F41E5B7B3E00BDA350 /* ColorLocalBinaryPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLocalBinaryPattern.swift; sourceTree = "<group>"; };
+		45DAC7F51E5B7B3E00BDA350 /* ColorMatrixFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatrixFilter.swift; sourceTree = "<group>"; };
+		45DAC7F61E5B7B3E00BDA350 /* ColourFASTFeatureDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourFASTFeatureDetection.swift; sourceTree = "<group>"; };
+		45DAC7F71E5B7B3E00BDA350 /* ContrastAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrastAdjustment.swift; sourceTree = "<group>"; };
+		45DAC7F81E5B7B3E00BDA350 /* Convolution3x3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convolution3x3.swift; sourceTree = "<group>"; };
+		45DAC7F91E5B7B3E00BDA350 /* Crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+		45DAC7FA1E5B7B3E00BDA350 /* CrosshairGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrosshairGenerator.swift; sourceTree = "<group>"; };
+		45DAC7FB1E5B7B3E00BDA350 /* Crosshatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crosshatch.swift; sourceTree = "<group>"; };
+		45DAC7FC1E5B7B3E00BDA350 /* DarkenBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkenBlend.swift; sourceTree = "<group>"; };
+		45DAC7FD1E5B7B3E00BDA350 /* DifferenceBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifferenceBlend.swift; sourceTree = "<group>"; };
+		45DAC7FE1E5B7B3E00BDA350 /* Dilation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dilation.swift; sourceTree = "<group>"; };
+		45DAC7FF1E5B7B3E00BDA350 /* DissolveBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissolveBlend.swift; sourceTree = "<group>"; };
+		45DAC8001E5B7B3E00BDA350 /* DivideBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideBlend.swift; sourceTree = "<group>"; };
+		45DAC8011E5B7B3E00BDA350 /* EmbossFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbossFilter.swift; sourceTree = "<group>"; };
+		45DAC8021E5B7B3E00BDA350 /* Erosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Erosion.swift; sourceTree = "<group>"; };
+		45DAC8031E5B7B3E00BDA350 /* ExclusionBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExclusionBlend.swift; sourceTree = "<group>"; };
+		45DAC8041E5B7B3E00BDA350 /* ExposureAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExposureAdjustment.swift; sourceTree = "<group>"; };
+		45DAC8051E5B7B3E00BDA350 /* FalseColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FalseColor.swift; sourceTree = "<group>"; };
+		45DAC8061E5B7B3E00BDA350 /* GammaAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GammaAdjustment.swift; sourceTree = "<group>"; };
+		45DAC8071E5B7B3E00BDA350 /* GaussianBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussianBlur.swift; sourceTree = "<group>"; };
+		45DAC8081E5B7B3E00BDA350 /* GlassSphereRefraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassSphereRefraction.swift; sourceTree = "<group>"; };
+		45DAC8091E5B7B3E00BDA350 /* Halftone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Halftone.swift; sourceTree = "<group>"; };
+		45DAC80A1E5B7B3E00BDA350 /* HardLightBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardLightBlend.swift; sourceTree = "<group>"; };
+		45DAC80B1E5B7B3E00BDA350 /* HarrisCornerDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarrisCornerDetector.swift; sourceTree = "<group>"; };
+		45DAC80C1E5B7B3E00BDA350 /* Haze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haze.swift; sourceTree = "<group>"; };
+		45DAC80D1E5B7B3E00BDA350 /* HighlightAndShadowTint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightAndShadowTint.swift; sourceTree = "<group>"; };
+		45DAC80E1E5B7B3E00BDA350 /* HighlightsAndShadows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightsAndShadows.swift; sourceTree = "<group>"; };
+		45DAC80F1E5B7B3E00BDA350 /* HighPassFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighPassFilter.swift; sourceTree = "<group>"; };
+		45DAC8101E5B7B3E00BDA350 /* Histogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Histogram.swift; sourceTree = "<group>"; };
+		45DAC8111E5B7B3E00BDA350 /* HistogramDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistogramDisplay.swift; sourceTree = "<group>"; };
+		45DAC8121E5B7B3E00BDA350 /* HistogramEqualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistogramEqualization.swift; sourceTree = "<group>"; };
+		45DAC8131E5B7B3E00BDA350 /* HueAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueAdjustment.swift; sourceTree = "<group>"; };
+		45DAC8141E5B7B3E00BDA350 /* HueBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueBlend.swift; sourceTree = "<group>"; };
+		45DAC8151E5B7B3E00BDA350 /* ImageBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBuffer.swift; sourceTree = "<group>"; };
+		45DAC8161E5B7B3E00BDA350 /* iOSBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSBlur.swift; sourceTree = "<group>"; };
+		45DAC8171E5B7B3E00BDA350 /* KuwaharaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KuwaharaFilter.swift; sourceTree = "<group>"; };
+		45DAC8181E5B7B3E00BDA350 /* KuwaharaRadius3Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KuwaharaRadius3Filter.swift; sourceTree = "<group>"; };
+		45DAC8191E5B7B3E00BDA350 /* LanczosResampling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanczosResampling.swift; sourceTree = "<group>"; };
+		45DAC81A1E5B7B3E00BDA350 /* Laplacian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Laplacian.swift; sourceTree = "<group>"; };
+		45DAC81B1E5B7B3E00BDA350 /* LevelsAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsAdjustment.swift; sourceTree = "<group>"; };
+		45DAC81C1E5B7B3E00BDA350 /* LightenBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightenBlend.swift; sourceTree = "<group>"; };
+		45DAC81D1E5B7B3E00BDA350 /* LinearBurnBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearBurnBlend.swift; sourceTree = "<group>"; };
+		45DAC81E1E5B7B3E00BDA350 /* LineGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGenerator.swift; sourceTree = "<group>"; };
+		45DAC81F1E5B7B3E00BDA350 /* LocalBinaryPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalBinaryPattern.swift; sourceTree = "<group>"; };
+		45DAC8201E5B7B3E00BDA350 /* LookupFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupFilter.swift; sourceTree = "<group>"; };
+		45DAC8221E5B7B3E00BDA350 /* lookup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup.png; sourceTree = "<group>"; };
+		45DAC8231E5B7B3E00BDA350 /* lookup_amatorka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_amatorka.png; sourceTree = "<group>"; };
+		45DAC8241E5B7B3E00BDA350 /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
+		45DAC8251E5B7B3E00BDA350 /* lookup_soft_elegance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_1.png; sourceTree = "<group>"; };
+		45DAC8261E5B7B3E00BDA350 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
+		45DAC8271E5B7B3E00BDA350 /* LowPassFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowPassFilter.swift; sourceTree = "<group>"; };
+		45DAC8281E5B7B3E00BDA350 /* Luminance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Luminance.swift; sourceTree = "<group>"; };
+		45DAC8291E5B7B3E00BDA350 /* LuminanceRangeReduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuminanceRangeReduction.swift; sourceTree = "<group>"; };
+		45DAC82A1E5B7B3E00BDA350 /* LuminanceThreshold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuminanceThreshold.swift; sourceTree = "<group>"; };
+		45DAC82B1E5B7B3E00BDA350 /* LuminosityBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuminosityBlend.swift; sourceTree = "<group>"; };
+		45DAC82C1E5B7B3E00BDA350 /* MedianFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedianFilter.swift; sourceTree = "<group>"; };
+		45DAC82D1E5B7B3E00BDA350 /* MissEtikateFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissEtikateFilter.swift; sourceTree = "<group>"; };
+		45DAC82E1E5B7B3E00BDA350 /* MonochromeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonochromeFilter.swift; sourceTree = "<group>"; };
+		45DAC82F1E5B7B3E00BDA350 /* MotionBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionBlur.swift; sourceTree = "<group>"; };
+		45DAC8301E5B7B3E00BDA350 /* MotionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetector.swift; sourceTree = "<group>"; };
+		45DAC8311E5B7B3E00BDA350 /* MultiplyBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplyBlend.swift; sourceTree = "<group>"; };
+		45DAC8321E5B7B3E00BDA350 /* NobleCornerDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NobleCornerDetector.swift; sourceTree = "<group>"; };
+		45DAC8331E5B7B3E00BDA350 /* NormalBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalBlend.swift; sourceTree = "<group>"; };
+		45DAC8341E5B7B3E00BDA350 /* OpacityAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpacityAdjustment.swift; sourceTree = "<group>"; };
+		45DAC8351E5B7B3E00BDA350 /* OpeningFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningFilter.swift; sourceTree = "<group>"; };
+		45DAC8361E5B7B3E00BDA350 /* OverlayBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayBlend.swift; sourceTree = "<group>"; };
+		45DAC8371E5B7B3E00BDA350 /* PinchDistortion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchDistortion.swift; sourceTree = "<group>"; };
+		45DAC8381E5B7B3E00BDA350 /* Pixellate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixellate.swift; sourceTree = "<group>"; };
+		45DAC8391E5B7B3E00BDA350 /* PolarPixellate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarPixellate.swift; sourceTree = "<group>"; };
+		45DAC83A1E5B7B3E00BDA350 /* PolkaDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolkaDot.swift; sourceTree = "<group>"; };
+		45DAC83B1E5B7B3E00BDA350 /* Posterize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posterize.swift; sourceTree = "<group>"; };
+		45DAC83C1E5B7B3E00BDA350 /* PrewittEdgeDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrewittEdgeDetection.swift; sourceTree = "<group>"; };
+		45DAC83D1E5B7B3E00BDA350 /* RGBAdjustmentFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAdjustmentFilter.swift; sourceTree = "<group>"; };
+		45DAC83E1E5B7B3E00BDA350 /* SaturationAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturationAdjustment.swift; sourceTree = "<group>"; };
+		45DAC83F1E5B7B3E00BDA350 /* SaturationBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturationBlend.swift; sourceTree = "<group>"; };
+		45DAC8401E5B7B3E00BDA350 /* ScreenBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBlend.swift; sourceTree = "<group>"; };
+		45DAC8411E5B7B3E00BDA350 /* SepiaToneFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepiaToneFilter.swift; sourceTree = "<group>"; };
+		45DAC8431E5B7B3E00BDA350 /* AdaptiveThreshold_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AdaptiveThreshold_GL.fsh; sourceTree = "<group>"; };
+		45DAC8441E5B7B3E00BDA350 /* AdaptiveThreshold_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AdaptiveThreshold_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8451E5B7B3E00BDA350 /* AddBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AddBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8461E5B7B3E00BDA350 /* AddBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AddBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8471E5B7B3E00BDA350 /* AlphaBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AlphaBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8481E5B7B3E00BDA350 /* AlphaBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AlphaBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8491E5B7B3E00BDA350 /* AlphaTest_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AlphaTest_GL.fsh; sourceTree = "<group>"; };
+		45DAC84A1E5B7B3E00BDA350 /* AlphaTest_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AlphaTest_GLES.fsh; sourceTree = "<group>"; };
+		45DAC84B1E5B7B3E00BDA350 /* AverageColor.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AverageColor.vsh; sourceTree = "<group>"; };
+		45DAC84C1E5B7B3E00BDA350 /* AverageColor_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AverageColor_GL.fsh; sourceTree = "<group>"; };
+		45DAC84D1E5B7B3E00BDA350 /* AverageColor_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AverageColor_GLES.fsh; sourceTree = "<group>"; };
+		45DAC84E1E5B7B3E00BDA350 /* AverageLuminance_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AverageLuminance_GL.fsh; sourceTree = "<group>"; };
+		45DAC84F1E5B7B3E00BDA350 /* AverageLuminance_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AverageLuminance_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8501E5B7B3E00BDA350 /* BilateralBlur.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BilateralBlur.vsh; sourceTree = "<group>"; };
+		45DAC8511E5B7B3E00BDA350 /* BilateralBlur_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BilateralBlur_GL.fsh; sourceTree = "<group>"; };
+		45DAC8521E5B7B3E00BDA350 /* BilateralBlur_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BilateralBlur_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8531E5B7B3E00BDA350 /* Brightness_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Brightness_GL.fsh; sourceTree = "<group>"; };
+		45DAC8541E5B7B3E00BDA350 /* Brightness_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Brightness_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8551E5B7B3F00BDA350 /* BulgeDistortion_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BulgeDistortion_GL.fsh; sourceTree = "<group>"; };
+		45DAC8561E5B7B3F00BDA350 /* BulgeDistortion_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BulgeDistortion_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8571E5B7B3F00BDA350 /* CGAColorspace_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CGAColorspace_GL.fsh; sourceTree = "<group>"; };
+		45DAC8581E5B7B3F00BDA350 /* CGAColorspace_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CGAColorspace_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8591E5B7B3F00BDA350 /* ChromaKey_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ChromaKey_GL.fsh; sourceTree = "<group>"; };
+		45DAC85A1E5B7B3F00BDA350 /* ChromaKey_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ChromaKey_GLES.fsh; sourceTree = "<group>"; };
+		45DAC85B1E5B7B3F00BDA350 /* ChromaKeyBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ChromaKeyBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC85C1E5B7B3F00BDA350 /* ChromaKeyBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ChromaKeyBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC85D1E5B7B3F00BDA350 /* Circle.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Circle.vsh; sourceTree = "<group>"; };
+		45DAC85E1E5B7B3F00BDA350 /* Circle_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Circle_GL.fsh; sourceTree = "<group>"; };
+		45DAC85F1E5B7B3F00BDA350 /* Circle_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Circle_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8601E5B7B3F00BDA350 /* ColorBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8611E5B7B3F00BDA350 /* ColorBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8621E5B7B3F00BDA350 /* ColorBurnBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorBurnBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8631E5B7B3F00BDA350 /* ColorBurnBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorBurnBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8641E5B7B3F00BDA350 /* ColorDodgeBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorDodgeBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8651E5B7B3F00BDA350 /* ColorDodgeBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorDodgeBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8661E5B7B3F00BDA350 /* ColorInvert_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorInvert_GL.fsh; sourceTree = "<group>"; };
+		45DAC8671E5B7B3F00BDA350 /* ColorInvert_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorInvert_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8681E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorLocalBinaryPattern_GL.fsh; sourceTree = "<group>"; };
+		45DAC8691E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorLocalBinaryPattern_GLES.fsh; sourceTree = "<group>"; };
+		45DAC86A1E5B7B3F00BDA350 /* ColorMatrix_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorMatrix_GL.fsh; sourceTree = "<group>"; };
+		45DAC86B1E5B7B3F00BDA350 /* ColorMatrix_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorMatrix_GLES.fsh; sourceTree = "<group>"; };
+		45DAC86C1E5B7B3F00BDA350 /* ColorSwizzling_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorSwizzling_GL.fsh; sourceTree = "<group>"; };
+		45DAC86D1E5B7B3F00BDA350 /* ColorSwizzling_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorSwizzling_GLES.fsh; sourceTree = "<group>"; };
+		45DAC86E1E5B7B3F00BDA350 /* ColourFASTDecriptor.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColourFASTDecriptor.vsh; sourceTree = "<group>"; };
+		45DAC86F1E5B7B3F00BDA350 /* ColourFASTDecriptor_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColourFASTDecriptor_GL.fsh; sourceTree = "<group>"; };
+		45DAC8701E5B7B3F00BDA350 /* ColourFASTDecriptor_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColourFASTDecriptor_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8711E5B7B3F00BDA350 /* Contrast_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Contrast_GL.fsh; sourceTree = "<group>"; };
+		45DAC8721E5B7B3F00BDA350 /* Contrast_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Contrast_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8731E5B7B3F00BDA350 /* ConvertedShaders_GL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertedShaders_GL.swift; sourceTree = "<group>"; };
+		45DAC8741E5B7B3F00BDA350 /* ConvertedShaders_GLES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertedShaders_GLES.swift; sourceTree = "<group>"; };
+		45DAC8751E5B7B3F00BDA350 /* Convolution3x3_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Convolution3x3_GL.fsh; sourceTree = "<group>"; };
+		45DAC8761E5B7B3F00BDA350 /* Convolution3x3_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Convolution3x3_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8771E5B7B3F00BDA350 /* Crosshair.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Crosshair.vsh; sourceTree = "<group>"; };
+		45DAC8781E5B7B3F00BDA350 /* Crosshair_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Crosshair_GL.fsh; sourceTree = "<group>"; };
+		45DAC8791E5B7B3F00BDA350 /* Crosshair_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Crosshair_GLES.fsh; sourceTree = "<group>"; };
+		45DAC87A1E5B7B3F00BDA350 /* Crosshatch_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Crosshatch_GL.fsh; sourceTree = "<group>"; };
+		45DAC87B1E5B7B3F00BDA350 /* Crosshatch_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Crosshatch_GLES.fsh; sourceTree = "<group>"; };
+		45DAC87C1E5B7B3F00BDA350 /* DarkenBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DarkenBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC87D1E5B7B3F00BDA350 /* DarkenBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DarkenBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC87E1E5B7B3F00BDA350 /* DifferenceBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DifferenceBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC87F1E5B7B3F00BDA350 /* DifferenceBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DifferenceBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8801E5B7B3F00BDA350 /* Dilation1_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation1_GL.fsh; sourceTree = "<group>"; };
+		45DAC8811E5B7B3F00BDA350 /* Dilation1_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation1_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8821E5B7B3F00BDA350 /* Dilation2_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation2_GL.fsh; sourceTree = "<group>"; };
+		45DAC8831E5B7B3F00BDA350 /* Dilation2_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation2_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8841E5B7B3F00BDA350 /* Dilation3_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation3_GL.fsh; sourceTree = "<group>"; };
+		45DAC8851E5B7B3F00BDA350 /* Dilation3_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation3_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8861E5B7B3F00BDA350 /* Dilation4_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation4_GL.fsh; sourceTree = "<group>"; };
+		45DAC8871E5B7B3F00BDA350 /* Dilation4_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Dilation4_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8881E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectionalNonMaximumSuppression_GL.fsh; sourceTree = "<group>"; };
+		45DAC8891E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectionalNonMaximumSuppression_GLES.fsh; sourceTree = "<group>"; };
+		45DAC88A1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectionalSobelEdgeDetection_GL.fsh; sourceTree = "<group>"; };
+		45DAC88B1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectionalSobelEdgeDetection_GLES.fsh; sourceTree = "<group>"; };
+		45DAC88C1E5B7B3F00BDA350 /* DissolveBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DissolveBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC88D1E5B7B3F00BDA350 /* DissolveBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DissolveBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC88E1E5B7B3F00BDA350 /* DivideBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DivideBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC88F1E5B7B3F00BDA350 /* DivideBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DivideBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8901E5B7B3F00BDA350 /* Erosion1_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion1_GL.fsh; sourceTree = "<group>"; };
+		45DAC8911E5B7B3F00BDA350 /* Erosion1_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion1_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8921E5B7B3F00BDA350 /* Erosion2_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion2_GL.fsh; sourceTree = "<group>"; };
+		45DAC8931E5B7B3F00BDA350 /* Erosion2_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion2_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8941E5B7B3F00BDA350 /* Erosion3_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion3_GL.fsh; sourceTree = "<group>"; };
+		45DAC8951E5B7B3F00BDA350 /* Erosion3_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion3_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8961E5B7B3F00BDA350 /* Erosion4_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion4_GL.fsh; sourceTree = "<group>"; };
+		45DAC8971E5B7B3F00BDA350 /* Erosion4_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Erosion4_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8981E5B7B3F00BDA350 /* ErosionDilation1.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ErosionDilation1.vsh; sourceTree = "<group>"; };
+		45DAC8991E5B7B3F00BDA350 /* ErosionDilation2.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ErosionDilation2.vsh; sourceTree = "<group>"; };
+		45DAC89A1E5B7B3F00BDA350 /* ErosionDilation3.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ErosionDilation3.vsh; sourceTree = "<group>"; };
+		45DAC89B1E5B7B3F00BDA350 /* ErosionDilation4.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ErosionDilation4.vsh; sourceTree = "<group>"; };
+		45DAC89C1E5B7B3F00BDA350 /* ExclusionBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ExclusionBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC89D1E5B7B3F00BDA350 /* ExclusionBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ExclusionBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC89E1E5B7B3F00BDA350 /* Exposure_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Exposure_GL.fsh; sourceTree = "<group>"; };
+		45DAC89F1E5B7B3F00BDA350 /* Exposure_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Exposure_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8A01E5B7B3F00BDA350 /* FalseColor_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FalseColor_GL.fsh; sourceTree = "<group>"; };
+		45DAC8A11E5B7B3F00BDA350 /* FalseColor_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FalseColor_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8A21E5B7B3F00BDA350 /* FiveInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FiveInput.vsh; sourceTree = "<group>"; };
+		45DAC8A31E5B7B3F00BDA350 /* FourInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FourInput.vsh; sourceTree = "<group>"; };
+		45DAC8A41E5B7B3F00BDA350 /* Gamma_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gamma_GL.fsh; sourceTree = "<group>"; };
+		45DAC8A51E5B7B3F00BDA350 /* Gamma_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gamma_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8A61E5B7B3F00BDA350 /* GlassSphere_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GlassSphere_GL.fsh; sourceTree = "<group>"; };
+		45DAC8A71E5B7B3F00BDA350 /* GlassSphere_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GlassSphere_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8A81E5B7B3F00BDA350 /* Halftone_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Halftone_GL.fsh; sourceTree = "<group>"; };
+		45DAC8A91E5B7B3F00BDA350 /* Halftone_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Halftone_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8AA1E5B7B3F00BDA350 /* HardLightBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HardLightBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8AB1E5B7B3F00BDA350 /* HardLightBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HardLightBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8AC1E5B7B3F00BDA350 /* HarrisCornerDetector_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HarrisCornerDetector_GL.fsh; sourceTree = "<group>"; };
+		45DAC8AD1E5B7B3F00BDA350 /* HarrisCornerDetector_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HarrisCornerDetector_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8AE1E5B7B3F00BDA350 /* Haze_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Haze_GL.fsh; sourceTree = "<group>"; };
+		45DAC8AF1E5B7B3F00BDA350 /* Haze_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Haze_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8B01E5B7B3F00BDA350 /* HighlightShadow_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HighlightShadow_GL.fsh; sourceTree = "<group>"; };
+		45DAC8B11E5B7B3F00BDA350 /* HighlightShadow_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HighlightShadow_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8B21E5B7B3F00BDA350 /* HighlightShadowTint_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HighlightShadowTint_GL.fsh; sourceTree = "<group>"; };
+		45DAC8B31E5B7B3F00BDA350 /* HighlightShadowTint_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HighlightShadowTint_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8B41E5B7B3F00BDA350 /* HistogramAccumulation_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramAccumulation_GL.fsh; sourceTree = "<group>"; };
+		45DAC8B51E5B7B3F00BDA350 /* HistogramAccumulation_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramAccumulation_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8B61E5B7B3F00BDA350 /* HistogramBlueSampling.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramBlueSampling.vsh; sourceTree = "<group>"; };
+		45DAC8B71E5B7B3F00BDA350 /* HistogramDisplay.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramDisplay.vsh; sourceTree = "<group>"; };
+		45DAC8B81E5B7B3F00BDA350 /* HistogramDisplay_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramDisplay_GL.fsh; sourceTree = "<group>"; };
+		45DAC8B91E5B7B3F00BDA350 /* HistogramDisplay_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramDisplay_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8BA1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationBlue_GL.fsh; sourceTree = "<group>"; };
+		45DAC8BB1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationBlue_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8BC1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationGreen_GL.fsh; sourceTree = "<group>"; };
+		45DAC8BD1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationGreen_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8BE1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationLuminance_GL.fsh; sourceTree = "<group>"; };
+		45DAC8BF1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationLuminance_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8C01E5B7B3F00BDA350 /* HistogramEqualizationRed_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationRed_GL.fsh; sourceTree = "<group>"; };
+		45DAC8C11E5B7B3F00BDA350 /* HistogramEqualizationRed_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationRed_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8C21E5B7B3F00BDA350 /* HistogramEqualizationRGB_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationRGB_GL.fsh; sourceTree = "<group>"; };
+		45DAC8C31E5B7B3F00BDA350 /* HistogramEqualizationRGB_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramEqualizationRGB_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8C41E5B7B3F00BDA350 /* HistogramGreenSampling.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramGreenSampling.vsh; sourceTree = "<group>"; };
+		45DAC8C51E5B7B3F00BDA350 /* HistogramLuminanceSampling.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramLuminanceSampling.vsh; sourceTree = "<group>"; };
+		45DAC8C61E5B7B3F00BDA350 /* HistogramRedSampling.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HistogramRedSampling.vsh; sourceTree = "<group>"; };
+		45DAC8C71E5B7B3F00BDA350 /* Hue_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Hue_GL.fsh; sourceTree = "<group>"; };
+		45DAC8C81E5B7B3F00BDA350 /* Hue_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Hue_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8C91E5B7B3F00BDA350 /* HueBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HueBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8CA1E5B7B3F00BDA350 /* HueBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HueBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8CB1E5B7B3F00BDA350 /* Kuwahara_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Kuwahara_GL.fsh; sourceTree = "<group>"; };
+		45DAC8CC1E5B7B3F00BDA350 /* Kuwahara_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Kuwahara_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8CD1E5B7B3F00BDA350 /* KuwaharaRadius3_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = KuwaharaRadius3_GL.fsh; sourceTree = "<group>"; };
+		45DAC8CE1E5B7B3F00BDA350 /* KuwaharaRadius3_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = KuwaharaRadius3_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8CF1E5B7B3F00BDA350 /* LanczosResampling.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LanczosResampling.vsh; sourceTree = "<group>"; };
+		45DAC8D01E5B7B3F00BDA350 /* LanczosResampling_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LanczosResampling_GL.fsh; sourceTree = "<group>"; };
+		45DAC8D11E5B7B3F00BDA350 /* LanczosResampling_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LanczosResampling_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8D21E5B7B3F00BDA350 /* Laplacian_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Laplacian_GL.fsh; sourceTree = "<group>"; };
+		45DAC8D31E5B7B3F00BDA350 /* Laplacian_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Laplacian_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8D41E5B7B3F00BDA350 /* Levels_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Levels_GL.fsh; sourceTree = "<group>"; };
+		45DAC8D51E5B7B3F00BDA350 /* Levels_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Levels_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8D61E5B7B3F00BDA350 /* LightenBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LightenBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8D71E5B7B3F00BDA350 /* LightenBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LightenBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8D81E5B7B3F00BDA350 /* Line.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Line.vsh; sourceTree = "<group>"; };
+		45DAC8D91E5B7B3F00BDA350 /* Line_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Line_GL.fsh; sourceTree = "<group>"; };
+		45DAC8DA1E5B7B3F00BDA350 /* Line_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Line_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8DB1E5B7B3F00BDA350 /* LinearBurnBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LinearBurnBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8DC1E5B7B3F00BDA350 /* LinearBurnBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LinearBurnBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8DD1E5B7B3F00BDA350 /* LocalBinaryPattern_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LocalBinaryPattern_GL.fsh; sourceTree = "<group>"; };
+		45DAC8DE1E5B7B3F00BDA350 /* LocalBinaryPattern_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LocalBinaryPattern_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8DF1E5B7B3F00BDA350 /* Lookup_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lookup_GL.fsh; sourceTree = "<group>"; };
+		45DAC8E01E5B7B3F00BDA350 /* Lookup_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lookup_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8E11E5B7B3F00BDA350 /* Luminance_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Luminance_GL.fsh; sourceTree = "<group>"; };
+		45DAC8E21E5B7B3F00BDA350 /* Luminance_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Luminance_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8E31E5B7B3F00BDA350 /* LuminanceRange_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LuminanceRange_GL.fsh; sourceTree = "<group>"; };
+		45DAC8E41E5B7B3F00BDA350 /* LuminanceRange_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LuminanceRange_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8E51E5B7B3F00BDA350 /* LuminanceThreshold_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LuminanceThreshold_GL.fsh; sourceTree = "<group>"; };
+		45DAC8E61E5B7B3F00BDA350 /* LuminanceThreshold_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LuminanceThreshold_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8E71E5B7B3F00BDA350 /* LuminosityBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LuminosityBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8E81E5B7B3F00BDA350 /* LuminosityBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LuminosityBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8E91E5B7B3F00BDA350 /* Median_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Median_GL.fsh; sourceTree = "<group>"; };
+		45DAC8EA1E5B7B3F00BDA350 /* Median_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Median_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8EB1E5B7B3F00BDA350 /* Monochrome_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Monochrome_GL.fsh; sourceTree = "<group>"; };
+		45DAC8EC1E5B7B3F00BDA350 /* Monochrome_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Monochrome_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8ED1E5B7B3F00BDA350 /* MotionBlur.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MotionBlur.vsh; sourceTree = "<group>"; };
+		45DAC8EE1E5B7B3F00BDA350 /* MotionBlur_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MotionBlur_GL.fsh; sourceTree = "<group>"; };
+		45DAC8EF1E5B7B3F00BDA350 /* MotionBlur_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MotionBlur_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8F01E5B7B3F00BDA350 /* MotionComparison_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MotionComparison_GL.fsh; sourceTree = "<group>"; };
+		45DAC8F11E5B7B3F00BDA350 /* MotionComparison_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MotionComparison_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8F21E5B7B3F00BDA350 /* MultiplyBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MultiplyBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8F31E5B7B3F00BDA350 /* MultiplyBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = MultiplyBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8F41E5B7B3F00BDA350 /* NearbyTexelSampling.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NearbyTexelSampling.vsh; sourceTree = "<group>"; };
+		45DAC8F51E5B7B3F00BDA350 /* NobleCornerDetector_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NobleCornerDetector_GL.fsh; sourceTree = "<group>"; };
+		45DAC8F61E5B7B3F00BDA350 /* NobleCornerDetector_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NobleCornerDetector_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8F71E5B7B3F00BDA350 /* NormalBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NormalBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8F81E5B7B3F00BDA350 /* NormalBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NormalBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8F91E5B7B3F00BDA350 /* OneInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = OneInput.vsh; sourceTree = "<group>"; };
+		45DAC8FA1E5B7B3F00BDA350 /* Opacity_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Opacity_GL.fsh; sourceTree = "<group>"; };
+		45DAC8FB1E5B7B3F00BDA350 /* Opacity_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Opacity_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8FC1E5B7B3F00BDA350 /* OverlayBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = OverlayBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC8FD1E5B7B3F00BDA350 /* OverlayBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = OverlayBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC8FE1E5B7B3F00BDA350 /* Passthrough_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Passthrough_GL.fsh; sourceTree = "<group>"; };
+		45DAC8FF1E5B7B3F00BDA350 /* Passthrough_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Passthrough_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9001E5B7B3F00BDA350 /* PinchDistortion_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PinchDistortion_GL.fsh; sourceTree = "<group>"; };
+		45DAC9011E5B7B3F00BDA350 /* PinchDistortion_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PinchDistortion_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9021E5B7B3F00BDA350 /* Pixellate_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Pixellate_GL.fsh; sourceTree = "<group>"; };
+		45DAC9031E5B7B3F00BDA350 /* Pixellate_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Pixellate_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9041E5B7B3F00BDA350 /* PolarPixellate_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PolarPixellate_GL.fsh; sourceTree = "<group>"; };
+		45DAC9051E5B7B3F00BDA350 /* PolarPixellate_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PolarPixellate_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9061E5B7B3F00BDA350 /* PolkaDot_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PolkaDot_GL.fsh; sourceTree = "<group>"; };
+		45DAC9071E5B7B3F00BDA350 /* PolkaDot_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PolkaDot_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9081E5B7B3F00BDA350 /* Posterize_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Posterize_GL.fsh; sourceTree = "<group>"; };
+		45DAC9091E5B7B3F00BDA350 /* Posterize_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Posterize_GLES.fsh; sourceTree = "<group>"; };
+		45DAC90A1E5B7B3F00BDA350 /* PrewittEdgeDetection_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PrewittEdgeDetection_GL.fsh; sourceTree = "<group>"; };
+		45DAC90B1E5B7B3F00BDA350 /* PrewittEdgeDetection_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PrewittEdgeDetection_GLES.fsh; sourceTree = "<group>"; };
+		45DAC90C1E5B7B3F00BDA350 /* RGBAdjustment_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = RGBAdjustment_GL.fsh; sourceTree = "<group>"; };
+		45DAC90D1E5B7B3F00BDA350 /* RGBAdjustment_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = RGBAdjustment_GLES.fsh; sourceTree = "<group>"; };
+		45DAC90E1E5B7B3F00BDA350 /* Saturation_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Saturation_GL.fsh; sourceTree = "<group>"; };
+		45DAC90F1E5B7B3F00BDA350 /* Saturation_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Saturation_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9101E5B7B3F00BDA350 /* SaturationBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SaturationBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC9111E5B7B3F00BDA350 /* SaturationBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SaturationBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9121E5B7B3F00BDA350 /* ScreenBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ScreenBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC9131E5B7B3F00BDA350 /* ScreenBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ScreenBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9141E5B7B3F00BDA350 /* ShaderConverter.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ShaderConverter.sh; sourceTree = "<group>"; };
+		45DAC9151E5B7B3F00BDA350 /* Sharpen.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Sharpen.vsh; sourceTree = "<group>"; };
+		45DAC9161E5B7B3F00BDA350 /* Sharpen_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Sharpen_GL.fsh; sourceTree = "<group>"; };
+		45DAC9171E5B7B3F00BDA350 /* Sharpen_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Sharpen_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9181E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShiTomasiFeatureDetector_GL.fsh; sourceTree = "<group>"; };
+		45DAC9191E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShiTomasiFeatureDetector_GLES.fsh; sourceTree = "<group>"; };
+		45DAC91A1E5B7B3F00BDA350 /* Sketch_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Sketch_GL.fsh; sourceTree = "<group>"; };
+		45DAC91B1E5B7B3F00BDA350 /* Sketch_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Sketch_GLES.fsh; sourceTree = "<group>"; };
+		45DAC91C1E5B7B3F00BDA350 /* SobelEdgeDetection_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SobelEdgeDetection_GL.fsh; sourceTree = "<group>"; };
+		45DAC91D1E5B7B3F00BDA350 /* SobelEdgeDetection_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SobelEdgeDetection_GLES.fsh; sourceTree = "<group>"; };
+		45DAC91E1E5B7B3F00BDA350 /* SoftLightBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SoftLightBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC91F1E5B7B3F00BDA350 /* SoftLightBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SoftLightBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9201E5B7B3F00BDA350 /* Solarize_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Solarize_GL.fsh; sourceTree = "<group>"; };
+		45DAC9211E5B7B3F00BDA350 /* Solarize_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Solarize_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9221E5B7B3F00BDA350 /* SourceOverBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SourceOverBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC9231E5B7B3F00BDA350 /* SourceOverBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SourceOverBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9241E5B7B3F00BDA350 /* SphereRefraction_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SphereRefraction_GL.fsh; sourceTree = "<group>"; };
+		45DAC9251E5B7B3F00BDA350 /* SphereRefraction_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SphereRefraction_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9261E5B7B3F00BDA350 /* StretchDistortion_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = StretchDistortion_GL.fsh; sourceTree = "<group>"; };
+		45DAC9271E5B7B3F00BDA350 /* StretchDistortion_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = StretchDistortion_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9281E5B7B3F00BDA350 /* SubtractBlend_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SubtractBlend_GL.fsh; sourceTree = "<group>"; };
+		45DAC9291E5B7B3F00BDA350 /* SubtractBlend_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SubtractBlend_GLES.fsh; sourceTree = "<group>"; };
+		45DAC92A1E5B7B3F00BDA350 /* Swirl_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Swirl_GL.fsh; sourceTree = "<group>"; };
+		45DAC92B1E5B7B3F00BDA350 /* Swirl_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Swirl_GLES.fsh; sourceTree = "<group>"; };
+		45DAC92C1E5B7B3F00BDA350 /* ThreeInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThreeInput.vsh; sourceTree = "<group>"; };
+		45DAC92D1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThresholdEdgeDetection_GL.fsh; sourceTree = "<group>"; };
+		45DAC92E1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThresholdEdgeDetection_GLES.fsh; sourceTree = "<group>"; };
+		45DAC92F1E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThresholdedNonMaximumSuppression_GL.fsh; sourceTree = "<group>"; };
+		45DAC9301E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThresholdedNonMaximumSuppression_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9311E5B7B3F00BDA350 /* ThresholdSketch_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThresholdSketch_GL.fsh; sourceTree = "<group>"; };
+		45DAC9321E5B7B3F00BDA350 /* ThresholdSketch_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThresholdSketch_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9331E5B7B3F00BDA350 /* TiltShift_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TiltShift_GL.fsh; sourceTree = "<group>"; };
+		45DAC9341E5B7B3F00BDA350 /* TiltShift_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TiltShift_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9351E5B7B3F00BDA350 /* Toon_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Toon_GL.fsh; sourceTree = "<group>"; };
+		45DAC9361E5B7B3F00BDA350 /* Toon_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Toon_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9371E5B7B3F00BDA350 /* Transform.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Transform.vsh; sourceTree = "<group>"; };
+		45DAC9381E5B7B3F00BDA350 /* TwoInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TwoInput.vsh; sourceTree = "<group>"; };
+		45DAC9391E5B7B3F00BDA350 /* UnsharpMask_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = UnsharpMask_GL.fsh; sourceTree = "<group>"; };
+		45DAC93A1E5B7B3F00BDA350 /* UnsharpMask_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = UnsharpMask_GLES.fsh; sourceTree = "<group>"; };
+		45DAC93B1E5B7B3F00BDA350 /* Vibrance_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Vibrance_GL.fsh; sourceTree = "<group>"; };
+		45DAC93C1E5B7B3F00BDA350 /* Vibrance_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Vibrance_GLES.fsh; sourceTree = "<group>"; };
+		45DAC93D1E5B7B3F00BDA350 /* Vignette_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Vignette_GL.fsh; sourceTree = "<group>"; };
+		45DAC93E1E5B7B3F00BDA350 /* Vignette_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Vignette_GLES.fsh; sourceTree = "<group>"; };
+		45DAC93F1E5B7B3F00BDA350 /* WeakPixelInclusion_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = WeakPixelInclusion_GL.fsh; sourceTree = "<group>"; };
+		45DAC9401E5B7B3F00BDA350 /* WeakPixelInclusion_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = WeakPixelInclusion_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9411E5B7B3F00BDA350 /* WhiteBalance_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = WhiteBalance_GL.fsh; sourceTree = "<group>"; };
+		45DAC9421E5B7B3F00BDA350 /* WhiteBalance_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = WhiteBalance_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9431E5B7B3F00BDA350 /* XYDerivative_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = XYDerivative_GL.fsh; sourceTree = "<group>"; };
+		45DAC9441E5B7B3F00BDA350 /* XYDerivative_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = XYDerivative_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9451E5B7B3F00BDA350 /* YUVConversionFullRange_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = YUVConversionFullRange_GL.fsh; sourceTree = "<group>"; };
+		45DAC9461E5B7B3F00BDA350 /* YUVConversionFullRange_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = YUVConversionFullRange_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9471E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = YUVConversionFullRangeUVPlanar_GL.fsh; sourceTree = "<group>"; };
+		45DAC9481E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = YUVConversionFullRangeUVPlanar_GLES.fsh; sourceTree = "<group>"; };
+		45DAC9491E5B7B3F00BDA350 /* YUVConversionVideoRange_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = YUVConversionVideoRange_GL.fsh; sourceTree = "<group>"; };
+		45DAC94A1E5B7B3F00BDA350 /* YUVConversionVideoRange_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = YUVConversionVideoRange_GLES.fsh; sourceTree = "<group>"; };
+		45DAC94B1E5B7B3F00BDA350 /* ZoomBlur_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ZoomBlur_GL.fsh; sourceTree = "<group>"; };
+		45DAC94C1E5B7B3F00BDA350 /* ZoomBlur_GLES.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ZoomBlur_GLES.fsh; sourceTree = "<group>"; };
+		45DAC94D1E5B7B3F00BDA350 /* Sharpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sharpen.swift; sourceTree = "<group>"; };
+		45DAC94E1E5B7B3F00BDA350 /* ShiTomasiFeatureDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiTomasiFeatureDetector.swift; sourceTree = "<group>"; };
+		45DAC94F1E5B7B3F00BDA350 /* SingleComponentGaussianBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleComponentGaussianBlur.swift; sourceTree = "<group>"; };
+		45DAC9501E5B7B3F00BDA350 /* SketchFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SketchFilter.swift; sourceTree = "<group>"; };
+		45DAC9511E5B7B3F00BDA350 /* SmoothToonFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothToonFilter.swift; sourceTree = "<group>"; };
+		45DAC9521E5B7B3F00BDA350 /* SobelEdgeDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobelEdgeDetection.swift; sourceTree = "<group>"; };
+		45DAC9531E5B7B3F00BDA350 /* SoftElegance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftElegance.swift; sourceTree = "<group>"; };
+		45DAC9541E5B7B3F00BDA350 /* SoftLightBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftLightBlend.swift; sourceTree = "<group>"; };
+		45DAC9551E5B7B3F00BDA350 /* Solarize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solarize.swift; sourceTree = "<group>"; };
+		45DAC9561E5B7B3F00BDA350 /* SolidColorGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidColorGenerator.swift; sourceTree = "<group>"; };
+		45DAC9571E5B7B3F00BDA350 /* SourceOverBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceOverBlend.swift; sourceTree = "<group>"; };
+		45DAC9581E5B7B3F00BDA350 /* SphereRefraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SphereRefraction.swift; sourceTree = "<group>"; };
+		45DAC9591E5B7B3F00BDA350 /* StretchDistortion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchDistortion.swift; sourceTree = "<group>"; };
+		45DAC95A1E5B7B3F00BDA350 /* SubtractBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractBlend.swift; sourceTree = "<group>"; };
+		45DAC95B1E5B7B3F00BDA350 /* SwirlDistortion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwirlDistortion.swift; sourceTree = "<group>"; };
+		45DAC95C1E5B7B3F00BDA350 /* ThresholdSketch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdSketch.swift; sourceTree = "<group>"; };
+		45DAC95D1E5B7B3F00BDA350 /* ThresholdSobelEdgeDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdSobelEdgeDetection.swift; sourceTree = "<group>"; };
+		45DAC95E1E5B7B3F00BDA350 /* TiltShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiltShift.swift; sourceTree = "<group>"; };
+		45DAC95F1E5B7B3F00BDA350 /* ToonFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToonFilter.swift; sourceTree = "<group>"; };
+		45DAC9601E5B7B3F00BDA350 /* TransformOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformOperation.swift; sourceTree = "<group>"; };
+		45DAC9611E5B7B3F00BDA350 /* UnsharpMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsharpMask.swift; sourceTree = "<group>"; };
+		45DAC9621E5B7B3F00BDA350 /* Vibrance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vibrance.swift; sourceTree = "<group>"; };
+		45DAC9631E5B7B3F00BDA350 /* Vignette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vignette.swift; sourceTree = "<group>"; };
+		45DAC9641E5B7B3F00BDA350 /* WhiteBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteBalance.swift; sourceTree = "<group>"; };
+		45DAC9651E5B7B3F00BDA350 /* ZoomBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomBlur.swift; sourceTree = "<group>"; };
+		45DAC9661E5B7B3F00BDA350 /* Pipeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
+		45DAC9671E5B7B3F00BDA350 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		45DAC9681E5B7B3F00BDA350 /* RawDataInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawDataInput.swift; sourceTree = "<group>"; };
+		45DAC9691E5B7B3F00BDA350 /* RawDataOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawDataOutput.swift; sourceTree = "<group>"; };
+		45DAC96A1E5B7B3F00BDA350 /* SerialDispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialDispatch.swift; sourceTree = "<group>"; };
+		45DAC96B1E5B7B3F00BDA350 /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
+		45DAC96C1E5B7B3F00BDA350 /* ShaderUniformSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderUniformSettings.swift; sourceTree = "<group>"; };
+		45DAC96D1E5B7B3F00BDA350 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		45DAC96E1E5B7B3F00BDA350 /* TextureInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureInput.swift; sourceTree = "<group>"; };
+		45DAC96F1E5B7B3F00BDA350 /* TextureOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureOutput.swift; sourceTree = "<group>"; };
+		45DAC9701E5B7B3F00BDA350 /* TextureSamplingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureSamplingOperation.swift; sourceTree = "<group>"; };
+		45DAC9711E5B7B3F00BDA350 /* Timestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
+		45DAC9721E5B7B3F00BDA350 /* TwoStageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoStageOperation.swift; sourceTree = "<group>"; };
+		45DAC9741E5B7B3F00BDA350 /* Pipeline_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pipeline_Tests.swift; sourceTree = "<group>"; };
+		45DAC9751E5B7B3F00BDA350 /* ShaderProgram_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram_Tests.swift; sourceTree = "<group>"; };
 		45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImportViewController.swift; sourceTree = "<group>"; };
 		45E535311DFF7D100047FA9C /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		45F4632A1DF8B00000CE87BE /* StorytellingVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytellingVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,12 +809,599 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DACB401E5B7BA700BDA350 /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45DAC79D1E5B7B3E00BDA350 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC79E1E5B7B3E00BDA350 /* compile-LinuxGL.sh */,
+				45DAC79F1E5B7B3E00BDA350 /* compile-LinuxRPi.sh */,
+				45DAC7A01E5B7B3E00BDA350 /* GPUImage.xcodeproj */,
+				45DAC7A31E5B7B3E00BDA350 /* LinuxCompilationGenerator.sh */,
+				45DAC7A41E5B7B3E00BDA350 /* Package.swift */,
+				45DAC7A51E5B7B3E00BDA350 /* Packages */,
+				45DAC7B81E5B7B3E00BDA350 /* Source */,
+				45DAC9731E5B7B3F00BDA350 /* Tests */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		45DAC7A11E5B7B3E00BDA350 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45DACB391E5B7B4000BDA350 /* GPUImage.framework */,
+				45DACB3B1E5B7B4000BDA350 /* GPUImageTests_macOS.xctest */,
+				45DACB3D1E5B7B4000BDA350 /* GPUImage.framework */,
+				45DACB3F1E5B7B4000BDA350 /* GPUImageTests_iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45DAC7A51E5B7B3E00BDA350 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7A61E5B7B3E00BDA350 /* CFreeGLUT */,
+				45DAC7AA1E5B7B3E00BDA350 /* COpenGL */,
+				45DAC7AE1E5B7B3E00BDA350 /* COpenGLES */,
+				45DAC7B11E5B7B3E00BDA350 /* CVideo4Linux */,
+				45DAC7B51E5B7B3E00BDA350 /* CVideoCore */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		45DAC7A61E5B7B3E00BDA350 /* CFreeGLUT */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7A71E5B7B3E00BDA350 /* module.modulemap */,
+				45DAC7A81E5B7B3E00BDA350 /* Package.swift */,
+				45DAC7A91E5B7B3E00BDA350 /* README.md */,
+			);
+			path = CFreeGLUT;
+			sourceTree = "<group>";
+		};
+		45DAC7AA1E5B7B3E00BDA350 /* COpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7AB1E5B7B3E00BDA350 /* module.modulemap */,
+				45DAC7AC1E5B7B3E00BDA350 /* Package.swift */,
+				45DAC7AD1E5B7B3E00BDA350 /* proto.h */,
+			);
+			path = COpenGL;
+			sourceTree = "<group>";
+		};
+		45DAC7AE1E5B7B3E00BDA350 /* COpenGLES */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7AF1E5B7B3E00BDA350 /* module.modulemap */,
+				45DAC7B01E5B7B3E00BDA350 /* Package.swift */,
+			);
+			path = COpenGLES;
+			sourceTree = "<group>";
+		};
+		45DAC7B11E5B7B3E00BDA350 /* CVideo4Linux */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7B21E5B7B3E00BDA350 /* module.modulemap */,
+				45DAC7B31E5B7B3E00BDA350 /* Package.swift */,
+				45DAC7B41E5B7B3E00BDA350 /* stubs.h */,
+			);
+			path = CVideo4Linux;
+			sourceTree = "<group>";
+		};
+		45DAC7B51E5B7B3E00BDA350 /* CVideoCore */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7B61E5B7B3E00BDA350 /* module.modulemap */,
+				45DAC7B71E5B7B3E00BDA350 /* Package.swift */,
+			);
+			path = CVideoCore;
+			sourceTree = "<group>";
+		};
+		45DAC7B81E5B7B3E00BDA350 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7B91E5B7B3E00BDA350 /* BasicOperation.swift */,
+				45DAC7BA1E5B7B3E00BDA350 /* CameraConversion.swift */,
+				45DAC7BB1E5B7B3E00BDA350 /* Color.swift */,
+				45DAC7BC1E5B7B3E00BDA350 /* FillMode.swift */,
+				45DAC7BD1E5B7B3E00BDA350 /* Framebuffer.swift */,
+				45DAC7BE1E5B7B3E00BDA350 /* FramebufferCache.swift */,
+				45DAC7BF1E5B7B3E00BDA350 /* ImageGenerator.swift */,
+				45DAC7C01E5B7B3E00BDA350 /* ImageOrientation.swift */,
+				45DAC7C11E5B7B3E00BDA350 /* iOS */,
+				45DAC7CA1E5B7B3E00BDA350 /* Linux */,
+				45DAC7D21E5B7B3E00BDA350 /* Mac */,
+				45DAC7DA1E5B7B3E00BDA350 /* Matrix.swift */,
+				45DAC7DB1E5B7B3E00BDA350 /* OpenGLContext_Shared.swift */,
+				45DAC7DC1E5B7B3E00BDA350 /* OpenGLRendering.swift */,
+				45DAC7DD1E5B7B3E00BDA350 /* OperationGroup.swift */,
+				45DAC7DE1E5B7B3E00BDA350 /* Operations */,
+				45DAC9661E5B7B3F00BDA350 /* Pipeline.swift */,
+				45DAC9671E5B7B3F00BDA350 /* Position.swift */,
+				45DAC9681E5B7B3F00BDA350 /* RawDataInput.swift */,
+				45DAC9691E5B7B3F00BDA350 /* RawDataOutput.swift */,
+				45DAC96A1E5B7B3F00BDA350 /* SerialDispatch.swift */,
+				45DAC96B1E5B7B3F00BDA350 /* ShaderProgram.swift */,
+				45DAC96C1E5B7B3F00BDA350 /* ShaderUniformSettings.swift */,
+				45DAC96D1E5B7B3F00BDA350 /* Size.swift */,
+				45DAC96E1E5B7B3F00BDA350 /* TextureInput.swift */,
+				45DAC96F1E5B7B3F00BDA350 /* TextureOutput.swift */,
+				45DAC9701E5B7B3F00BDA350 /* TextureSamplingOperation.swift */,
+				45DAC9711E5B7B3F00BDA350 /* Timestamp.swift */,
+				45DAC9721E5B7B3F00BDA350 /* TwoStageOperation.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		45DAC7C11E5B7B3E00BDA350 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7C21E5B7B3E00BDA350 /* Camera.swift */,
+				45DAC7C31E5B7B3E00BDA350 /* GPUImage.h */,
+				45DAC7C41E5B7B3E00BDA350 /* MovieInput.swift */,
+				45DAC7C51E5B7B3E00BDA350 /* MovieOutput.swift */,
+				45DAC7C61E5B7B3E00BDA350 /* OpenGLContext.swift */,
+				45DAC7C71E5B7B3E00BDA350 /* PictureInput.swift */,
+				45DAC7C81E5B7B3E00BDA350 /* PictureOutput.swift */,
+				45DAC7C91E5B7B3E00BDA350 /* RenderView.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		45DAC7CA1E5B7B3E00BDA350 /* Linux */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7CB1E5B7B3E00BDA350 /* GLUTRenderWindow.swift */,
+				45DAC7CC1E5B7B3E00BDA350 /* OpenGLContext-RPi.swift */,
+				45DAC7CD1E5B7B3E00BDA350 /* OpenGLContext.swift */,
+				45DAC7CE1E5B7B3E00BDA350 /* RPiRenderWindow.swift */,
+				45DAC7CF1E5B7B3E00BDA350 /* V4LCamera.swift */,
+				45DAC7D01E5B7B3E00BDA350 /* v4lfuncs.c */,
+				45DAC7D11E5B7B3E00BDA350 /* v4lfuncs.h */,
+			);
+			path = Linux;
+			sourceTree = "<group>";
+		};
+		45DAC7D21E5B7B3E00BDA350 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7D31E5B7B3E00BDA350 /* Camera.swift */,
+				45DAC7D41E5B7B3E00BDA350 /* MovieInput.swift */,
+				45DAC7D51E5B7B3E00BDA350 /* MovieOutput.swift */,
+				45DAC7D61E5B7B3E00BDA350 /* OpenGLContext.swift */,
+				45DAC7D71E5B7B3E00BDA350 /* PictureInput.swift */,
+				45DAC7D81E5B7B3E00BDA350 /* PictureOutput.swift */,
+				45DAC7D91E5B7B3E00BDA350 /* RenderView.swift */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		45DAC7DE1E5B7B3E00BDA350 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC7DF1E5B7B3E00BDA350 /* AdaptiveThreshold.swift */,
+				45DAC7E01E5B7B3E00BDA350 /* AddBlend.swift */,
+				45DAC7E11E5B7B3E00BDA350 /* AlphaBlend.swift */,
+				45DAC7E21E5B7B3E00BDA350 /* AmatorkaFilter.swift */,
+				45DAC7E31E5B7B3E00BDA350 /* AverageColorExtractor.swift */,
+				45DAC7E41E5B7B3E00BDA350 /* AverageLuminanceExtractor.swift */,
+				45DAC7E51E5B7B3E00BDA350 /* AverageLuminanceThreshold.swift */,
+				45DAC7E61E5B7B3E00BDA350 /* BilateralBlur.swift */,
+				45DAC7E71E5B7B3E00BDA350 /* BoxBlur.swift */,
+				45DAC7E81E5B7B3E00BDA350 /* BrightnessAdjustment.swift */,
+				45DAC7E91E5B7B3E00BDA350 /* BulgeDistortion.swift */,
+				45DAC7EA1E5B7B3E00BDA350 /* CannyEdgeDetection.swift */,
+				45DAC7EB1E5B7B3E00BDA350 /* CGAColorspaceFilter.swift */,
+				45DAC7EC1E5B7B3E00BDA350 /* ChromaKeyBlend.swift */,
+				45DAC7ED1E5B7B3E00BDA350 /* ChromaKeying.swift */,
+				45DAC7EE1E5B7B3E00BDA350 /* CircleGenerator.swift */,
+				45DAC7EF1E5B7B3E00BDA350 /* ClosingFilter.swift */,
+				45DAC7F01E5B7B3E00BDA350 /* ColorBlend.swift */,
+				45DAC7F11E5B7B3E00BDA350 /* ColorBurnBlend.swift */,
+				45DAC7F21E5B7B3E00BDA350 /* ColorDodgeBlend.swift */,
+				45DAC7F31E5B7B3E00BDA350 /* ColorInversion.swift */,
+				45DAC7F41E5B7B3E00BDA350 /* ColorLocalBinaryPattern.swift */,
+				45DAC7F51E5B7B3E00BDA350 /* ColorMatrixFilter.swift */,
+				45DAC7F61E5B7B3E00BDA350 /* ColourFASTFeatureDetection.swift */,
+				45DAC7F71E5B7B3E00BDA350 /* ContrastAdjustment.swift */,
+				45DAC7F81E5B7B3E00BDA350 /* Convolution3x3.swift */,
+				45DAC7F91E5B7B3E00BDA350 /* Crop.swift */,
+				45DAC7FA1E5B7B3E00BDA350 /* CrosshairGenerator.swift */,
+				45DAC7FB1E5B7B3E00BDA350 /* Crosshatch.swift */,
+				45DAC7FC1E5B7B3E00BDA350 /* DarkenBlend.swift */,
+				45DAC7FD1E5B7B3E00BDA350 /* DifferenceBlend.swift */,
+				45DAC7FE1E5B7B3E00BDA350 /* Dilation.swift */,
+				45DAC7FF1E5B7B3E00BDA350 /* DissolveBlend.swift */,
+				45DAC8001E5B7B3E00BDA350 /* DivideBlend.swift */,
+				45DAC8011E5B7B3E00BDA350 /* EmbossFilter.swift */,
+				45DAC8021E5B7B3E00BDA350 /* Erosion.swift */,
+				45DAC8031E5B7B3E00BDA350 /* ExclusionBlend.swift */,
+				45DAC8041E5B7B3E00BDA350 /* ExposureAdjustment.swift */,
+				45DAC8051E5B7B3E00BDA350 /* FalseColor.swift */,
+				45DAC8061E5B7B3E00BDA350 /* GammaAdjustment.swift */,
+				45DAC8071E5B7B3E00BDA350 /* GaussianBlur.swift */,
+				45DAC8081E5B7B3E00BDA350 /* GlassSphereRefraction.swift */,
+				45DAC8091E5B7B3E00BDA350 /* Halftone.swift */,
+				45DAC80A1E5B7B3E00BDA350 /* HardLightBlend.swift */,
+				45DAC80B1E5B7B3E00BDA350 /* HarrisCornerDetector.swift */,
+				45DAC80C1E5B7B3E00BDA350 /* Haze.swift */,
+				45DAC80D1E5B7B3E00BDA350 /* HighlightAndShadowTint.swift */,
+				45DAC80E1E5B7B3E00BDA350 /* HighlightsAndShadows.swift */,
+				45DAC80F1E5B7B3E00BDA350 /* HighPassFilter.swift */,
+				45DAC8101E5B7B3E00BDA350 /* Histogram.swift */,
+				45DAC8111E5B7B3E00BDA350 /* HistogramDisplay.swift */,
+				45DAC8121E5B7B3E00BDA350 /* HistogramEqualization.swift */,
+				45DAC8131E5B7B3E00BDA350 /* HueAdjustment.swift */,
+				45DAC8141E5B7B3E00BDA350 /* HueBlend.swift */,
+				45DAC8151E5B7B3E00BDA350 /* ImageBuffer.swift */,
+				45DAC8161E5B7B3E00BDA350 /* iOSBlur.swift */,
+				45DAC8171E5B7B3E00BDA350 /* KuwaharaFilter.swift */,
+				45DAC8181E5B7B3E00BDA350 /* KuwaharaRadius3Filter.swift */,
+				45DAC8191E5B7B3E00BDA350 /* LanczosResampling.swift */,
+				45DAC81A1E5B7B3E00BDA350 /* Laplacian.swift */,
+				45DAC81B1E5B7B3E00BDA350 /* LevelsAdjustment.swift */,
+				45DAC81C1E5B7B3E00BDA350 /* LightenBlend.swift */,
+				45DAC81D1E5B7B3E00BDA350 /* LinearBurnBlend.swift */,
+				45DAC81E1E5B7B3E00BDA350 /* LineGenerator.swift */,
+				45DAC81F1E5B7B3E00BDA350 /* LocalBinaryPattern.swift */,
+				45DAC8201E5B7B3E00BDA350 /* LookupFilter.swift */,
+				45DAC8211E5B7B3E00BDA350 /* LookupImages */,
+				45DAC8271E5B7B3E00BDA350 /* LowPassFilter.swift */,
+				45DAC8281E5B7B3E00BDA350 /* Luminance.swift */,
+				45DAC8291E5B7B3E00BDA350 /* LuminanceRangeReduction.swift */,
+				45DAC82A1E5B7B3E00BDA350 /* LuminanceThreshold.swift */,
+				45DAC82B1E5B7B3E00BDA350 /* LuminosityBlend.swift */,
+				45DAC82C1E5B7B3E00BDA350 /* MedianFilter.swift */,
+				45DAC82D1E5B7B3E00BDA350 /* MissEtikateFilter.swift */,
+				45DAC82E1E5B7B3E00BDA350 /* MonochromeFilter.swift */,
+				45DAC82F1E5B7B3E00BDA350 /* MotionBlur.swift */,
+				45DAC8301E5B7B3E00BDA350 /* MotionDetector.swift */,
+				45DAC8311E5B7B3E00BDA350 /* MultiplyBlend.swift */,
+				45DAC8321E5B7B3E00BDA350 /* NobleCornerDetector.swift */,
+				45DAC8331E5B7B3E00BDA350 /* NormalBlend.swift */,
+				45DAC8341E5B7B3E00BDA350 /* OpacityAdjustment.swift */,
+				45DAC8351E5B7B3E00BDA350 /* OpeningFilter.swift */,
+				45DAC8361E5B7B3E00BDA350 /* OverlayBlend.swift */,
+				45DAC8371E5B7B3E00BDA350 /* PinchDistortion.swift */,
+				45DAC8381E5B7B3E00BDA350 /* Pixellate.swift */,
+				45DAC8391E5B7B3E00BDA350 /* PolarPixellate.swift */,
+				45DAC83A1E5B7B3E00BDA350 /* PolkaDot.swift */,
+				45DAC83B1E5B7B3E00BDA350 /* Posterize.swift */,
+				45DAC83C1E5B7B3E00BDA350 /* PrewittEdgeDetection.swift */,
+				45DAC83D1E5B7B3E00BDA350 /* RGBAdjustmentFilter.swift */,
+				45DAC83E1E5B7B3E00BDA350 /* SaturationAdjustment.swift */,
+				45DAC83F1E5B7B3E00BDA350 /* SaturationBlend.swift */,
+				45DAC8401E5B7B3E00BDA350 /* ScreenBlend.swift */,
+				45DAC8411E5B7B3E00BDA350 /* SepiaToneFilter.swift */,
+				45DAC8421E5B7B3E00BDA350 /* Shaders */,
+				45DAC94D1E5B7B3F00BDA350 /* Sharpen.swift */,
+				45DAC94E1E5B7B3F00BDA350 /* ShiTomasiFeatureDetector.swift */,
+				45DAC94F1E5B7B3F00BDA350 /* SingleComponentGaussianBlur.swift */,
+				45DAC9501E5B7B3F00BDA350 /* SketchFilter.swift */,
+				45DAC9511E5B7B3F00BDA350 /* SmoothToonFilter.swift */,
+				45DAC9521E5B7B3F00BDA350 /* SobelEdgeDetection.swift */,
+				45DAC9531E5B7B3F00BDA350 /* SoftElegance.swift */,
+				45DAC9541E5B7B3F00BDA350 /* SoftLightBlend.swift */,
+				45DAC9551E5B7B3F00BDA350 /* Solarize.swift */,
+				45DAC9561E5B7B3F00BDA350 /* SolidColorGenerator.swift */,
+				45DAC9571E5B7B3F00BDA350 /* SourceOverBlend.swift */,
+				45DAC9581E5B7B3F00BDA350 /* SphereRefraction.swift */,
+				45DAC9591E5B7B3F00BDA350 /* StretchDistortion.swift */,
+				45DAC95A1E5B7B3F00BDA350 /* SubtractBlend.swift */,
+				45DAC95B1E5B7B3F00BDA350 /* SwirlDistortion.swift */,
+				45DAC95C1E5B7B3F00BDA350 /* ThresholdSketch.swift */,
+				45DAC95D1E5B7B3F00BDA350 /* ThresholdSobelEdgeDetection.swift */,
+				45DAC95E1E5B7B3F00BDA350 /* TiltShift.swift */,
+				45DAC95F1E5B7B3F00BDA350 /* ToonFilter.swift */,
+				45DAC9601E5B7B3F00BDA350 /* TransformOperation.swift */,
+				45DAC9611E5B7B3F00BDA350 /* UnsharpMask.swift */,
+				45DAC9621E5B7B3F00BDA350 /* Vibrance.swift */,
+				45DAC9631E5B7B3F00BDA350 /* Vignette.swift */,
+				45DAC9641E5B7B3F00BDA350 /* WhiteBalance.swift */,
+				45DAC9651E5B7B3F00BDA350 /* ZoomBlur.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		45DAC8211E5B7B3E00BDA350 /* LookupImages */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC8221E5B7B3E00BDA350 /* lookup.png */,
+				45DAC8231E5B7B3E00BDA350 /* lookup_amatorka.png */,
+				45DAC8241E5B7B3E00BDA350 /* lookup_miss_etikate.png */,
+				45DAC8251E5B7B3E00BDA350 /* lookup_soft_elegance_1.png */,
+				45DAC8261E5B7B3E00BDA350 /* lookup_soft_elegance_2.png */,
+			);
+			path = LookupImages;
+			sourceTree = "<group>";
+		};
+		45DAC8421E5B7B3E00BDA350 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC8431E5B7B3E00BDA350 /* AdaptiveThreshold_GL.fsh */,
+				45DAC8441E5B7B3E00BDA350 /* AdaptiveThreshold_GLES.fsh */,
+				45DAC8451E5B7B3E00BDA350 /* AddBlend_GL.fsh */,
+				45DAC8461E5B7B3E00BDA350 /* AddBlend_GLES.fsh */,
+				45DAC8471E5B7B3E00BDA350 /* AlphaBlend_GL.fsh */,
+				45DAC8481E5B7B3E00BDA350 /* AlphaBlend_GLES.fsh */,
+				45DAC8491E5B7B3E00BDA350 /* AlphaTest_GL.fsh */,
+				45DAC84A1E5B7B3E00BDA350 /* AlphaTest_GLES.fsh */,
+				45DAC84B1E5B7B3E00BDA350 /* AverageColor.vsh */,
+				45DAC84C1E5B7B3E00BDA350 /* AverageColor_GL.fsh */,
+				45DAC84D1E5B7B3E00BDA350 /* AverageColor_GLES.fsh */,
+				45DAC84E1E5B7B3E00BDA350 /* AverageLuminance_GL.fsh */,
+				45DAC84F1E5B7B3E00BDA350 /* AverageLuminance_GLES.fsh */,
+				45DAC8501E5B7B3E00BDA350 /* BilateralBlur.vsh */,
+				45DAC8511E5B7B3E00BDA350 /* BilateralBlur_GL.fsh */,
+				45DAC8521E5B7B3E00BDA350 /* BilateralBlur_GLES.fsh */,
+				45DAC8531E5B7B3E00BDA350 /* Brightness_GL.fsh */,
+				45DAC8541E5B7B3E00BDA350 /* Brightness_GLES.fsh */,
+				45DAC8551E5B7B3F00BDA350 /* BulgeDistortion_GL.fsh */,
+				45DAC8561E5B7B3F00BDA350 /* BulgeDistortion_GLES.fsh */,
+				45DAC8571E5B7B3F00BDA350 /* CGAColorspace_GL.fsh */,
+				45DAC8581E5B7B3F00BDA350 /* CGAColorspace_GLES.fsh */,
+				45DAC8591E5B7B3F00BDA350 /* ChromaKey_GL.fsh */,
+				45DAC85A1E5B7B3F00BDA350 /* ChromaKey_GLES.fsh */,
+				45DAC85B1E5B7B3F00BDA350 /* ChromaKeyBlend_GL.fsh */,
+				45DAC85C1E5B7B3F00BDA350 /* ChromaKeyBlend_GLES.fsh */,
+				45DAC85D1E5B7B3F00BDA350 /* Circle.vsh */,
+				45DAC85E1E5B7B3F00BDA350 /* Circle_GL.fsh */,
+				45DAC85F1E5B7B3F00BDA350 /* Circle_GLES.fsh */,
+				45DAC8601E5B7B3F00BDA350 /* ColorBlend_GL.fsh */,
+				45DAC8611E5B7B3F00BDA350 /* ColorBlend_GLES.fsh */,
+				45DAC8621E5B7B3F00BDA350 /* ColorBurnBlend_GL.fsh */,
+				45DAC8631E5B7B3F00BDA350 /* ColorBurnBlend_GLES.fsh */,
+				45DAC8641E5B7B3F00BDA350 /* ColorDodgeBlend_GL.fsh */,
+				45DAC8651E5B7B3F00BDA350 /* ColorDodgeBlend_GLES.fsh */,
+				45DAC8661E5B7B3F00BDA350 /* ColorInvert_GL.fsh */,
+				45DAC8671E5B7B3F00BDA350 /* ColorInvert_GLES.fsh */,
+				45DAC8681E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GL.fsh */,
+				45DAC8691E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GLES.fsh */,
+				45DAC86A1E5B7B3F00BDA350 /* ColorMatrix_GL.fsh */,
+				45DAC86B1E5B7B3F00BDA350 /* ColorMatrix_GLES.fsh */,
+				45DAC86C1E5B7B3F00BDA350 /* ColorSwizzling_GL.fsh */,
+				45DAC86D1E5B7B3F00BDA350 /* ColorSwizzling_GLES.fsh */,
+				45DAC86E1E5B7B3F00BDA350 /* ColourFASTDecriptor.vsh */,
+				45DAC86F1E5B7B3F00BDA350 /* ColourFASTDecriptor_GL.fsh */,
+				45DAC8701E5B7B3F00BDA350 /* ColourFASTDecriptor_GLES.fsh */,
+				45DAC8711E5B7B3F00BDA350 /* Contrast_GL.fsh */,
+				45DAC8721E5B7B3F00BDA350 /* Contrast_GLES.fsh */,
+				45DAC8731E5B7B3F00BDA350 /* ConvertedShaders_GL.swift */,
+				45DAC8741E5B7B3F00BDA350 /* ConvertedShaders_GLES.swift */,
+				45DAC8751E5B7B3F00BDA350 /* Convolution3x3_GL.fsh */,
+				45DAC8761E5B7B3F00BDA350 /* Convolution3x3_GLES.fsh */,
+				45DAC8771E5B7B3F00BDA350 /* Crosshair.vsh */,
+				45DAC8781E5B7B3F00BDA350 /* Crosshair_GL.fsh */,
+				45DAC8791E5B7B3F00BDA350 /* Crosshair_GLES.fsh */,
+				45DAC87A1E5B7B3F00BDA350 /* Crosshatch_GL.fsh */,
+				45DAC87B1E5B7B3F00BDA350 /* Crosshatch_GLES.fsh */,
+				45DAC87C1E5B7B3F00BDA350 /* DarkenBlend_GL.fsh */,
+				45DAC87D1E5B7B3F00BDA350 /* DarkenBlend_GLES.fsh */,
+				45DAC87E1E5B7B3F00BDA350 /* DifferenceBlend_GL.fsh */,
+				45DAC87F1E5B7B3F00BDA350 /* DifferenceBlend_GLES.fsh */,
+				45DAC8801E5B7B3F00BDA350 /* Dilation1_GL.fsh */,
+				45DAC8811E5B7B3F00BDA350 /* Dilation1_GLES.fsh */,
+				45DAC8821E5B7B3F00BDA350 /* Dilation2_GL.fsh */,
+				45DAC8831E5B7B3F00BDA350 /* Dilation2_GLES.fsh */,
+				45DAC8841E5B7B3F00BDA350 /* Dilation3_GL.fsh */,
+				45DAC8851E5B7B3F00BDA350 /* Dilation3_GLES.fsh */,
+				45DAC8861E5B7B3F00BDA350 /* Dilation4_GL.fsh */,
+				45DAC8871E5B7B3F00BDA350 /* Dilation4_GLES.fsh */,
+				45DAC8881E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GL.fsh */,
+				45DAC8891E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GLES.fsh */,
+				45DAC88A1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GL.fsh */,
+				45DAC88B1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GLES.fsh */,
+				45DAC88C1E5B7B3F00BDA350 /* DissolveBlend_GL.fsh */,
+				45DAC88D1E5B7B3F00BDA350 /* DissolveBlend_GLES.fsh */,
+				45DAC88E1E5B7B3F00BDA350 /* DivideBlend_GL.fsh */,
+				45DAC88F1E5B7B3F00BDA350 /* DivideBlend_GLES.fsh */,
+				45DAC8901E5B7B3F00BDA350 /* Erosion1_GL.fsh */,
+				45DAC8911E5B7B3F00BDA350 /* Erosion1_GLES.fsh */,
+				45DAC8921E5B7B3F00BDA350 /* Erosion2_GL.fsh */,
+				45DAC8931E5B7B3F00BDA350 /* Erosion2_GLES.fsh */,
+				45DAC8941E5B7B3F00BDA350 /* Erosion3_GL.fsh */,
+				45DAC8951E5B7B3F00BDA350 /* Erosion3_GLES.fsh */,
+				45DAC8961E5B7B3F00BDA350 /* Erosion4_GL.fsh */,
+				45DAC8971E5B7B3F00BDA350 /* Erosion4_GLES.fsh */,
+				45DAC8981E5B7B3F00BDA350 /* ErosionDilation1.vsh */,
+				45DAC8991E5B7B3F00BDA350 /* ErosionDilation2.vsh */,
+				45DAC89A1E5B7B3F00BDA350 /* ErosionDilation3.vsh */,
+				45DAC89B1E5B7B3F00BDA350 /* ErosionDilation4.vsh */,
+				45DAC89C1E5B7B3F00BDA350 /* ExclusionBlend_GL.fsh */,
+				45DAC89D1E5B7B3F00BDA350 /* ExclusionBlend_GLES.fsh */,
+				45DAC89E1E5B7B3F00BDA350 /* Exposure_GL.fsh */,
+				45DAC89F1E5B7B3F00BDA350 /* Exposure_GLES.fsh */,
+				45DAC8A01E5B7B3F00BDA350 /* FalseColor_GL.fsh */,
+				45DAC8A11E5B7B3F00BDA350 /* FalseColor_GLES.fsh */,
+				45DAC8A21E5B7B3F00BDA350 /* FiveInput.vsh */,
+				45DAC8A31E5B7B3F00BDA350 /* FourInput.vsh */,
+				45DAC8A41E5B7B3F00BDA350 /* Gamma_GL.fsh */,
+				45DAC8A51E5B7B3F00BDA350 /* Gamma_GLES.fsh */,
+				45DAC8A61E5B7B3F00BDA350 /* GlassSphere_GL.fsh */,
+				45DAC8A71E5B7B3F00BDA350 /* GlassSphere_GLES.fsh */,
+				45DAC8A81E5B7B3F00BDA350 /* Halftone_GL.fsh */,
+				45DAC8A91E5B7B3F00BDA350 /* Halftone_GLES.fsh */,
+				45DAC8AA1E5B7B3F00BDA350 /* HardLightBlend_GL.fsh */,
+				45DAC8AB1E5B7B3F00BDA350 /* HardLightBlend_GLES.fsh */,
+				45DAC8AC1E5B7B3F00BDA350 /* HarrisCornerDetector_GL.fsh */,
+				45DAC8AD1E5B7B3F00BDA350 /* HarrisCornerDetector_GLES.fsh */,
+				45DAC8AE1E5B7B3F00BDA350 /* Haze_GL.fsh */,
+				45DAC8AF1E5B7B3F00BDA350 /* Haze_GLES.fsh */,
+				45DAC8B01E5B7B3F00BDA350 /* HighlightShadow_GL.fsh */,
+				45DAC8B11E5B7B3F00BDA350 /* HighlightShadow_GLES.fsh */,
+				45DAC8B21E5B7B3F00BDA350 /* HighlightShadowTint_GL.fsh */,
+				45DAC8B31E5B7B3F00BDA350 /* HighlightShadowTint_GLES.fsh */,
+				45DAC8B41E5B7B3F00BDA350 /* HistogramAccumulation_GL.fsh */,
+				45DAC8B51E5B7B3F00BDA350 /* HistogramAccumulation_GLES.fsh */,
+				45DAC8B61E5B7B3F00BDA350 /* HistogramBlueSampling.vsh */,
+				45DAC8B71E5B7B3F00BDA350 /* HistogramDisplay.vsh */,
+				45DAC8B81E5B7B3F00BDA350 /* HistogramDisplay_GL.fsh */,
+				45DAC8B91E5B7B3F00BDA350 /* HistogramDisplay_GLES.fsh */,
+				45DAC8BA1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GL.fsh */,
+				45DAC8BB1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GLES.fsh */,
+				45DAC8BC1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GL.fsh */,
+				45DAC8BD1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GLES.fsh */,
+				45DAC8BE1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GL.fsh */,
+				45DAC8BF1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GLES.fsh */,
+				45DAC8C01E5B7B3F00BDA350 /* HistogramEqualizationRed_GL.fsh */,
+				45DAC8C11E5B7B3F00BDA350 /* HistogramEqualizationRed_GLES.fsh */,
+				45DAC8C21E5B7B3F00BDA350 /* HistogramEqualizationRGB_GL.fsh */,
+				45DAC8C31E5B7B3F00BDA350 /* HistogramEqualizationRGB_GLES.fsh */,
+				45DAC8C41E5B7B3F00BDA350 /* HistogramGreenSampling.vsh */,
+				45DAC8C51E5B7B3F00BDA350 /* HistogramLuminanceSampling.vsh */,
+				45DAC8C61E5B7B3F00BDA350 /* HistogramRedSampling.vsh */,
+				45DAC8C71E5B7B3F00BDA350 /* Hue_GL.fsh */,
+				45DAC8C81E5B7B3F00BDA350 /* Hue_GLES.fsh */,
+				45DAC8C91E5B7B3F00BDA350 /* HueBlend_GL.fsh */,
+				45DAC8CA1E5B7B3F00BDA350 /* HueBlend_GLES.fsh */,
+				45DAC8CB1E5B7B3F00BDA350 /* Kuwahara_GL.fsh */,
+				45DAC8CC1E5B7B3F00BDA350 /* Kuwahara_GLES.fsh */,
+				45DAC8CD1E5B7B3F00BDA350 /* KuwaharaRadius3_GL.fsh */,
+				45DAC8CE1E5B7B3F00BDA350 /* KuwaharaRadius3_GLES.fsh */,
+				45DAC8CF1E5B7B3F00BDA350 /* LanczosResampling.vsh */,
+				45DAC8D01E5B7B3F00BDA350 /* LanczosResampling_GL.fsh */,
+				45DAC8D11E5B7B3F00BDA350 /* LanczosResampling_GLES.fsh */,
+				45DAC8D21E5B7B3F00BDA350 /* Laplacian_GL.fsh */,
+				45DAC8D31E5B7B3F00BDA350 /* Laplacian_GLES.fsh */,
+				45DAC8D41E5B7B3F00BDA350 /* Levels_GL.fsh */,
+				45DAC8D51E5B7B3F00BDA350 /* Levels_GLES.fsh */,
+				45DAC8D61E5B7B3F00BDA350 /* LightenBlend_GL.fsh */,
+				45DAC8D71E5B7B3F00BDA350 /* LightenBlend_GLES.fsh */,
+				45DAC8D81E5B7B3F00BDA350 /* Line.vsh */,
+				45DAC8D91E5B7B3F00BDA350 /* Line_GL.fsh */,
+				45DAC8DA1E5B7B3F00BDA350 /* Line_GLES.fsh */,
+				45DAC8DB1E5B7B3F00BDA350 /* LinearBurnBlend_GL.fsh */,
+				45DAC8DC1E5B7B3F00BDA350 /* LinearBurnBlend_GLES.fsh */,
+				45DAC8DD1E5B7B3F00BDA350 /* LocalBinaryPattern_GL.fsh */,
+				45DAC8DE1E5B7B3F00BDA350 /* LocalBinaryPattern_GLES.fsh */,
+				45DAC8DF1E5B7B3F00BDA350 /* Lookup_GL.fsh */,
+				45DAC8E01E5B7B3F00BDA350 /* Lookup_GLES.fsh */,
+				45DAC8E11E5B7B3F00BDA350 /* Luminance_GL.fsh */,
+				45DAC8E21E5B7B3F00BDA350 /* Luminance_GLES.fsh */,
+				45DAC8E31E5B7B3F00BDA350 /* LuminanceRange_GL.fsh */,
+				45DAC8E41E5B7B3F00BDA350 /* LuminanceRange_GLES.fsh */,
+				45DAC8E51E5B7B3F00BDA350 /* LuminanceThreshold_GL.fsh */,
+				45DAC8E61E5B7B3F00BDA350 /* LuminanceThreshold_GLES.fsh */,
+				45DAC8E71E5B7B3F00BDA350 /* LuminosityBlend_GL.fsh */,
+				45DAC8E81E5B7B3F00BDA350 /* LuminosityBlend_GLES.fsh */,
+				45DAC8E91E5B7B3F00BDA350 /* Median_GL.fsh */,
+				45DAC8EA1E5B7B3F00BDA350 /* Median_GLES.fsh */,
+				45DAC8EB1E5B7B3F00BDA350 /* Monochrome_GL.fsh */,
+				45DAC8EC1E5B7B3F00BDA350 /* Monochrome_GLES.fsh */,
+				45DAC8ED1E5B7B3F00BDA350 /* MotionBlur.vsh */,
+				45DAC8EE1E5B7B3F00BDA350 /* MotionBlur_GL.fsh */,
+				45DAC8EF1E5B7B3F00BDA350 /* MotionBlur_GLES.fsh */,
+				45DAC8F01E5B7B3F00BDA350 /* MotionComparison_GL.fsh */,
+				45DAC8F11E5B7B3F00BDA350 /* MotionComparison_GLES.fsh */,
+				45DAC8F21E5B7B3F00BDA350 /* MultiplyBlend_GL.fsh */,
+				45DAC8F31E5B7B3F00BDA350 /* MultiplyBlend_GLES.fsh */,
+				45DAC8F41E5B7B3F00BDA350 /* NearbyTexelSampling.vsh */,
+				45DAC8F51E5B7B3F00BDA350 /* NobleCornerDetector_GL.fsh */,
+				45DAC8F61E5B7B3F00BDA350 /* NobleCornerDetector_GLES.fsh */,
+				45DAC8F71E5B7B3F00BDA350 /* NormalBlend_GL.fsh */,
+				45DAC8F81E5B7B3F00BDA350 /* NormalBlend_GLES.fsh */,
+				45DAC8F91E5B7B3F00BDA350 /* OneInput.vsh */,
+				45DAC8FA1E5B7B3F00BDA350 /* Opacity_GL.fsh */,
+				45DAC8FB1E5B7B3F00BDA350 /* Opacity_GLES.fsh */,
+				45DAC8FC1E5B7B3F00BDA350 /* OverlayBlend_GL.fsh */,
+				45DAC8FD1E5B7B3F00BDA350 /* OverlayBlend_GLES.fsh */,
+				45DAC8FE1E5B7B3F00BDA350 /* Passthrough_GL.fsh */,
+				45DAC8FF1E5B7B3F00BDA350 /* Passthrough_GLES.fsh */,
+				45DAC9001E5B7B3F00BDA350 /* PinchDistortion_GL.fsh */,
+				45DAC9011E5B7B3F00BDA350 /* PinchDistortion_GLES.fsh */,
+				45DAC9021E5B7B3F00BDA350 /* Pixellate_GL.fsh */,
+				45DAC9031E5B7B3F00BDA350 /* Pixellate_GLES.fsh */,
+				45DAC9041E5B7B3F00BDA350 /* PolarPixellate_GL.fsh */,
+				45DAC9051E5B7B3F00BDA350 /* PolarPixellate_GLES.fsh */,
+				45DAC9061E5B7B3F00BDA350 /* PolkaDot_GL.fsh */,
+				45DAC9071E5B7B3F00BDA350 /* PolkaDot_GLES.fsh */,
+				45DAC9081E5B7B3F00BDA350 /* Posterize_GL.fsh */,
+				45DAC9091E5B7B3F00BDA350 /* Posterize_GLES.fsh */,
+				45DAC90A1E5B7B3F00BDA350 /* PrewittEdgeDetection_GL.fsh */,
+				45DAC90B1E5B7B3F00BDA350 /* PrewittEdgeDetection_GLES.fsh */,
+				45DAC90C1E5B7B3F00BDA350 /* RGBAdjustment_GL.fsh */,
+				45DAC90D1E5B7B3F00BDA350 /* RGBAdjustment_GLES.fsh */,
+				45DAC90E1E5B7B3F00BDA350 /* Saturation_GL.fsh */,
+				45DAC90F1E5B7B3F00BDA350 /* Saturation_GLES.fsh */,
+				45DAC9101E5B7B3F00BDA350 /* SaturationBlend_GL.fsh */,
+				45DAC9111E5B7B3F00BDA350 /* SaturationBlend_GLES.fsh */,
+				45DAC9121E5B7B3F00BDA350 /* ScreenBlend_GL.fsh */,
+				45DAC9131E5B7B3F00BDA350 /* ScreenBlend_GLES.fsh */,
+				45DAC9141E5B7B3F00BDA350 /* ShaderConverter.sh */,
+				45DAC9151E5B7B3F00BDA350 /* Sharpen.vsh */,
+				45DAC9161E5B7B3F00BDA350 /* Sharpen_GL.fsh */,
+				45DAC9171E5B7B3F00BDA350 /* Sharpen_GLES.fsh */,
+				45DAC9181E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GL.fsh */,
+				45DAC9191E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GLES.fsh */,
+				45DAC91A1E5B7B3F00BDA350 /* Sketch_GL.fsh */,
+				45DAC91B1E5B7B3F00BDA350 /* Sketch_GLES.fsh */,
+				45DAC91C1E5B7B3F00BDA350 /* SobelEdgeDetection_GL.fsh */,
+				45DAC91D1E5B7B3F00BDA350 /* SobelEdgeDetection_GLES.fsh */,
+				45DAC91E1E5B7B3F00BDA350 /* SoftLightBlend_GL.fsh */,
+				45DAC91F1E5B7B3F00BDA350 /* SoftLightBlend_GLES.fsh */,
+				45DAC9201E5B7B3F00BDA350 /* Solarize_GL.fsh */,
+				45DAC9211E5B7B3F00BDA350 /* Solarize_GLES.fsh */,
+				45DAC9221E5B7B3F00BDA350 /* SourceOverBlend_GL.fsh */,
+				45DAC9231E5B7B3F00BDA350 /* SourceOverBlend_GLES.fsh */,
+				45DAC9241E5B7B3F00BDA350 /* SphereRefraction_GL.fsh */,
+				45DAC9251E5B7B3F00BDA350 /* SphereRefraction_GLES.fsh */,
+				45DAC9261E5B7B3F00BDA350 /* StretchDistortion_GL.fsh */,
+				45DAC9271E5B7B3F00BDA350 /* StretchDistortion_GLES.fsh */,
+				45DAC9281E5B7B3F00BDA350 /* SubtractBlend_GL.fsh */,
+				45DAC9291E5B7B3F00BDA350 /* SubtractBlend_GLES.fsh */,
+				45DAC92A1E5B7B3F00BDA350 /* Swirl_GL.fsh */,
+				45DAC92B1E5B7B3F00BDA350 /* Swirl_GLES.fsh */,
+				45DAC92C1E5B7B3F00BDA350 /* ThreeInput.vsh */,
+				45DAC92D1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GL.fsh */,
+				45DAC92E1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GLES.fsh */,
+				45DAC92F1E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GL.fsh */,
+				45DAC9301E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GLES.fsh */,
+				45DAC9311E5B7B3F00BDA350 /* ThresholdSketch_GL.fsh */,
+				45DAC9321E5B7B3F00BDA350 /* ThresholdSketch_GLES.fsh */,
+				45DAC9331E5B7B3F00BDA350 /* TiltShift_GL.fsh */,
+				45DAC9341E5B7B3F00BDA350 /* TiltShift_GLES.fsh */,
+				45DAC9351E5B7B3F00BDA350 /* Toon_GL.fsh */,
+				45DAC9361E5B7B3F00BDA350 /* Toon_GLES.fsh */,
+				45DAC9371E5B7B3F00BDA350 /* Transform.vsh */,
+				45DAC9381E5B7B3F00BDA350 /* TwoInput.vsh */,
+				45DAC9391E5B7B3F00BDA350 /* UnsharpMask_GL.fsh */,
+				45DAC93A1E5B7B3F00BDA350 /* UnsharpMask_GLES.fsh */,
+				45DAC93B1E5B7B3F00BDA350 /* Vibrance_GL.fsh */,
+				45DAC93C1E5B7B3F00BDA350 /* Vibrance_GLES.fsh */,
+				45DAC93D1E5B7B3F00BDA350 /* Vignette_GL.fsh */,
+				45DAC93E1E5B7B3F00BDA350 /* Vignette_GLES.fsh */,
+				45DAC93F1E5B7B3F00BDA350 /* WeakPixelInclusion_GL.fsh */,
+				45DAC9401E5B7B3F00BDA350 /* WeakPixelInclusion_GLES.fsh */,
+				45DAC9411E5B7B3F00BDA350 /* WhiteBalance_GL.fsh */,
+				45DAC9421E5B7B3F00BDA350 /* WhiteBalance_GLES.fsh */,
+				45DAC9431E5B7B3F00BDA350 /* XYDerivative_GL.fsh */,
+				45DAC9441E5B7B3F00BDA350 /* XYDerivative_GLES.fsh */,
+				45DAC9451E5B7B3F00BDA350 /* YUVConversionFullRange_GL.fsh */,
+				45DAC9461E5B7B3F00BDA350 /* YUVConversionFullRange_GLES.fsh */,
+				45DAC9471E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GL.fsh */,
+				45DAC9481E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GLES.fsh */,
+				45DAC9491E5B7B3F00BDA350 /* YUVConversionVideoRange_GL.fsh */,
+				45DAC94A1E5B7B3F00BDA350 /* YUVConversionVideoRange_GLES.fsh */,
+				45DAC94B1E5B7B3F00BDA350 /* ZoomBlur_GL.fsh */,
+				45DAC94C1E5B7B3F00BDA350 /* ZoomBlur_GLES.fsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		45DAC9731E5B7B3F00BDA350 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC9741E5B7B3F00BDA350 /* Pipeline_Tests.swift */,
+				45DAC9751E5B7B3F00BDA350 /* ShaderProgram_Tests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		45F463211DF8B00000CE87BE = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +1421,8 @@
 		45F4632C1DF8B00000CE87BE /* StorytellingVideo */ = {
 			isa = PBXGroup;
 			children = (
+				45DAC79B1E5B79E900BDA350 /* FilterChain.swift */,
+				45DAC79D1E5B7B3E00BDA350 /* framework */,
 				45F4632D1DF8B00000CE87BE /* AppDelegate.swift */,
 				45F4632F1DF8B00000CE87BE /* ViewController.swift */,
 				450B9E671E02167D0066037E /* SlotView.swift */,
@@ -139,6 +1490,12 @@
 			mainGroup = 45F463211DF8B00000CE87BE;
 			productRefGroup = 45F4632B1DF8B00000CE87BE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 45DAC7A11E5B7B3E00BDA350 /* Products */;
+					ProjectRef = 45DAC7A01E5B7B3E00BDA350 /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				45F463291DF8B00000CE87BE /* StorytellingVideo */,
@@ -146,19 +1503,322 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		45DACB391E5B7B4000BDA350 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 45DACB381E5B7B4000BDA350 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45DACB3B1E5B7B4000BDA350 /* GPUImageTests_macOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests_macOS.xctest;
+			remoteRef = 45DACB3A1E5B7B4000BDA350 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45DACB3D1E5B7B4000BDA350 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 45DACB3C1E5B7B4000BDA350 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45DACB3F1E5B7B4000BDA350 /* GPUImageTests_iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests_iOS.xctest;
+			remoteRef = 45DACB3E1E5B7B4000BDA350 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		45F463281DF8B00000CE87BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DACABF1E5B7B3F00BDA350 /* PinchDistortion_GL.fsh in Resources */,
+				45DACA201E5B7B3F00BDA350 /* ColorBlend_GLES.fsh in Resources */,
+				45DACA881E5B7B3F00BDA350 /* HueBlend_GL.fsh in Resources */,
+				45DACAA01E5B7B3F00BDA350 /* Luminance_GL.fsh in Resources */,
+				45DACA241E5B7B3F00BDA350 /* ColorDodgeBlend_GLES.fsh in Resources */,
+				45DACAED1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GLES.fsh in Resources */,
+				45DACA491E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GL.fsh in Resources */,
+				45DACA871E5B7B3F00BDA350 /* Hue_GLES.fsh in Resources */,
+				45DACAD71E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GL.fsh in Resources */,
+				45DAC9E31E5B7B3F00BDA350 /* lookup_amatorka.png in Resources */,
+				45DACAAA1E5B7B3F00BDA350 /* Monochrome_GL.fsh in Resources */,
+				45DACA4F1E5B7B3F00BDA350 /* Erosion1_GL.fsh in Resources */,
+				45DACA091E5B7B3F00BDA350 /* AlphaTest_GLES.fsh in Resources */,
+				45DAC9781E5B7B3F00BDA350 /* LinuxCompilationGenerator.sh in Resources */,
+				45DACA921E5B7B3F00BDA350 /* Laplacian_GLES.fsh in Resources */,
+				45DACAB91E5B7B3F00BDA350 /* Opacity_GL.fsh in Resources */,
+				45DACAD11E5B7B3F00BDA350 /* ScreenBlend_GL.fsh in Resources */,
+				45DACAB11E5B7B3F00BDA350 /* MultiplyBlend_GL.fsh in Resources */,
+				45DACA551E5B7B3F00BDA350 /* Erosion4_GL.fsh in Resources */,
+				45DACAAF1E5B7B3F00BDA350 /* MotionComparison_GL.fsh in Resources */,
+				45DACADA1E5B7B3F00BDA350 /* Sketch_GLES.fsh in Resources */,
+				45DACAA91E5B7B3F00BDA350 /* Median_GLES.fsh in Resources */,
+				45DACABC1E5B7B3F00BDA350 /* OverlayBlend_GLES.fsh in Resources */,
+				45DACA621E5B7B3F00BDA350 /* FourInput.vsh in Resources */,
+				45DACA741E5B7B3F00BDA350 /* HistogramAccumulation_GLES.fsh in Resources */,
+				45DACB0A1E5B7B3F00BDA350 /* ZoomBlur_GL.fsh in Resources */,
+				45DACAA61E5B7B3F00BDA350 /* LuminosityBlend_GL.fsh in Resources */,
+				45DACA0D1E5B7B3F00BDA350 /* AverageLuminance_GL.fsh in Resources */,
+				45DACACB1E5B7B3F00BDA350 /* RGBAdjustment_GL.fsh in Resources */,
+				45DACADB1E5B7B3F00BDA350 /* SobelEdgeDetection_GL.fsh in Resources */,
+				45DACA811E5B7B3F00BDA350 /* HistogramEqualizationRGB_GL.fsh in Resources */,
+				45DACACE1E5B7B3F00BDA350 /* Saturation_GLES.fsh in Resources */,
+				45DACB041E5B7B3F00BDA350 /* YUVConversionFullRange_GL.fsh in Resources */,
+				45DACAC51E5B7B3F00BDA350 /* PolkaDot_GL.fsh in Resources */,
+				45DACA401E5B7B3F00BDA350 /* Dilation1_GLES.fsh in Resources */,
+				45DACAD91E5B7B3F00BDA350 /* Sketch_GL.fsh in Resources */,
+				45DACA521E5B7B3F00BDA350 /* Erosion2_GLES.fsh in Resources */,
+				45DACA6C1E5B7B3F00BDA350 /* HarrisCornerDetector_GLES.fsh in Resources */,
+				45DACACA1E5B7B3F00BDA350 /* PrewittEdgeDetection_GLES.fsh in Resources */,
+				45DAC9761E5B7B3F00BDA350 /* compile-LinuxGL.sh in Resources */,
+				45DACB071E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GLES.fsh in Resources */,
+				45DACAE61E5B7B3F00BDA350 /* StretchDistortion_GLES.fsh in Resources */,
+				45DACAE71E5B7B3F00BDA350 /* SubtractBlend_GL.fsh in Resources */,
 				45557FF41E01F9EC008714AD /* crossBtn.png in Resources */,
+				45DACA191E5B7B3F00BDA350 /* ChromaKey_GLES.fsh in Resources */,
+				45DACAC91E5B7B3F00BDA350 /* PrewittEdgeDetection_GL.fsh in Resources */,
+				45DACA7E1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GLES.fsh in Resources */,
+				45DACA731E5B7B3F00BDA350 /* HistogramAccumulation_GL.fsh in Resources */,
+				45DACA101E5B7B3F00BDA350 /* BilateralBlur_GL.fsh in Resources */,
+				45DACAD01E5B7B3F00BDA350 /* SaturationBlend_GLES.fsh in Resources */,
+				45DACAB01E5B7B3F00BDA350 /* MotionComparison_GLES.fsh in Resources */,
+				45DACA631E5B7B3F00BDA350 /* Gamma_GL.fsh in Resources */,
+				45DACA391E5B7B3F00BDA350 /* Crosshatch_GL.fsh in Resources */,
+				45DACACC1E5B7B3F00BDA350 /* RGBAdjustment_GLES.fsh in Resources */,
+				45DACA951E5B7B3F00BDA350 /* LightenBlend_GL.fsh in Resources */,
+				45DACA851E5B7B3F00BDA350 /* HistogramRedSampling.vsh in Resources */,
+				45DACA611E5B7B3F00BDA350 /* FiveInput.vsh in Resources */,
+				45DACA161E5B7B3F00BDA350 /* CGAColorspace_GL.fsh in Resources */,
+				45DACA451E5B7B3F00BDA350 /* Dilation4_GL.fsh in Resources */,
+				45DACA661E5B7B3F00BDA350 /* GlassSphere_GLES.fsh in Resources */,
+				45DACA501E5B7B3F00BDA350 /* Erosion1_GLES.fsh in Resources */,
+				45DACAFC1E5B7B3F00BDA350 /* Vignette_GL.fsh in Resources */,
+				45DAC9E21E5B7B3F00BDA350 /* lookup.png in Resources */,
+				45DACA081E5B7B3F00BDA350 /* AlphaTest_GL.fsh in Resources */,
+				45DACAF91E5B7B3F00BDA350 /* UnsharpMask_GLES.fsh in Resources */,
+				45DACA8F1E5B7B3F00BDA350 /* LanczosResampling_GL.fsh in Resources */,
+				45DACAF81E5B7B3F00BDA350 /* UnsharpMask_GL.fsh in Resources */,
+				45DACAA51E5B7B3F00BDA350 /* LuminanceThreshold_GLES.fsh in Resources */,
+				45DACA511E5B7B3F00BDA350 /* Erosion2_GL.fsh in Resources */,
+				45DACA071E5B7B3F00BDA350 /* AlphaBlend_GLES.fsh in Resources */,
+				45DACA251E5B7B3F00BDA350 /* ColorInvert_GL.fsh in Resources */,
+				45DACAB21E5B7B3F00BDA350 /* MultiplyBlend_GLES.fsh in Resources */,
+				45DACA6E1E5B7B3F00BDA350 /* Haze_GLES.fsh in Resources */,
+				45DACA9B1E5B7B3F00BDA350 /* LinearBurnBlend_GLES.fsh in Resources */,
+				45DACA4B1E5B7B3F00BDA350 /* DissolveBlend_GL.fsh in Resources */,
+				45DACA441E5B7B3F00BDA350 /* Dilation3_GLES.fsh in Resources */,
+				45DACA761E5B7B3F00BDA350 /* HistogramDisplay.vsh in Resources */,
+				45DACA121E5B7B3F00BDA350 /* Brightness_GL.fsh in Resources */,
+				45DACA5D1E5B7B3F00BDA350 /* Exposure_GL.fsh in Resources */,
+				45DACA351E5B7B3F00BDA350 /* Convolution3x3_GLES.fsh in Resources */,
+				45DACA1C1E5B7B3F00BDA350 /* Circle.vsh in Resources */,
+				45DACA1F1E5B7B3F00BDA350 /* ColorBlend_GL.fsh in Resources */,
+				45DACA2E1E5B7B3F00BDA350 /* ColourFASTDecriptor_GL.fsh in Resources */,
+				45DACAB61E5B7B3F00BDA350 /* NormalBlend_GL.fsh in Resources */,
+				45DACAA81E5B7B3F00BDA350 /* Median_GL.fsh in Resources */,
+				45DACA181E5B7B3F00BDA350 /* ChromaKey_GL.fsh in Resources */,
+				45DACA211E5B7B3F00BDA350 /* ColorBurnBlend_GL.fsh in Resources */,
+				45DACA021E5B7B3F00BDA350 /* AdaptiveThreshold_GL.fsh in Resources */,
+				45DACA8E1E5B7B3F00BDA350 /* LanczosResampling.vsh in Resources */,
 				45C569991E086B4F00D9B0A8 /* arrow_1.png in Resources */,
+				45DACACD1E5B7B3F00BDA350 /* Saturation_GL.fsh in Resources */,
+				45DACA531E5B7B3F00BDA350 /* Erosion3_GL.fsh in Resources */,
+				45DACABA1E5B7B3F00BDA350 /* Opacity_GLES.fsh in Resources */,
+				45DACA3A1E5B7B3F00BDA350 /* Crosshatch_GLES.fsh in Resources */,
+				45DAC9E61E5B7B3F00BDA350 /* lookup_soft_elegance_2.png in Resources */,
+				45DACA801E5B7B3F00BDA350 /* HistogramEqualizationRed_GLES.fsh in Resources */,
+				45DACA931E5B7B3F00BDA350 /* Levels_GL.fsh in Resources */,
+				45DACAD61E5B7B3F00BDA350 /* Sharpen_GLES.fsh in Resources */,
+				45DACA361E5B7B3F00BDA350 /* Crosshair.vsh in Resources */,
+				45DACAC01E5B7B3F00BDA350 /* PinchDistortion_GLES.fsh in Resources */,
+				45DACA311E5B7B3F00BDA350 /* Contrast_GLES.fsh in Resources */,
+				45DACA8D1E5B7B3F00BDA350 /* KuwaharaRadius3_GLES.fsh in Resources */,
+				45DACA4C1E5B7B3F00BDA350 /* DissolveBlend_GLES.fsh in Resources */,
+				45DACA3B1E5B7B3F00BDA350 /* DarkenBlend_GL.fsh in Resources */,
+				45DACA1E1E5B7B3F00BDA350 /* Circle_GLES.fsh in Resources */,
+				45DACA2A1E5B7B3F00BDA350 /* ColorMatrix_GLES.fsh in Resources */,
+				45DACA221E5B7B3F00BDA350 /* ColorBurnBlend_GLES.fsh in Resources */,
+				45DACAF41E5B7B3F00BDA350 /* Toon_GL.fsh in Resources */,
+				45DACA301E5B7B3F00BDA350 /* Contrast_GL.fsh in Resources */,
+				45DACAFF1E5B7B3F00BDA350 /* WeakPixelInclusion_GLES.fsh in Resources */,
+				45DACA051E5B7B3F00BDA350 /* AddBlend_GLES.fsh in Resources */,
+				45DACA0E1E5B7B3F00BDA350 /* AverageLuminance_GLES.fsh in Resources */,
+				45DACAB41E5B7B3F00BDA350 /* NobleCornerDetector_GL.fsh in Resources */,
+				45DACAFB1E5B7B3F00BDA350 /* Vibrance_GLES.fsh in Resources */,
+				45DACA0A1E5B7B3F00BDA350 /* AverageColor.vsh in Resources */,
+				45DACAC71E5B7B3F00BDA350 /* Posterize_GL.fsh in Resources */,
+				45DACA281E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GLES.fsh in Resources */,
+				45DACA751E5B7B3F00BDA350 /* HistogramBlueSampling.vsh in Resources */,
+				45DACAA11E5B7B3F00BDA350 /* Luminance_GLES.fsh in Resources */,
+				45DACAC31E5B7B3F00BDA350 /* PolarPixellate_GL.fsh in Resources */,
+				45DACAE31E5B7B3F00BDA350 /* SphereRefraction_GL.fsh in Resources */,
+				45DACA371E5B7B3F00BDA350 /* Crosshair_GL.fsh in Resources */,
+				45DACADF1E5B7B3F00BDA350 /* Solarize_GL.fsh in Resources */,
+				45DACA641E5B7B3F00BDA350 /* Gamma_GLES.fsh in Resources */,
+				45DACA651E5B7B3F00BDA350 /* GlassSphere_GL.fsh in Resources */,
+				45DACA431E5B7B3F00BDA350 /* Dilation3_GL.fsh in Resources */,
+				45DACA9F1E5B7B3F00BDA350 /* Lookup_GLES.fsh in Resources */,
+				45DACA861E5B7B3F00BDA350 /* Hue_GL.fsh in Resources */,
 				45C5699A1E086B4F00D9B0A8 /* arrow_2.png in Resources */,
+				45DACA791E5B7B3F00BDA350 /* HistogramEqualizationBlue_GL.fsh in Resources */,
 				45F463381DF8B00000CE87BE /* LaunchScreen.storyboard in Resources */,
+				45DACA911E5B7B3F00BDA350 /* Laplacian_GL.fsh in Resources */,
+				45DACAE41E5B7B3F00BDA350 /* SphereRefraction_GLES.fsh in Resources */,
+				45DACA9E1E5B7B3F00BDA350 /* Lookup_GL.fsh in Resources */,
+				45DACA2D1E5B7B3F00BDA350 /* ColourFASTDecriptor.vsh in Resources */,
+				45DACA291E5B7B3F00BDA350 /* ColorMatrix_GL.fsh in Resources */,
+				45DACB011E5B7B3F00BDA350 /* WhiteBalance_GLES.fsh in Resources */,
+				45DACA061E5B7B3F00BDA350 /* AlphaBlend_GL.fsh in Resources */,
+				45DACA691E5B7B3F00BDA350 /* HardLightBlend_GL.fsh in Resources */,
 				45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */,
+				45DACA111E5B7B3F00BDA350 /* BilateralBlur_GLES.fsh in Resources */,
+				45DACA581E5B7B3F00BDA350 /* ErosionDilation2.vsh in Resources */,
+				45DACA3F1E5B7B3F00BDA350 /* Dilation1_GL.fsh in Resources */,
+				45DACA381E5B7B3F00BDA350 /* Crosshair_GLES.fsh in Resources */,
+				45DACA341E5B7B3F00BDA350 /* Convolution3x3_GL.fsh in Resources */,
+				45DACA4A1E5B7B3F00BDA350 /* DirectionalSobelEdgeDetection_GLES.fsh in Resources */,
 				45F463351DF8B00000CE87BE /* Assets.xcassets in Resources */,
+				45DACADD1E5B7B3F00BDA350 /* SoftLightBlend_GL.fsh in Resources */,
+				45DACAAC1E5B7B3F00BDA350 /* MotionBlur.vsh in Resources */,
+				45DACA831E5B7B3F00BDA350 /* HistogramGreenSampling.vsh in Resources */,
+				45DACAE51E5B7B3F00BDA350 /* StretchDistortion_GL.fsh in Resources */,
+				45DACAC21E5B7B3F00BDA350 /* Pixellate_GLES.fsh in Resources */,
+				45DACAF21E5B7B3F00BDA350 /* TiltShift_GL.fsh in Resources */,
+				45DACA561E5B7B3F00BDA350 /* Erosion4_GLES.fsh in Resources */,
+				45DACA5C1E5B7B3F00BDA350 /* ExclusionBlend_GLES.fsh in Resources */,
+				45DACA5F1E5B7B3F00BDA350 /* FalseColor_GL.fsh in Resources */,
+				45DACADC1E5B7B3F00BDA350 /* SobelEdgeDetection_GLES.fsh in Resources */,
+				45DACA471E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GL.fsh in Resources */,
+				45DACAA21E5B7B3F00BDA350 /* LuminanceRange_GL.fsh in Resources */,
+				45DACA231E5B7B3F00BDA350 /* ColorDodgeBlend_GL.fsh in Resources */,
+				45DACAB31E5B7B3F00BDA350 /* NearbyTexelSampling.vsh in Resources */,
+				45DACAB71E5B7B3F00BDA350 /* NormalBlend_GLES.fsh in Resources */,
+				45DACABD1E5B7B3F00BDA350 /* Passthrough_GL.fsh in Resources */,
+				45DACAC41E5B7B3F00BDA350 /* PolarPixellate_GLES.fsh in Resources */,
+				45DACA7B1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GL.fsh in Resources */,
+				45DACA901E5B7B3F00BDA350 /* LanczosResampling_GLES.fsh in Resources */,
+				45DACA1B1E5B7B3F00BDA350 /* ChromaKeyBlend_GLES.fsh in Resources */,
+				45DACAFD1E5B7B3F00BDA350 /* Vignette_GLES.fsh in Resources */,
+				45DACA8A1E5B7B3F00BDA350 /* Kuwahara_GL.fsh in Resources */,
+				45DACA5B1E5B7B3F00BDA350 /* ExclusionBlend_GL.fsh in Resources */,
+				45DACAF11E5B7B3F00BDA350 /* ThresholdSketch_GLES.fsh in Resources */,
+				45DACA841E5B7B3F00BDA350 /* HistogramLuminanceSampling.vsh in Resources */,
+				45DACAE91E5B7B3F00BDA350 /* Swirl_GL.fsh in Resources */,
+				45DACA591E5B7B3F00BDA350 /* ErosionDilation3.vsh in Resources */,
+				45DACAAD1E5B7B3F00BDA350 /* MotionBlur_GL.fsh in Resources */,
+				45DACA6A1E5B7B3F00BDA350 /* HardLightBlend_GLES.fsh in Resources */,
+				45DACA7A1E5B7B3F00BDA350 /* HistogramEqualizationBlue_GLES.fsh in Resources */,
+				45DACAF31E5B7B3F00BDA350 /* TiltShift_GLES.fsh in Resources */,
+				45DACA821E5B7B3F00BDA350 /* HistogramEqualizationRGB_GLES.fsh in Resources */,
+				45DACA2F1E5B7B3F00BDA350 /* ColourFASTDecriptor_GLES.fsh in Resources */,
+				45DACA031E5B7B3F00BDA350 /* AdaptiveThreshold_GLES.fsh in Resources */,
+				45DACA3C1E5B7B3F00BDA350 /* DarkenBlend_GLES.fsh in Resources */,
+				45DACB001E5B7B3F00BDA350 /* WhiteBalance_GL.fsh in Resources */,
+				45DACA7D1E5B7B3F00BDA350 /* HistogramEqualizationLuminance_GL.fsh in Resources */,
+				45DACAFA1E5B7B3F00BDA350 /* Vibrance_GL.fsh in Resources */,
+				45DACA261E5B7B3F00BDA350 /* ColorInvert_GLES.fsh in Resources */,
+				45DACA041E5B7B3F00BDA350 /* AddBlend_GL.fsh in Resources */,
+				45DACA781E5B7B3F00BDA350 /* HistogramDisplay_GLES.fsh in Resources */,
+				45DACA6F1E5B7B3F00BDA350 /* HighlightShadow_GL.fsh in Resources */,
+				45DACA1A1E5B7B3F00BDA350 /* ChromaKeyBlend_GL.fsh in Resources */,
+				45DACA7C1E5B7B3F00BDA350 /* HistogramEqualizationGreen_GLES.fsh in Resources */,
+				45DAC9771E5B7B3F00BDA350 /* compile-LinuxRPi.sh in Resources */,
+				45DACA171E5B7B3F00BDA350 /* CGAColorspace_GLES.fsh in Resources */,
+				45DACA481E5B7B3F00BDA350 /* DirectionalNonMaximumSuppression_GLES.fsh in Resources */,
+				45DACA3D1E5B7B3F00BDA350 /* DifferenceBlend_GL.fsh in Resources */,
+				45DACA8C1E5B7B3F00BDA350 /* KuwaharaRadius3_GL.fsh in Resources */,
+				45DACAB51E5B7B3F00BDA350 /* NobleCornerDetector_GLES.fsh in Resources */,
+				45DACB031E5B7B3F00BDA350 /* XYDerivative_GLES.fsh in Resources */,
+				45DACA891E5B7B3F00BDA350 /* HueBlend_GLES.fsh in Resources */,
+				45DACA461E5B7B3F00BDA350 /* Dilation4_GLES.fsh in Resources */,
+				45DACA2C1E5B7B3F00BDA350 /* ColorSwizzling_GLES.fsh in Resources */,
+				45DACAAB1E5B7B3F00BDA350 /* Monochrome_GLES.fsh in Resources */,
+				45DACA0C1E5B7B3F00BDA350 /* AverageColor_GLES.fsh in Resources */,
+				45DACA671E5B7B3F00BDA350 /* Halftone_GL.fsh in Resources */,
+				45DACB0B1E5B7B3F00BDA350 /* ZoomBlur_GLES.fsh in Resources */,
+				45DACA541E5B7B3F00BDA350 /* Erosion3_GLES.fsh in Resources */,
+				45DACA141E5B7B3F00BDA350 /* BulgeDistortion_GL.fsh in Resources */,
+				45DACAC81E5B7B3F00BDA350 /* Posterize_GLES.fsh in Resources */,
+				45DACA681E5B7B3F00BDA350 /* Halftone_GLES.fsh in Resources */,
+				45DACA9A1E5B7B3F00BDA350 /* LinearBurnBlend_GL.fsh in Resources */,
+				45DACAE11E5B7B3F00BDA350 /* SourceOverBlend_GL.fsh in Resources */,
+				45DACA601E5B7B3F00BDA350 /* FalseColor_GLES.fsh in Resources */,
+				45DACAB81E5B7B3F00BDA350 /* OneInput.vsh in Resources */,
 				45C569941E08678A00D9B0A8 /* arrow.png in Resources */,
+				45DACA7F1E5B7B3F00BDA350 /* HistogramEqualizationRed_GL.fsh in Resources */,
+				45DACAEA1E5B7B3F00BDA350 /* Swirl_GLES.fsh in Resources */,
+				45DACAE01E5B7B3F00BDA350 /* Solarize_GLES.fsh in Resources */,
+				45DACA771E5B7B3F00BDA350 /* HistogramDisplay_GL.fsh in Resources */,
+				45DACA1D1E5B7B3F00BDA350 /* Circle_GL.fsh in Resources */,
+				45DACA9C1E5B7B3F00BDA350 /* LocalBinaryPattern_GL.fsh in Resources */,
+				45DACAD41E5B7B3F00BDA350 /* Sharpen.vsh in Resources */,
+				45DACAC61E5B7B3F00BDA350 /* PolkaDot_GLES.fsh in Resources */,
+				45DACAAE1E5B7B3F00BDA350 /* MotionBlur_GLES.fsh in Resources */,
+				45DACA411E5B7B3F00BDA350 /* Dilation2_GL.fsh in Resources */,
+				45DACA0B1E5B7B3F00BDA350 /* AverageColor_GL.fsh in Resources */,
+				45DAC9E51E5B7B3F00BDA350 /* lookup_soft_elegance_1.png in Resources */,
+				45DACAFE1E5B7B3F00BDA350 /* WeakPixelInclusion_GL.fsh in Resources */,
+				45DACA4E1E5B7B3F00BDA350 /* DivideBlend_GLES.fsh in Resources */,
+				45DACAF01E5B7B3F00BDA350 /* ThresholdSketch_GL.fsh in Resources */,
+				45DACABB1E5B7B3F00BDA350 /* OverlayBlend_GL.fsh in Resources */,
+				45DACA991E5B7B3F00BDA350 /* Line_GLES.fsh in Resources */,
+				45DACA271E5B7B3F00BDA350 /* ColorLocalBinaryPattern_GL.fsh in Resources */,
+				45DACA5E1E5B7B3F00BDA350 /* Exposure_GLES.fsh in Resources */,
+				45DACAC11E5B7B3F00BDA350 /* Pixellate_GL.fsh in Resources */,
+				45DACA151E5B7B3F00BDA350 /* BulgeDistortion_GLES.fsh in Resources */,
+				45DACAF51E5B7B3F00BDA350 /* Toon_GLES.fsh in Resources */,
+				45DACAF71E5B7B3F00BDA350 /* TwoInput.vsh in Resources */,
+				45DACAA41E5B7B3F00BDA350 /* LuminanceThreshold_GL.fsh in Resources */,
+				45DACAEF1E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GLES.fsh in Resources */,
+				45DACAEE1E5B7B3F00BDA350 /* ThresholdedNonMaximumSuppression_GL.fsh in Resources */,
+				45DACA571E5B7B3F00BDA350 /* ErosionDilation1.vsh in Resources */,
+				45DACA721E5B7B3F00BDA350 /* HighlightShadowTint_GLES.fsh in Resources */,
+				45DACB091E5B7B3F00BDA350 /* YUVConversionVideoRange_GLES.fsh in Resources */,
+				45DACA0F1E5B7B3F00BDA350 /* BilateralBlur.vsh in Resources */,
+				45DACA961E5B7B3F00BDA350 /* LightenBlend_GLES.fsh in Resources */,
+				45DACA4D1E5B7B3F00BDA350 /* DivideBlend_GL.fsh in Resources */,
+				45DACAE81E5B7B3F00BDA350 /* SubtractBlend_GLES.fsh in Resources */,
+				45DACAEB1E5B7B3F00BDA350 /* ThreeInput.vsh in Resources */,
+				45DACAD31E5B7B3F00BDA350 /* ShaderConverter.sh in Resources */,
+				45DACADE1E5B7B3F00BDA350 /* SoftLightBlend_GLES.fsh in Resources */,
+				45DACA6B1E5B7B3F00BDA350 /* HarrisCornerDetector_GL.fsh in Resources */,
+				45DACABE1E5B7B3F00BDA350 /* Passthrough_GLES.fsh in Resources */,
+				45DACAD81E5B7B3F00BDA350 /* ShiTomasiFeatureDetector_GLES.fsh in Resources */,
+				45DACA3E1E5B7B3F00BDA350 /* DifferenceBlend_GLES.fsh in Resources */,
+				45DACB081E5B7B3F00BDA350 /* YUVConversionVideoRange_GL.fsh in Resources */,
+				45DACA8B1E5B7B3F00BDA350 /* Kuwahara_GLES.fsh in Resources */,
+				45DACA981E5B7B3F00BDA350 /* Line_GL.fsh in Resources */,
+				45DACB051E5B7B3F00BDA350 /* YUVConversionFullRange_GLES.fsh in Resources */,
+				45DACAE21E5B7B3F00BDA350 /* SourceOverBlend_GLES.fsh in Resources */,
+				45DACA9D1E5B7B3F00BDA350 /* LocalBinaryPattern_GLES.fsh in Resources */,
+				45DACAEC1E5B7B3F00BDA350 /* ThresholdEdgeDetection_GL.fsh in Resources */,
+				45DACA421E5B7B3F00BDA350 /* Dilation2_GLES.fsh in Resources */,
+				45DACA5A1E5B7B3F00BDA350 /* ErosionDilation4.vsh in Resources */,
 				45F463421DF8B2C700CE87BE /* videoBg.png in Resources */,
+				45DACA711E5B7B3F00BDA350 /* HighlightShadowTint_GL.fsh in Resources */,
+				45DAC9E41E5B7B3F00BDA350 /* lookup_miss_etikate.png in Resources */,
+				45DACAA31E5B7B3F00BDA350 /* LuminanceRange_GLES.fsh in Resources */,
+				45DACA941E5B7B3F00BDA350 /* Levels_GLES.fsh in Resources */,
+				45DACA971E5B7B3F00BDA350 /* Line.vsh in Resources */,
+				45DACACF1E5B7B3F00BDA350 /* SaturationBlend_GL.fsh in Resources */,
+				45DACA2B1E5B7B3F00BDA350 /* ColorSwizzling_GL.fsh in Resources */,
+				45DACA6D1E5B7B3F00BDA350 /* Haze_GL.fsh in Resources */,
+				45DACB061E5B7B3F00BDA350 /* YUVConversionFullRangeUVPlanar_GL.fsh in Resources */,
+				45DACAD21E5B7B3F00BDA350 /* ScreenBlend_GLES.fsh in Resources */,
+				45DACA131E5B7B3F00BDA350 /* Brightness_GLES.fsh in Resources */,
+				45DACB021E5B7B3F00BDA350 /* XYDerivative_GL.fsh in Resources */,
+				45DACA701E5B7B3F00BDA350 /* HighlightShadow_GLES.fsh in Resources */,
+				45DACAF61E5B7B3F00BDA350 /* Transform.vsh in Resources */,
+				45DACAD51E5B7B3F00BDA350 /* Sharpen_GL.fsh in Resources */,
+				45DACAA71E5B7B3F00BDA350 /* LuminosityBlend_GLES.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +1835,7 @@
 				45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */,
 				45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */,
 				45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */,
+				45DAC79C1E5B79E900BDA350 /* FilterChain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

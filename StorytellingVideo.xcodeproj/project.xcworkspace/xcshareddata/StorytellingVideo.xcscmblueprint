@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FD8F5DB578BB045C1CF06B375D70B7AAD9B613D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FD8F5DB578BB045C1CF06B375D70B7AAD9B613D3" : 9223372036854775807,
+    "E8B558F6FD0226BDA17227F7CDA1A35E71A44667" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "509CFC3E-1E6A-4B61-B351-A754DA5E4DF9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FD8F5DB578BB045C1CF06B375D70B7AAD9B613D3" : "VideoStorytelling\/",
+    "E8B558F6FD0226BDA17227F7CDA1A35E71A44667" : "VideoStorytelling\/StorytellingVideo\/FilterChain\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "StorytellingVideo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "StorytellingVideo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Hybridity\/FilterChain.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E8B558F6FD0226BDA17227F7CDA1A35E71A44667"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BeckyWu220\/VideoStory.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FD8F5DB578BB045C1CF06B375D70B7AAD9B613D3"
+    }
+  ]
+}
