@@ -12,6 +12,7 @@ import MobileCoreServices
 import AssetsLibrary
 import AVKit
 import AVFoundation
+import GPUImage
 
 class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDelegate, UIVideoEditorControllerDelegate {
     
@@ -173,7 +174,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                         message = "Video exported and saved"
                         
                         let previewController = PreviewViewController.init(videoURL: self.videoURL!)
-                        self.navigationController?.pushViewController(previewController, animated: true)
+                        //self.navigationController?.pushViewController(previewController, animated: true)
                         
                         self.loadIndicator?.stopAnimating()
                         self.loadIndicator?.removeFromSuperview()
@@ -350,6 +351,21 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             if videoSection.containVideo {
                 let videoAsset = AVAsset(url: videoSection.videoURL!)
                 print("??\(videoAsset)")
+                
+                let renderView = RenderView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+                self.view.addSubview(renderView)
+                
+                let output : MovieOutput!
+                
+                do {
+                    let movie = try MovieInput(asset: videoAsset, playAtActualSpeed: true, loop: false)
+                    let filter = Pixellate()
+                    movie --> filter --> renderView
+                    movie.start()
+                    print("RenderView Sources: \(renderView)")
+                } catch {
+                    fatalError("Could not initialize rendering pipeline: \(error)")
+                }
                 
                 let videoTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
                 do {
