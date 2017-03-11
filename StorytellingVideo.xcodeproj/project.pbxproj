@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		450B9E681E02167D0066037E /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9E671E02167D0066037E /* SlotView.swift */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
+		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
+		45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45B3F5C21E7487D7007032E0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3F5C11E7487D7007032E0 /* FilterViewController.swift */; };
 		45C569941E08678A00D9B0A8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569931E08678A00D9B0A8 /* arrow.png */; };
 		45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569951E086B4F00D9B0A8 /* arrow_0.png */; };
@@ -25,45 +27,58 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		45DACB4A1E5BA37F00BDA350 /* PBXContainerItemProxy */ = {
+		45A987921E74925300934AB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45DACB431E5BA37F00BDA350 /* GPUImage.xcodeproj */;
+			containerPortal = 45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC6E7CAB1C39A9D8006DF678;
 			remoteInfo = GPUImage_macOS;
 		};
-		45DACB4C1E5BA37F00BDA350 /* PBXContainerItemProxy */ = {
+		45A987941E74925300934AB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45DACB431E5BA37F00BDA350 /* GPUImage.xcodeproj */;
+			containerPortal = 45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC6E7CB51C39A9D8006DF678;
 			remoteInfo = GPUImageTests_macOS;
 		};
-		45DACB4E1E5BA37F00BDA350 /* PBXContainerItemProxy */ = {
+		45A987961E74925300934AB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45DACB431E5BA37F00BDA350 /* GPUImage.xcodeproj */;
+			containerPortal = 45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC9E34E91E524A2200B8604F;
 			remoteInfo = GPUImage_iOS;
 		};
-		45DACB501E5BA37F00BDA350 /* PBXContainerItemProxy */ = {
+		45A987981E74925300934AB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45DACB431E5BA37F00BDA350 /* GPUImage.xcodeproj */;
+			containerPortal = 45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC9E34F11E524A2200B8604F;
 			remoteInfo = GPUImageTests_iOS;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		45A9879B1E7492CC00934AB4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
+		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		45B3F5C11E7487D7007032E0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		45C569931E08678A00D9B0A8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		45C569951E086B4F00D9B0A8 /* arrow_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_0.png; sourceTree = "<group>"; };
 		45C569961E086B4F00D9B0A8 /* arrow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_1.png; sourceTree = "<group>"; };
 		45C569971E086B4F00D9B0A8 /* arrow_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_2.png; sourceTree = "<group>"; };
-		45DACB431E5BA37F00BDA350 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../../Downloads/GPUImage2-master 2/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectImportViewController.swift; sourceTree = "<group>"; };
 		45E535311DFF7D100047FA9C /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		45F4632A1DF8B00000CE87BE /* StorytellingVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytellingVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,19 +96,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45DACB441E5BA37F00BDA350 /* Products */ = {
+		45A9878C1E74925300934AB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45DACB4B1E5BA37F00BDA350 /* GPUImage.framework */,
-				45DACB4D1E5BA37F00BDA350 /* GPUImageTests_macOS.xctest */,
-				45DACB4F1E5BA37F00BDA350 /* GPUImage.framework */,
-				45DACB511E5BA37F00BDA350 /* GPUImageTests_iOS.xctest */,
+				45A987931E74925300934AB4 /* GPUImage.framework */,
+				45A987951E74925300934AB4 /* GPUImageTests_macOS.xctest */,
+				45A987971E74925300934AB4 /* GPUImage.framework */,
+				45A987991E74925300934AB4 /* GPUImageTests_iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +117,7 @@
 		45F463211DF8B00000CE87BE = {
 			isa = PBXGroup;
 			children = (
+				45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */,
 				45F4632C1DF8B00000CE87BE /* StorytellingVideo */,
 				45F4632B1DF8B00000CE87BE /* Products */,
 			);
@@ -133,7 +150,6 @@
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
 				45F463361DF8B00000CE87BE /* LaunchScreen.storyboard */,
 				45F463391DF8B00000CE87BE /* Info.plist */,
-				45DACB431E5BA37F00BDA350 /* GPUImage.xcodeproj */,
 			);
 			path = StorytellingVideo;
 			sourceTree = "<group>";
@@ -148,6 +164,7 @@
 				45F463261DF8B00000CE87BE /* Sources */,
 				45F463271DF8B00000CE87BE /* Frameworks */,
 				45F463281DF8B00000CE87BE /* Resources */,
+				45A9879B1E7492CC00934AB4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -165,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Wanqiao Wu";
 				TargetAttributes = {
 					45F463291DF8B00000CE87BE = {
@@ -188,8 +205,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 45DACB441E5BA37F00BDA350 /* Products */;
-					ProjectRef = 45DACB431E5BA37F00BDA350 /* GPUImage.xcodeproj */;
+					ProductGroup = 45A9878C1E74925300934AB4 /* Products */;
+					ProjectRef = 45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -200,32 +217,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		45DACB4B1E5BA37F00BDA350 /* GPUImage.framework */ = {
+		45A987931E74925300934AB4 /* GPUImage.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GPUImage.framework;
-			remoteRef = 45DACB4A1E5BA37F00BDA350 /* PBXContainerItemProxy */;
+			remoteRef = 45A987921E74925300934AB4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		45DACB4D1E5BA37F00BDA350 /* GPUImageTests_macOS.xctest */ = {
+		45A987951E74925300934AB4 /* GPUImageTests_macOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GPUImageTests_macOS.xctest;
-			remoteRef = 45DACB4C1E5BA37F00BDA350 /* PBXContainerItemProxy */;
+			remoteRef = 45A987941E74925300934AB4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		45DACB4F1E5BA37F00BDA350 /* GPUImage.framework */ = {
+		45A987971E74925300934AB4 /* GPUImage.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GPUImage.framework;
-			remoteRef = 45DACB4E1E5BA37F00BDA350 /* PBXContainerItemProxy */;
+			remoteRef = 45A987961E74925300934AB4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		45DACB511E5BA37F00BDA350 /* GPUImageTests_iOS.xctest */ = {
+		45A987991E74925300934AB4 /* GPUImageTests_iOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GPUImageTests_iOS.xctest;
-			remoteRef = 45DACB501E5BA37F00BDA350 /* PBXContainerItemProxy */;
+			remoteRef = 45A987981E74925300934AB4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -295,6 +312,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -344,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

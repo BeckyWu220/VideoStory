@@ -32,13 +32,36 @@ class FilterViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         
-        let videoSize = videoAsset?.tracks(withMediaType: AVMediaTypeVideo).first?.naturalSize
+        let videoTrack = videoAsset?.tracks(withMediaType: AVMediaTypeVideo).first
+        var videoSize = videoTrack?.naturalSize
         
-        renderView = RenderView(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width*(videoSize?.height)!/(videoSize?.width)!))
+        var videoOrientation = orientationFor(track: videoTrack!)
+        var renderOrientation = ImageOrientation.portrait
+        
+        if videoOrientation == UIInterfaceOrientation.portrait {
+            videoSize = CGSize(width: (videoTrack?.naturalSize.height)!, height: (videoTrack?.naturalSize.width)!)
+            print("Portrait")
+            renderOrientation = ImageOrientation.landscapeLeft
+        }else if videoOrientation == UIInterfaceOrientation.portraitUpsideDown {
+            videoSize = CGSize(width: (videoTrack?.naturalSize.height)!, height: (videoTrack?.naturalSize.width)!)
+            print("Portrait Upsidedown")
+            renderOrientation = ImageOrientation.landscapeRight
+        }else if videoOrientation == UIInterfaceOrientation.landscapeRight {
+            print("Landscape Right")
+            renderOrientation = ImageOrientation.portraitUpsideDown
+        }else if videoOrientation == UIInterfaceOrientation.landscapeLeft {
+            print("Landscape Left")
+            renderOrientation = ImageOrientation.portrait
+        }
+        
+        renderView = RenderView(frame: CGRect(x: 0, y: 60, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width*(videoSize?.height)!/(videoSize?.width)!))
+        renderView.orientation = renderOrientation
+        print("Orientation: \(renderView.orientation)")
         self.view.addSubview(renderView)
         
         do {
-            let movie = try MovieInput(asset: videoAsset!, playAtActualSpeed: true, loop: false)
+            let movie = try MovieInput(asset: videoAsset!, playAtActualSpeed: true, loop: true)
+            
             let filter = Pixellate()
             movie --> filter --> renderView
             movie.start()
@@ -54,14 +77,19 @@ class FilterViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func orientationFor(track: AVAssetTrack) -> UIInterfaceOrientation {
+        let videoSize = track.naturalSize
+        let videoTransform = track.preferredTransform
+        
+        if videoSize.width == videoTransform.tx && videoSize.height == videoTransform.ty {
+            return UIInterfaceOrientation.landscapeRight
+        }else if videoTransform.tx == 0 && videoTransform.ty == 0 {
+            return UIInterfaceOrientation.landscapeLeft
+        }else if videoTransform.tx == 0 && videoTransform.ty == videoSize.width {
+            return UIInterfaceOrientation.portraitUpsideDown
+        }else {
+            return UIInterfaceOrientation.portrait
+        }
     }
-    */
 
 }
