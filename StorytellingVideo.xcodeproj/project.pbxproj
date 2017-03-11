@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		450B9E681E02167D0066037E /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9E671E02167D0066037E /* SlotView.swift */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
+		45B3F5C21E7487D7007032E0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3F5C11E7487D7007032E0 /* FilterViewController.swift */; };
 		45C569941E08678A00D9B0A8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569931E08678A00D9B0A8 /* arrow.png */; };
 		45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569951E086B4F00D9B0A8 /* arrow_0.png */; };
 		45C569991E086B4F00D9B0A8 /* arrow_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569961E086B4F00D9B0A8 /* arrow_1.png */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
+		45B3F5C11E7487D7007032E0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		45C569931E08678A00D9B0A8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		45C569951E086B4F00D9B0A8 /* arrow_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_0.png; sourceTree = "<group>"; };
 		45C569961E086B4F00D9B0A8 /* arrow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_1.png; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */,
 				45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */,
 				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
+				45B3F5C11E7487D7007032E0 /* FilterViewController.swift */,
 				45F463411DF8B2C700CE87BE /* videoBg.png */,
 				45557FF31E01F9EC008714AD /* crossBtn.png */,
 				45C569931E08678A00D9B0A8 /* arrow.png */,
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B3F5C21E7487D7007032E0 /* FilterViewController.swift in Sources */,
 				450B9E681E02167D0066037E /* SlotView.swift in Sources */,
 				45F463301DF8B00000CE87BE /* ViewController.swift in Sources */,
 				45F463401DF8B05400CE87BE /* VideoSectionView.swift in Sources */,

@@ -94,7 +94,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     }
     
     func videoEditorController(_ editor: UIVideoEditorController, didSaveEditedVideoToPath editedVideoPath: String) {
-        dismiss(animated: true, completion: {
+        dismiss(animated: false, completion: {
             self.currentVideoSection?.videoPath = editedVideoPath
             self.currentVideoSection?.videoURL = URL(fileURLWithPath: editedVideoPath)
             
@@ -104,6 +104,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
             
             self.setThumbnailForVideoSection(image: image, videoURL: (self.currentVideoSection?.videoURL)!, videoPath: (self.currentVideoSection?.videoPath)!)
+            
+            let filterController: FilterViewController = FilterViewController.init(videoURL: (self.currentVideoSection?.videoURL)!)
+            self.navigationController?.pushViewController(filterController, animated: true)
         })
     }
     
@@ -354,8 +357,6 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                 
                 let renderView = RenderView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
                 self.view.addSubview(renderView)
-                
-                let output : MovieOutput!
                 
                 do {
                     let movie = try MovieInput(asset: videoAsset, playAtActualSpeed: true, loop: false)
