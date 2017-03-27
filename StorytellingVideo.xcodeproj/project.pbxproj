@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4505AA841E89D56D00643ACA /* Filterchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505AA831E89D56D00643ACA /* Filterchain.swift */; };
 		450B9E681E02167D0066037E /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9E671E02167D0066037E /* SlotView.swift */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
-		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
-		45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45A9879A1E7492AE00934AB4 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
+		45A9879C1E7492F000934AB4 /* ReferenceProxy in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45B3F5C21E7487D7007032E0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3F5C11E7487D7007032E0 /* FilterViewController.swift */; };
 		45C569941E08678A00D9B0A8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569931E08678A00D9B0A8 /* arrow.png */; };
 		45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569951E086B4F00D9B0A8 /* arrow_0.png */; };
@@ -24,6 +25,7 @@
 		45F463381DF8B00000CE87BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F463361DF8B00000CE87BE /* LaunchScreen.storyboard */; };
 		45F463401DF8B05400CE87BE /* VideoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */; };
 		45F463421DF8B2C700CE87BE /* videoBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F463411DF8B2C700CE87BE /* videoBg.png */; };
+		6A57AE4F1C9FC175B5E6DC57 /* Pods_StorytellingVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC566C0A28E993251CAB7796 /* Pods_StorytellingVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,13 +66,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */,
+				45A9879C1E7492F000934AB4 /* ReferenceProxy in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F2A967603077E52DA680B99 /* Pods-StorytellingVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytellingVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StorytellingVideo/Pods-StorytellingVideo.debug.xcconfig"; sourceTree = "<group>"; };
+		4505AA831E89D56D00643ACA /* Filterchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filterchain.swift; sourceTree = "<group>"; };
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
 		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		45F463391DF8B00000CE87BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSectionView.swift; sourceTree = "<group>"; };
 		45F463411DF8B2C700CE87BE /* videoBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoBg.png; sourceTree = "<group>"; };
+		9110DF711EBB24DDCF57484E /* Pods-StorytellingVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytellingVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-StorytellingVideo/Pods-StorytellingVideo.release.xcconfig"; sourceTree = "<group>"; };
+		EC566C0A28E993251CAB7796 /* Pods_StorytellingVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorytellingVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +102,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */,
+				45A9879A1E7492AE00934AB4 /* ReferenceProxy in Frameworks */,
+				6A57AE4F1C9FC175B5E6DC57 /* Pods_StorytellingVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4FCBC1AFCD649125425ACF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC566C0A28E993251CAB7796 /* Pods_StorytellingVideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		45A9878C1E74925300934AB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +135,8 @@
 				45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */,
 				45F4632C1DF8B00000CE87BE /* StorytellingVideo */,
 				45F4632B1DF8B00000CE87BE /* Products */,
+				ED6A6F4A535F4C31492F47E1 /* Pods */,
+				0F4FCBC1AFCD649125425ACF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +158,7 @@
 				45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */,
 				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
 				45B3F5C11E7487D7007032E0 /* FilterViewController.swift */,
+				4505AA831E89D56D00643ACA /* Filterchain.swift */,
 				45F463411DF8B2C700CE87BE /* videoBg.png */,
 				45557FF31E01F9EC008714AD /* crossBtn.png */,
 				45C569931E08678A00D9B0A8 /* arrow.png */,
@@ -154,6 +172,15 @@
 			path = StorytellingVideo;
 			sourceTree = "<group>";
 		};
+		ED6A6F4A535F4C31492F47E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F2A967603077E52DA680B99 /* Pods-StorytellingVideo.debug.xcconfig */,
+				9110DF711EBB24DDCF57484E /* Pods-StorytellingVideo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,10 +188,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45F4633C1DF8B00000CE87BE /* Build configuration list for PBXNativeTarget "StorytellingVideo" */;
 			buildPhases = (
+				74258847DF4B4C60CA040E33 /* [CP] Check Pods Manifest.lock */,
 				45F463261DF8B00000CE87BE /* Sources */,
 				45F463271DF8B00000CE87BE /* Frameworks */,
 				45F463281DF8B00000CE87BE /* Resources */,
 				45A9879B1E7492CC00934AB4 /* CopyFiles */,
+				755F18E2B1A47301D3B91C03 /* [CP] Embed Pods Frameworks */,
+				ACB0B6D673B922460960F350 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +295,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74258847DF4B4C60CA040E33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		755F18E2B1A47301D3B91C03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StorytellingVideo/Pods-StorytellingVideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACB0B6D673B922460960F350 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StorytellingVideo/Pods-StorytellingVideo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45F463261DF8B00000CE87BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,6 +353,7 @@
 				45F463301DF8B00000CE87BE /* ViewController.swift in Sources */,
 				45F463401DF8B05400CE87BE /* VideoSectionView.swift in Sources */,
 				45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */,
+				4505AA841E89D56D00643ACA /* Filterchain.swift in Sources */,
 				45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */,
 				45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */,
 			);
@@ -389,6 +468,7 @@
 		};
 		45F4633D1DF8B00000CE87BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2A967603077E52DA680B99 /* Pods-StorytellingVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2P73JXLGWC;
@@ -403,6 +483,7 @@
 		};
 		45F4633E1DF8B00000CE87BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9110DF711EBB24DDCF57484E /* Pods-StorytellingVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2P73JXLGWC;
