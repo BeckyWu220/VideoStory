@@ -226,7 +226,7 @@ public class FilterChain {
                     PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: self.fileURL!)
                 }, completionHandler: { success, error in
                     print("Done saving video, with or without error.")
-                    print("Saving URL: \(self.fileURL)")
+                    //print("Saving URL: \(self.fileURL)")
                 })
 
                 self.isRecording = false
