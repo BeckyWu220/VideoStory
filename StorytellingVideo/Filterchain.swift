@@ -10,6 +10,7 @@ import GPUImage2Hybridity
 import AVFoundation
 import Photos // We need this to save videos
 
+
 public class FilterChain {
     let fbSize = Size(width: 1080, height: 1920)
     var camera:Camera!
@@ -225,6 +226,7 @@ public class FilterChain {
                     PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: self.fileURL!)
                 }, completionHandler: { success, error in
                     print("Done saving video, with or without error.")
+                    print("Saving URL: \(self.fileURL)")
                 })
 
                 self.isRecording = false

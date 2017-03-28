@@ -52,7 +52,9 @@ class SelectImportViewController: UIViewController {
     
     func clickCameraBtn() -> Void {
         print("Click Camera")
-        switchCameraFromViewController(viewController: self, usingDelegate: self)
+        //switchCameraFromViewController(viewController: self, usingDelegate: self)
+        let cameraController: CameraViewController = CameraViewController.init()
+        present(cameraController, animated: true, completion: nil)
     }
     
     func switchToMediaBrowser(viewController: UIViewController, usingDelegate delegate: UINavigationControllerDelegate & UIImagePickerControllerDelegate) -> Bool {

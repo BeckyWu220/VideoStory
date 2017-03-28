@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4505AA841E89D56D00643ACA /* Filterchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505AA831E89D56D00643ACA /* Filterchain.swift */; };
+		4505AA8B1E89DCA600643ACA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505AA8A1E89DCA600643ACA /* CameraViewController.swift */; };
 		450B9E681E02167D0066037E /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9E671E02167D0066037E /* SlotView.swift */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
-		45A9879A1E7492AE00934AB4 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
-		45A9879C1E7492F000934AB4 /* ReferenceProxy in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
+		45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45B3F5C21E7487D7007032E0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3F5C11E7487D7007032E0 /* FilterViewController.swift */; };
 		45C569941E08678A00D9B0A8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569931E08678A00D9B0A8 /* arrow.png */; };
 		45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C569951E086B4F00D9B0A8 /* arrow_0.png */; };
@@ -66,7 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				45A9879C1E7492F000934AB4 /* ReferenceProxy in CopyFiles */,
+				45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		2F2A967603077E52DA680B99 /* Pods-StorytellingVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytellingVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StorytellingVideo/Pods-StorytellingVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		4505AA831E89D56D00643ACA /* Filterchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filterchain.swift; sourceTree = "<group>"; };
+		4505AA8A1E89DCA600643ACA /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
 		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45A9879A1E7492AE00934AB4 /* ReferenceProxy in Frameworks */,
+				45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */,
 				6A57AE4F1C9FC175B5E6DC57 /* Pods_StorytellingVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +157,7 @@
 				45F4632F1DF8B00000CE87BE /* ViewController.swift */,
 				450B9E671E02167D0066037E /* SlotView.swift */,
 				45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */,
+				4505AA8A1E89DCA600643ACA /* CameraViewController.swift */,
 				45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */,
 				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
 				45B3F5C11E7487D7007032E0 /* FilterViewController.swift */,
@@ -356,6 +359,7 @@
 				4505AA841E89D56D00643ACA /* Filterchain.swift in Sources */,
 				45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */,
 				45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */,
+				4505AA8B1E89DCA600643ACA /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
