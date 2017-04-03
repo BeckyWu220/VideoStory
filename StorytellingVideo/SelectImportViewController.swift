@@ -6,6 +6,8 @@
 //  Copyright © 2016 Wanqiao Wu. All rights reserved.
 //
 
+/*Deprecated*/
+
 import UIKit
 import MediaPlayer
 import MobileCoreServices

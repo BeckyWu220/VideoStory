@@ -6,6 +6,8 @@
 //  Copyright © 2017 Wanqiao Wu. All rights reserved.
 //
 
+/*Deprecated*/
+
 import UIKit
 //import Filterchain
 import GPUImage2Hybridity
@@ -72,7 +74,7 @@ class CameraViewController: UIViewController {
         }
         
         // Check if video is done saving
-        filterChain.videoDidSave = { result in
+        filterChain.videoDidSave = { result, fileURL in
             print("ViewController -> videoCaptureButtonAction -> filterChain.videoDidSave result:  \(result)")
             if result {
                 print("Video Saved Successfully")

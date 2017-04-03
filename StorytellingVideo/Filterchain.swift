@@ -58,7 +58,7 @@ public class FilterChain {
     
     
     // Callbacks
-    var videoDidSave: ((_: Bool)->())?
+    var videoDidSave: ((_: Bool, _: URL)->())?
     var stillImageDidSave: ((_: Bool)->())?
     
     
@@ -218,7 +218,14 @@ public class FilterChain {
             do {
                 self.isRecording = true
                 let documentsDir = try FileManager.default.url(for:.documentDirectory, in:.userDomainMask, appropriateFor:nil, create:true)
-                self.fileURL = URL(string:"test.mp4", relativeTo:documentsDir)!
+                
+                let currentDateTime = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-mm-dd_hh:mm:ss"
+                
+                print("Capture At:\(dateFormatter.string(from: currentDateTime))")
+                
+                self.fileURL = URL(string:"test_\(dateFormatter.string(from: currentDateTime)).mp4", relativeTo:documentsDir)!
                 do {
                     try FileManager.default.removeItem(at:self.fileURL!)
                 } catch {
@@ -233,7 +240,7 @@ public class FilterChain {
                 fatalError("Couldn't initialize movie, error: \(error)")
             }
         } else {
-            
+            self.isRecording = false
             movieOutput?.finishRecording{
                 print("FC -> Video recording finished")
                 PHPhotoLibrary.shared().performChanges({
@@ -241,9 +248,8 @@ public class FilterChain {
                 }, completionHandler: { success, error in
                     print("Video recording completed with error = " + String(describing: error))
                     // Notify the videoDidSave callback of the results
-                    self.videoDidSave?(_:success)
+                    self.videoDidSave?(_:success, _:self.fileURL!)
                 })
-                self.isRecording = false
                 
                 DispatchQueue.main.async {
                   //  (sender as! UIButton).titleLabel!.text = "Record"
