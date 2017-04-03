@@ -10,9 +10,7 @@ import GPUImage2Hybridity
 import AVFoundation
 import Photos // We need this to save videos
 
-
 public class FilterChain {
-    let fbSize = Size(width: 1080, height: 1920)
     var camera:Camera!
     var renderView:RenderView!
     
@@ -21,7 +19,7 @@ public class FilterChain {
     
     // Video capture
     var movieOutput : MovieOutput? = nil
-    var isRecording = false
+    var isRecording = false // Indicates recording state (started/stopped), does NOT indicae file saving completion (
     var fileURL: URL? = nil
     
     // Filters
@@ -57,6 +55,12 @@ public class FilterChain {
     var filters: [BasicOperation] = [BasicOperation]() // All available filters, casting as superclass to hold all filters in an array
     var activeFilters: [BasicOperation] = [BasicOperation]() // Currently active filters
     var numFilters = 7 // Number of filters in chain
+    
+    
+    // Callbacks
+    var videoDidSave: ((_: Bool)->())?
+    var stillImageDidSave: ((_: Bool)->())?
+    
     
     public func initFilters() {
         filters = [saturationFilter, pixellateFilter, dotFilter, invertFilter, halftoneFilter, /*blendFilter,*/ swirlFilter, dilationFilter, erosionFilter, /*lowPassFilter, highPassFilter,*/ cgaColorspaceFilter, kuwaharaFilter, posterizeFilter, vignetteFilter, zoomBlurFilter, polarPizellateFilter, pinchDistortionFilter, sphereRefractionFilter, glassSphereRefractionFilter, embossFilter, toonFilter, thresholdSketchFilter, /*ShiftFilter, iOSBlurFilter,*/ solarizeFilter]
@@ -99,7 +103,6 @@ public class FilterChain {
         // Remove targets from active filters
         var index = 0
         for _ in activeFilters {
-            print("removing target from filter at index \(index)")
             activeFilters[index].removeAllTargets()
             index+=1
         }
@@ -135,8 +138,7 @@ public class FilterChain {
             let randNum = uniqueRandomIndex()
             activeFilters[index] = filters[randNum]
         }
-        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++-")
-        print("Current filter chain:")
+        // Print the combo:
         for filter in activeFilters {
             print(filter)
         }
@@ -148,9 +150,7 @@ public class FilterChain {
     // Return a random filter index
     private func randomIndex() -> Int {
         let count = filters.count
-        
         let randNum = Int(arc4random_uniform(UInt32(count)))
-        //        print("diceRoll: \(randNum)")
         return randNum
     }
     
@@ -162,18 +162,15 @@ public class FilterChain {
         while alreadySelected {
             index = randomIndex()
             var hits = 0
-            print("Trying to find unique number, current \(hits) hits")
-            let newFilterName = type(of:filters[index])//object_getClassName(filters[index])
-            print("----------------------------------------------------------------------------")
-            print("index \(index)")
+            
+            let newFilterName = type(of:filters[index])
             for filter in activeFilters {
-                let activeFilterName = type(of:filter)//object_getClassName(filter)
-                print("comparing \(newFilterName) to \(activeFilterName)")
+                let activeFilterName = type(of:filter)
                 if (newFilterName == activeFilterName) {
                     hits = hits+1
-                    print("hits \(hits)")
                 }
             }
+            
             if (hits == 0) {
                 alreadySelected = false
                 // Leave the while loop
@@ -187,14 +184,34 @@ public class FilterChain {
         print("FC -> Capture Still")
         
         pictureOutput.encodedImageFormat = .png
+        
         pictureOutput.imageAvailableCallback = {image in
-        print("FC -> image available callback")
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            print("FC -> image available callback")
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            //
+            //UIImageWriteToSavedPhotosAlbum(image, self, #selector(FilterChain.image(_:didFinishSavingWithError:contextInfo:)) , nil)
+            
         }
+    
     }
     
+
+//    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+//        let success:Bool?
+//        if let error = error {
+//            success = false
+//            // we got back an error!
+//            print("Error saving image -> \(error)")
+//            
+//        } else {
+//            success = true
+//        }
+//        print("STUUUUUUUUFFFFF")
+//        self.stillImageDidSave?(_:success!)
+//    }
+    
     // Video Capture toggle (start/stop)
-    public func startVideoCapture() {
+    public func captureVideo() {
         print("FC -> Start Capture Video")
         
         if (!isRecording) {
@@ -212,24 +229,22 @@ public class FilterChain {
                 camera.audioEncodingTarget = movieOutput
                 activeFilters[numFilters-1] --> movieOutput!
                 movieOutput!.startRecording()
-                DispatchQueue.main.async {
-                    // Label not updating on the main thread, for some reason, so dispatching slightly after this
-                    //(sender as! UIButton).titleLabel!.text = "Stop"
-                }
             } catch {
                 fatalError("Couldn't initialize movie, error: \(error)")
             }
         } else {
+            
             movieOutput?.finishRecording{
                 print("FC -> Video recording finished")
                 PHPhotoLibrary.shared().performChanges({
                     PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: self.fileURL!)
                 }, completionHandler: { success, error in
-                    print("Done saving video, with or without error.")
-                    //print("Saving URL: \(self.fileURL)")
+                    print("Video recording completed with error = " + String(describing: error))
+                    // Notify the videoDidSave callback of the results
+                    self.videoDidSave?(_:success)
                 })
-
                 self.isRecording = false
+                
                 DispatchQueue.main.async {
                   //  (sender as! UIButton).titleLabel!.text = "Record"
                 }
@@ -238,21 +253,6 @@ public class FilterChain {
             }
         }
     }
-        
-    
-    // TODO Callback and error handling for captureStill()
-    dynamic func didSaveStillImage() {
-        print("Saved image")
-    }
-//    dynamic func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-//        if let error = error {
-//            // we got back an error!
-//            print("FC -> There was a problem saving the image.")
-//        } else {
-//            print("FC -> Image saved successfully")
-//        }
-//    }
-    
     
     func getFilterChainLength() -> Int{
         return numFilters
@@ -270,10 +270,8 @@ public class FilterChain {
             numFilters = newLength
         }
         
-        //rebuild chain
+        // Rebuild chain
         rebuildChain()
-        
-        
     }
     
     
@@ -294,7 +292,7 @@ public class FilterChain {
         camera.startCapture()
     }
     
-    //    func appendFilter(filter:BasicOperation){
+    
     func appendFilter(filter:Int){
         //Stop Camera Capture
         camera.stopCapture()

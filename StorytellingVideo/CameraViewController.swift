@@ -15,6 +15,8 @@ class CameraViewController: UIViewController {
     var filterChain = FilterChain()
     let filterView = RenderView(frame: UIScreen.main.bounds)
     
+    var captureBtn : UIButton?
+    
     init() {
         super.init(nibName: nil, bundle:nil)
     }
@@ -33,9 +35,9 @@ class CameraViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchEventRecognizer (_:)))
         self.filterView.addGestureRecognizer(gesture)
         
-        let captureBtn = createVideoCaptureButton()
-        captureBtn.addTarget(self, action: #selector(videoCaptureButtonAction(sender:)), for: .touchUpInside)
-        self.view.addSubview(captureBtn)
+        captureBtn = createVideoCaptureButton()
+        captureBtn?.addTarget(self, action: #selector(videoCaptureButtonAction(sender:)), for: .touchUpInside)
+        self.view.addSubview(captureBtn!)
         
         filterChain.start()
         filterChain.startCameraWithView(view: filterView)
@@ -56,7 +58,36 @@ class CameraViewController: UIViewController {
     
     func videoCaptureButtonAction(sender: UIButton!) {
         print("Video Capture Button tapped")
-        filterChain.startVideoCapture()
+        // Start capturing video
+        filterChain.captureVideo()
+        
+        // Update UI elements to indicate that we are recording
+        if (filterChain.isRecording) {
+            self.captureBtn?.backgroundColor = .green
+        }
+        else {
+            // Not recording, but not done saving either...i
+            print("Setting video capture button color to yellow")
+            self.captureBtn?.backgroundColor = .yellow
+        }
+        
+        // Check if video is done saving
+        filterChain.videoDidSave = { result in
+            print("ViewController -> videoCaptureButtonAction -> filterChain.videoDidSave result:  \(result)")
+            if result {
+                print("Video Saved Successfully")
+            }
+            else {
+                print("There was a problem saving the video.")
+            }
+            
+            // Update UI elements
+            print("Setting video capture button color to red")
+            // Put UI updating on the main queue to prevent a delay
+            DispatchQueue.main.async {
+                self.captureBtn?.backgroundColor = .red
+            }
+        }
     }
     
     // Touch recognizer action
