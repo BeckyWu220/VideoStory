@@ -86,8 +86,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                 })
             }
         }else{
-            let importController : SelectImportViewController = SelectImportViewController()
-            importController.delegate = self
+            let importController : ToyViewController = ToyViewController()
+                //SelectImportViewController = SelectImportViewController()
+            //importController.delegate = self
             self.endEditingMode()
             self.navigationController?.pushViewController(importController, animated: true)
         }

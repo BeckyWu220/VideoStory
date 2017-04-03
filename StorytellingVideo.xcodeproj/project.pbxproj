@@ -11,6 +11,7 @@
 		4505AA8B1E89DCA600643ACA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505AA8A1E89DCA600643ACA /* CameraViewController.swift */; };
 		450B9E681E02167D0066037E /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9E671E02167D0066037E /* SlotView.swift */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
+		45A5B5351E92B9240056825A /* ToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A5B5341E92B9240056825A /* ToyViewController.swift */; };
 		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
 		45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45B3F5C21E7487D7007032E0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3F5C11E7487D7007032E0 /* FilterViewController.swift */; };
@@ -79,6 +80,7 @@
 		4505AA8A1E89DCA600643ACA /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
+		45A5B5341E92B9240056825A /* ToyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewController.swift; sourceTree = "<group>"; };
 		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		45B3F5C11E7487D7007032E0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		45C569931E08678A00D9B0A8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				45F4632F1DF8B00000CE87BE /* ViewController.swift */,
 				450B9E671E02167D0066037E /* SlotView.swift */,
 				45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */,
+				45A5B5341E92B9240056825A /* ToyViewController.swift */,
 				4505AA8A1E89DCA600643ACA /* CameraViewController.swift */,
 				45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */,
 				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
@@ -360,6 +363,7 @@
 				45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */,
 				45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */,
 				4505AA8B1E89DCA600643ACA /* CameraViewController.swift in Sources */,
+				45A5B5351E92B9240056825A /* ToyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

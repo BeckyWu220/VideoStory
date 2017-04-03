@@ -6,6 +6,8 @@
 //  Copyright © 2017 Wanqiao Wu. All rights reserved.
 //
 
+/*Deprecated*/
+
 import UIKit
 import GPUImage
 import AssetsLibrary

@@ -17,7 +17,6 @@ protocol SelectImportVCDelegate{
 class SelectImportViewController: UIViewController {
     
     var delegate: SelectImportVCDelegate!
-    public var albumBtn: UIButton?
     public var cameraBtn: UIButton?
 
     override func viewDidLoad() {
@@ -25,13 +24,6 @@ class SelectImportViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Import/Shoot Video"
-
-        // Do any additional setup after loading the view.
-        albumBtn = UIButton(frame: CGRect(x: (self.view.frame.size.width - 100)/2, y: (self.view.frame.size.height - 30)/2, width: 100, height: 30))
-        albumBtn?.setTitle("Album", for: UIControlState.normal)
-        albumBtn?.addTarget(self, action: #selector(clickAlbumBtn), for: UIControlEvents.touchUpInside)
-        albumBtn?.backgroundColor = UIColor.gray
-        self.view.addSubview(albumBtn!)
         
         cameraBtn = UIButton(frame: CGRect(x: (self.view.frame.size.width - 100)/2, y: (self.view.frame.size.height - 30)/2 + 60, width: 100, height: 30))
         cameraBtn?.setTitle("Camera", for: UIControlState.normal)
@@ -45,33 +37,12 @@ class SelectImportViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func clickAlbumBtn() -> Void {
-        print("Click Album")
-        switchToMediaBrowser(viewController: self, usingDelegate: self)
-    }
-    
     func clickCameraBtn() -> Void {
         print("Click Camera")
         //switchCameraFromViewController(viewController: self, usingDelegate: self)
         let cameraController: CameraViewController = CameraViewController.init()
         self.navigationController?.pushViewController(cameraController, animated: true)
         //present(cameraController, animated: true, completion: nil)
-    }
-    
-    func switchToMediaBrowser(viewController: UIViewController, usingDelegate delegate: UINavigationControllerDelegate & UIImagePickerControllerDelegate) -> Bool {
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) == false{
-            return false
-        }
-        
-        let mediaUI = UIImagePickerController()
-        mediaUI.sourceType = .savedPhotosAlbum
-        mediaUI.mediaTypes = [kUTTypeMovie as NSString as String]
-        mediaUI.allowsEditing = true
-        mediaUI.delegate = delegate
-        
-        //self.navigationController?.pushViewController(mediaUI, animated: true)
-        present(mediaUI, animated: true, completion: nil)
-        return true
     }
     
     func switchCameraFromViewController(viewController: UIViewController, usingDelegate delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> Bool {
