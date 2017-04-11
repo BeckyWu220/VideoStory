@@ -11,7 +11,8 @@ import UIKit
 protocol VideoSectionDelegate {
     func tappedVideoSection(videoSection: VideoSectionView)
     func switchToEditingMode()
-    func draggedVideoSection(videoSection: VideoSectionView)
+    func draggedVideoSection(videoSection: VideoSectionView, targetSlot: SlotView)
+    func draggingVideoSection(videoSection: VideoSectionView) -> SlotView
 }
 class VideoSectionView: UIView {
     
@@ -21,6 +22,7 @@ class VideoSectionView: UIView {
     public var videoURL : URL? //Used to store selected video and preview it later.
     public var videoPath: String!
     var deleteBtn : UIButton?
+    var targetSlot : SlotView?
 
     override init(frame: CGRect) {
         containVideo = false
@@ -29,8 +31,10 @@ class VideoSectionView: UIView {
         
         videoIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         //videoIcon?.backgroundColor = UIColor.darkGray
+        videoIcon?.layer.cornerRadius = 4.0
         videoIcon?.contentMode = .scaleAspectFill
         videoIcon?.clipsToBounds = true
+        
         self.addSubview(videoIcon!)
         
         deleteBtn = UIButton.init(frame: CGRect(x: -15, y: -15, width: self.frame.width/1.5, height: self.frame.width/1.5))
@@ -93,9 +97,14 @@ class VideoSectionView: UIView {
         self.center = CGPoint(x: ((gesture.view?.center.x)! + translation.x), y: (gesture.view?.center.y)! + translation.y)
         gesture.setTranslation(CGPoint.zero, in: self.superview)
         
-        if gesture.state == UIGestureRecognizerState.ended {
+        if gesture.state == UIGestureRecognizerState.changed {
             //self.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
-            self.delegate.draggedVideoSection(videoSection: self)
+            if (targetSlot != nil) {
+                 targetSlot?.transform = CGAffineTransform.identity
+            }
+            self.targetSlot = self.delegate.draggingVideoSection(videoSection: self)
+        } else if gesture.state == UIGestureRecognizerState.ended {
+            self.delegate.draggedVideoSection(videoSection: self, targetSlot: self.targetSlot!)
         }
         
     }
@@ -107,6 +116,10 @@ class VideoSectionView: UIView {
         animation.repeatCount = .infinity
         animation.values = [0, -5.0/180.0*M_PI, 0, 5.0/180.0*M_PI, 0]
         self.layer.add(animation, forKey: "shake")
+    }
+    
+    func stopShaking() {
+        self.layer.removeAnimation(forKey: "shake")
     }
 
 }

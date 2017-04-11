@@ -110,6 +110,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         for i in 0...(self.videoSectionArray.count-1) {
             let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
             videoSection.deleteBtn?.isHidden = true
+            videoSection.stopShaking()
             
             if videoSection.containVideo {
                 exportBtn?.isHidden = false
@@ -256,8 +257,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         }
     }
     
-    func draggedVideoSection(videoSection: VideoSectionView) {
-        print("Drag")
+    func draggingVideoSection(videoSection: VideoSectionView) -> SlotView {
+        
+        print("Dragging")
         let intersectionArray : NSMutableArray = []
         print("Elements: \(intersectionArray.count)")
         for i in 0...(slotRangeArray.count-1) {
@@ -266,7 +268,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             let intersection = slotRange.frame.intersection(videoSection.frame)
             let intersectArea: CGFloat
-
+            
             
             if intersection.isNull {
                 intersectArea = 0
@@ -292,12 +294,20 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         }
         print("MaxSlot: \(maxIntersectionSlot)")
         let targetSlot = videoSlotArray.object(at: maxIntersectionSlot) as! SlotView
+        targetSlot.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
+        
+        return targetSlot
+    }
+    
+    func draggedVideoSection(videoSection: VideoSectionView, targetSlot: SlotView) {
+        print("Drag")
         
         let originSlotIndex = videoSectionArray.index(of: videoSection)
-        
         let originSlot = videoSlotArray.object(at: originSlotIndex) as! SlotView
         
-        let targetVideoSection = videoSectionArray.object(at: maxIntersectionSlot) as! VideoSectionView
+        
+        let targetSlotIndex = videoSlotArray.index(of: targetSlot)
+        let targetVideoSection = videoSectionArray.object(at: targetSlotIndex) as! VideoSectionView
         
         UIView.animate(withDuration: 0.3,
                                    delay: 0.0,
@@ -306,11 +316,13 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         {
             videoSection.center = targetSlot.center
             targetVideoSection.center = originSlot.center
+            
+            targetSlot.transform = CGAffineTransform.identity
         }, completion: { finished in
             let tempVideoSection = self.videoSectionArray.object(at: originSlotIndex) as! VideoSectionView
             
-            self.videoSectionArray.replaceObject(at: originSlotIndex, with: self.videoSectionArray.object(at: maxIntersectionSlot))
-            self.videoSectionArray.replaceObject(at: maxIntersectionSlot, with: tempVideoSection)
+            self.videoSectionArray.replaceObject(at: originSlotIndex, with: self.videoSectionArray.object(at: targetSlotIndex))
+            self.videoSectionArray.replaceObject(at: targetSlotIndex, with: tempVideoSection)
         })
     }
     
