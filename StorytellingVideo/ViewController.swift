@@ -105,9 +105,6 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
             
             self.setThumbnailForVideoSection(image: image, videoURL: (self.currentVideoSection?.videoURL)!, videoPath: (self.currentVideoSection?.videoPath)!)
-            
-            let filterController: FilterViewController = FilterViewController.init(videoURL: (self.currentVideoSection?.videoURL)!)
-            self.navigationController?.pushViewController(filterController, animated: true)
         })
     }
     
@@ -417,8 +414,10 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             isPortrait = true
         } else if transform.a == 1.0 && transform.b == 0 && transform.c == 0 && transform.d == 1.0 {
             assetOrientation = .up
+            isPortrait = true
         } else if transform.a == -1.0 && transform.b == 0 && transform.c == 0 && transform.d == -1.0 {
             assetOrientation = .down
+            isPortrait = true
         }
         return (assetOrientation, isPortrait)
     }
@@ -447,10 +446,11 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         print("Orientation: \(orientation)")
         
         if assetInfo.isPortrait {
-            scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
+            scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.width
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
-            instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor),
+            instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(CGAffineTransform(translationX: 0, y: -(UIScreen.main.bounds.height - assetTrack.naturalSize.width)/2)),
                                      at: kCMTimeZero)
+            print("Is Protrait");
         } else {
 
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
@@ -463,6 +463,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                 concat = fixUpsideDown.concatenating(centerFix).concatenating(scaleFactor)
             }
             instruction.setTransform(concat, at: kCMTimeZero)
+            print("Is Landscape");
         }
         
         return instruction
