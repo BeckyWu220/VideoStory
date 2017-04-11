@@ -51,12 +51,19 @@ class PreviewViewController: UIViewController {
         if (self.mergedVideo) {
             /*If this is the preview of merged video*/
         }else {
-            /*If this preview is for unmerged video*/
+            /*If this preview is for unmerged video, show editBtn and deleteBtn*/
             let editBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
             editBtn.setTitle("Edit Video", for: UIControlState.normal)
             editBtn.addTarget(self, action: #selector(editVideo), for: UIControlEvents.touchUpInside)
             editBtn.backgroundColor = UIColor.gray
             self.view.addSubview(editBtn)
+            
+            let deleteBtn = UIButton.init(frame: CGRect(x: editBtn.frame.origin.x, y: editBtn.frame.origin.y+editBtn.frame.size.height + 10, width: editBtn.frame.size.width, height: editBtn.frame.size.height))
+            deleteBtn.setTitle("Delete", for: UIControlState.normal)
+            deleteBtn.addTarget(self, action: #selector(deleteVideo), for: UIControlEvents.touchUpInside)
+            deleteBtn.backgroundColor = UIColor.gray
+            self.view.addSubview(deleteBtn)
+            
         }
     }
 
@@ -70,6 +77,12 @@ class PreviewViewController: UIViewController {
         print("Play Preview Video")
         let moviePlayer = MPMoviePlayerViewController(contentURL: videoURL)
         self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+    }
+    
+    func deleteVideo() {
+        print("Delete Video & Return to ViewController")
+        self.delegate.resetVideoSection()
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

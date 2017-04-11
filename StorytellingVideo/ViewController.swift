@@ -128,6 +128,18 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         tipLabel?.text = "Click loaded video to preview.\n Long press any loaded video to edit."
     }
     
+    func resetVideoSection() {
+        self.currentVideoSection?.deleteCurrentVideoSection()
+        
+        exportBtn?.isHidden = true
+        for i in 0...(self.videoSectionArray.count-1) {
+            let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
+            if videoSection.containVideo {
+                exportBtn?.isHidden = false
+            }
+        }
+    }
+    
     func exportDidFinish(session: AVAssetExportSession) {
         if session.status == AVAssetExportSessionStatus.completed{
             let outputURL = session.outputURL

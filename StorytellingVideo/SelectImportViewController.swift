@@ -14,6 +14,7 @@ import MobileCoreServices
 
 protocol SelectImportVCDelegate{
     func setThumbnailForVideoSection(image: UIImage, videoURL: URL, videoPath: String)
+    func resetVideoSection()
 }
 
 class SelectImportViewController: UIViewController {
