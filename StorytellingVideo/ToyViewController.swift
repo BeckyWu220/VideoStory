@@ -255,7 +255,7 @@ extension ToyViewController: UIVideoEditorControllerDelegate {
         print("error=\(error.localizedDescription)")
         dismiss(animated: true, completion: {})
     }
-
+    
 }
 
 

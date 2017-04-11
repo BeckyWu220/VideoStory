@@ -10,6 +10,10 @@
 		4505AA841E89D56D00643ACA /* Filterchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505AA831E89D56D00643ACA /* Filterchain.swift */; };
 		4505AA8B1E89DCA600643ACA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505AA8A1E89DCA600643ACA /* CameraViewController.swift */; };
 		450B9E681E02167D0066037E /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9E671E02167D0066037E /* SlotView.swift */; };
+		452247BC1E9D7D5A00487EBF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247B81E9D7D5A00487EBF /* Bolts.framework */; };
+		452247BD1E9D7D5A00487EBF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247B91E9D7D5A00487EBF /* FBSDKCoreKit.framework */; };
+		452247BE1E9D7D5A00487EBF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247BA1E9D7D5A00487EBF /* FBSDKLoginKit.framework */; };
+		452247BF1E9D7D5A00487EBF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247BB1E9D7D5A00487EBF /* FBSDKShareKit.framework */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
 		45A5B5351E92B9240056825A /* ToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A5B5341E92B9240056825A /* ToyViewController.swift */; };
 		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
@@ -79,6 +83,10 @@
 		4505AA831E89D56D00643ACA /* Filterchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filterchain.swift; sourceTree = "<group>"; };
 		4505AA8A1E89DCA600643ACA /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = StorytellingVideo/CameraViewController.swift; sourceTree = "<group>"; };
 		450B9E671E02167D0066037E /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
+		452247B81E9D7D5A00487EBF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		452247B91E9D7D5A00487EBF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		452247BA1E9D7D5A00487EBF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		452247BB1E9D7D5A00487EBF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
 		45A5B5341E92B9240056825A /* ToyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewController.swift; sourceTree = "<group>"; };
 		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
@@ -106,6 +114,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452247BC1E9D7D5A00487EBF /* Bolts.framework in Frameworks */,
+				452247BD1E9D7D5A00487EBF /* FBSDKCoreKit.framework in Frameworks */,
+				452247BF1E9D7D5A00487EBF /* FBSDKShareKit.framework in Frameworks */,
+				452247BE1E9D7D5A00487EBF /* FBSDKLoginKit.framework in Frameworks */,
 				45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */,
 				6A57AE4F1C9FC175B5E6DC57 /* Pods_StorytellingVideo.framework in Frameworks */,
 			);
@@ -117,6 +129,10 @@
 		0F4FCBC1AFCD649125425ACF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				452247B81E9D7D5A00487EBF /* Bolts.framework */,
+				452247B91E9D7D5A00487EBF /* FBSDKCoreKit.framework */,
+				452247BA1E9D7D5A00487EBF /* FBSDKLoginKit.framework */,
+				452247BB1E9D7D5A00487EBF /* FBSDKShareKit.framework */,
 				EC566C0A28E993251CAB7796 /* Pods_StorytellingVideo.framework */,
 			);
 			name = Frameworks;
@@ -480,6 +496,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2P73JXLGWC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StorytellingVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -495,6 +515,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2P73JXLGWC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StorytellingVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

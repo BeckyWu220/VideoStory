@@ -41,6 +41,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Storyboard"
@@ -168,10 +169,12 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                     if error != nil {
                         title = "Error"
                         message = "Failed to save video"
-                    }else{
-                        title = "Success"
-                        message = "Video exported and saved"
                         
+                        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    }else{
                         let previewController = PreviewViewController.init(videoURL: self.videoURL!, mergedVideo: true)
                         self.navigationController?.pushViewController(previewController, animated: true)
                         
@@ -185,9 +188,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                         //self.videoSectionArray.removeAllObjects()
                         //self.createVideoSections(number: 3)
                     }
-                    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    
                 })
             }
         }
