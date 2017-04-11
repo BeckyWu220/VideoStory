@@ -14,7 +14,7 @@ import AVKit
 import AVFoundation
 import GPUImage
 
-class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDelegate, UIVideoEditorControllerDelegate {
+class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDelegate {
     
     var videoSectionArray: NSMutableArray = []
     var videoSlotArray: NSMutableArray = []
@@ -74,17 +74,10 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             //let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
             //self.presentMoviePlayerViewControllerAnimated(moviePlayer)
             
-            let editVideoViewController: UIVideoEditorController!
+            let previewController = PreviewViewController.init(videoURL: (self.currentVideoSection?.videoURL)!, mergedVideo: false)
+            previewController.delegate = self
+            self.navigationController?.pushViewController(previewController, animated: true)
             
-            if UIVideoEditorController.canEditVideo(atPath: (currentVideoSection?.videoPath)!) {
-                editVideoViewController = UIVideoEditorController()
-                editVideoViewController.delegate = self
-                editVideoViewController.videoPath = (currentVideoSection?.videoPath)!
-                editVideoViewController.videoQuality = .typeHigh
-                present(editVideoViewController, animated: true, completion: {
-                    
-                })
-            }
         }else{
             let importController : ToyViewController = ToyViewController()
                 //SelectImportViewController = SelectImportViewController()
@@ -92,29 +85,6 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             self.endEditingMode()
             self.navigationController?.pushViewController(importController, animated: true)
         }
-    }
-    
-    func videoEditorController(_ editor: UIVideoEditorController, didSaveEditedVideoToPath editedVideoPath: String) {
-        dismiss(animated: false, completion: {
-            self.currentVideoSection?.videoPath = editedVideoPath
-            self.currentVideoSection?.videoURL = URL(fileURLWithPath: editedVideoPath)
-            
-            let asset = AVURLAsset(url: (self.currentVideoSection?.videoURL)!)
-            let imgGenerator = AVAssetImageGenerator(asset: asset)
-            imgGenerator.appliesPreferredTrackTransform = true
-            let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
-            
-            self.setThumbnailForVideoSection(image: image, videoURL: (self.currentVideoSection?.videoURL)!, videoPath: (self.currentVideoSection?.videoPath)!)
-        })
-    }
-    
-    func videoEditorControllerDidCancel(_ editor: UIVideoEditorController) {
-        dismiss(animated: true, completion: {})
-    }
-    
-    func videoEditorController(_ editor: UIVideoEditorController, didFailWithError error: Error) {
-        print("error=\(error.localizedDescription)")
-        dismiss(animated: true, completion: {})
     }
     
     func switchToEditingMode() {
@@ -174,7 +144,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
                         title = "Success"
                         message = "Video exported and saved"
                         
-                        let previewController = PreviewViewController.init(videoURL: self.videoURL!)
+                        let previewController = PreviewViewController.init(videoURL: self.videoURL!, mergedVideo: true)
                         self.navigationController?.pushViewController(previewController, animated: true)
                         
                         self.loadIndicator?.stopAnimating()
