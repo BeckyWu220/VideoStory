@@ -121,8 +121,8 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
                 let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
                 self.delegate.setThumbnailForVideoSection(image: image, videoURL: fileURL, videoPath: fileURL.path)
                 
-                //Switch back to ViewController View.
-                self.navigationController?.popViewController(animated: true)
+                //Switch to Video Trimming.
+                self.editVideo(path: fileURL.path)
             }
         }
     }
@@ -211,6 +211,49 @@ extension ToyViewController: UIImagePickerControllerDelegate {
             print("Portrait")
             renderOrientation = ImageOrientation.landscapeLeft
         }
+    }
+
+}
+
+extension ToyViewController: UIVideoEditorControllerDelegate {
+    func editVideo(path: String) {
+        print("Edit Video After Recording.")
+        let editVideoViewController: UIVideoEditorController!
+        
+        if UIVideoEditorController.canEditVideo(atPath: path) {
+            editVideoViewController = UIVideoEditorController()
+            editVideoViewController.delegate = self
+            editVideoViewController.videoPath = path
+            editVideoViewController.videoQuality = .typeHigh
+            present(editVideoViewController, animated: true, completion: {
+                
+            })
+        }
+    }
+    
+    func videoEditorController(_ editor: UIVideoEditorController, didSaveEditedVideoToPath editedVideoPath: String) {
+        dismiss(animated: false, completion: {
+            let videoURL = URL(fileURLWithPath: editedVideoPath)
+            
+            let asset = AVURLAsset(url: videoURL)
+            let imgGenerator = AVAssetImageGenerator(asset: asset)
+            imgGenerator.appliesPreferredTrackTransform = true
+            let image : UIImage = try! UIImage(cgImage: imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil))
+            
+            self.delegate.setThumbnailForVideoSection(image: image, videoURL: videoURL, videoPath: editedVideoPath)
+            
+            //Switch back to ViewController View.
+            self.navigationController?.popViewController(animated: false)
+        })
+    }
+    
+    func videoEditorControllerDidCancel(_ editor: UIVideoEditorController) {
+        dismiss(animated: true, completion: {})
+    }
+    
+    func videoEditorController(_ editor: UIVideoEditorController, didFailWithError error: Error) {
+        print("error=\(error.localizedDescription)")
+        dismiss(animated: true, completion: {})
     }
 
 }
