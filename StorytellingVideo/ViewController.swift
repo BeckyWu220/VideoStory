@@ -97,6 +97,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             let videoSection = self.videoSectionArray.object(at: i) as! VideoSectionView
             if videoSection.containVideo {
                 videoSection.deleteBtn?.isHidden = false
+                videoSection.shake()
             }
         }
     }

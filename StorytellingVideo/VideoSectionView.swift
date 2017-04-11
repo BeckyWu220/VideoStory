@@ -63,6 +63,7 @@ class VideoSectionView: UIView {
             if gesture.state == UIGestureRecognizerState.began {
                 print("Begin")
                 deleteBtn?.isHidden = false
+                //self.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
                 
                 let panGesture = UIPanGestureRecognizer(target: self, action: #selector(VideoSectionView.beDragged(gesture:)))
                 self.addGestureRecognizer(panGesture)
@@ -93,9 +94,19 @@ class VideoSectionView: UIView {
         gesture.setTranslation(CGPoint.zero, in: self.superview)
         
         if gesture.state == UIGestureRecognizerState.ended {
+            //self.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
             self.delegate.draggedVideoSection(videoSection: self)
         }
         
+    }
+    
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.duration = 0.3
+        animation.repeatCount = .infinity
+        animation.values = [0, -5.0/180.0*M_PI, 0, 5.0/180.0*M_PI, 0]
+        self.layer.add(animation, forKey: "shake")
     }
 
 }
