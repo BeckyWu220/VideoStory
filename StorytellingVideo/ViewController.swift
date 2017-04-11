@@ -24,6 +24,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     var exportBtn: UIButton?
     var videoURL: URL?
     var endEditingBtn: UIButton?
+    var editingMode: Bool?
     
     var loadIndicator: UIActivityIndicatorView?
     
@@ -43,6 +44,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Storyboard"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "back", style: .plain, target: self, action: #selector(endEditingMode))
         
         //self.createVideoSections(number: 3)
         
@@ -60,6 +62,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.view.addSubview(endEditingBtn!)
         endEditingBtn?.isHidden = true
         
+        editingMode = false
+        
         tipLabel = UILabel.init(frame: CGRect(x: 0, y: self.view.frame.size.height - 100, width: self.view.frame.size.width, height: 100))
         tipLabel?.text = "Click [+] to import video."
         tipLabel?.textColor = UIColor.darkGray
@@ -69,25 +73,31 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     }
     
     func tappedVideoSection(videoSection: VideoSectionView) {
-        currentVideoSection = videoSection
-        if videoSection.containVideo {
-            //let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
-            //self.presentMoviePlayerViewControllerAnimated(moviePlayer)
-            
-            let previewController = PreviewViewController.init(videoURL: (self.currentVideoSection?.videoURL)!, mergedVideo: false)
-            previewController.delegate = self
-            self.navigationController?.pushViewController(previewController, animated: true)
-            
-        }else{
-            let importController : ToyViewController = ToyViewController()
+        
+        if !(editingMode!) {
+            //If it's not in the editing mode, allow uses to tap video section.
+            currentVideoSection = videoSection
+            if videoSection.containVideo {
+                //let moviePlayer = MPMoviePlayerViewController(contentURL: self.currentVideoSection?.videoURL)
+                //self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+                
+                let previewController = PreviewViewController.init(videoURL: (self.currentVideoSection?.videoURL)!, mergedVideo: false)
+                previewController.delegate = self
+                self.navigationController?.pushViewController(previewController, animated: true)
+                
+            }else{
+                let importController : ToyViewController = ToyViewController()
                 //SelectImportViewController = SelectImportViewController()
-            importController.delegate = self
-            self.endEditingMode()
-            self.navigationController?.pushViewController(importController, animated: true)
+                importController.delegate = self
+                self.endEditingMode()
+                self.navigationController?.pushViewController(importController, animated: true)
+            }
         }
     }
     
     func switchToEditingMode() {
+        editingMode = true
+        
         exportBtn?.isHidden = true
         endEditingBtn?.isHidden = false
         
@@ -103,6 +113,10 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     }
     
     func endEditingMode() {
+        print("End Editing Mode")
+        
+        editingMode = false
+        
         endEditingBtn?.isHidden = true
         
         tipLabel?.text = "Import more videos or export a new video as the videos sequence above."

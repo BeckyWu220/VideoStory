@@ -97,13 +97,18 @@ class VideoSectionView: UIView {
         self.center = CGPoint(x: ((gesture.view?.center.x)! + translation.x), y: (gesture.view?.center.y)! + translation.y)
         gesture.setTranslation(CGPoint.zero, in: self.superview)
         
-        if gesture.state == UIGestureRecognizerState.changed {
-            //self.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
+        if gesture.state == UIGestureRecognizerState.began {
+            self.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
+            
+        } else if gesture.state == UIGestureRecognizerState.changed {
+            
             if (targetSlot != nil) {
                  targetSlot?.transform = CGAffineTransform.identity
             }
             self.targetSlot = self.delegate.draggingVideoSection(videoSection: self)
         } else if gesture.state == UIGestureRecognizerState.ended {
+            self.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
+
             self.delegate.draggedVideoSection(videoSection: self, targetSlot: self.targetSlot!)
         }
         
