@@ -23,6 +23,7 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     
     public var albumBtn: UIButton?
     var captureBtn : UIButton?
+    var loadIndicator: UIActivityIndicatorView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         self.filterView.addGestureRecognizer(gesture)
         
         captureBtn = createVideoCaptureButton()
+        captureBtn?.setImage(UIImage(named:"captureBtn_1"), for: UIControlState.normal)
         captureBtn?.addTarget(self, action: #selector(videoCaptureButtonAction(sender:)), for: .touchUpInside)
         self.view.addSubview(captureBtn!)
         
@@ -46,7 +48,7 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         albumBtn?.setTitle("Album", for: UIControlState.normal)
         albumBtn?.addTarget(self, action: #selector(clickAlbumBtn), for: UIControlEvents.touchUpInside)
         albumBtn?.backgroundColor = UIColor.gray
-        self.view.addSubview(albumBtn!)
+        //self.view.addSubview(albumBtn!)
         
     }
     
@@ -73,14 +75,10 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     
     func createVideoCaptureButton() -> UIButton{
         let bSize = 72; // This should be an even number
-        let loc = CGRect(x: Int(UIScreen.main.bounds.width/2)-(bSize/2)+bSize*2, y: Int(UIScreen.main.bounds.height)-Int(UIScreen.main.bounds.height/7), width: bSize, height: bSize)
+        let loc = CGRect(x: Int(UIScreen.main.bounds.width/2)-(bSize/2), y: Int(UIScreen.main.bounds.height)-bSize, width: bSize, height: bSize)
         let captureButton = UIButton(frame: loc)
         
-        captureButton.setTitle("V", for: .normal)
-        captureButton.backgroundColor = .red
-        // Make the button round
-        captureButton.layer.cornerRadius = 0.5 * captureButton.bounds.size.width
-        captureButton.clipsToBounds = true
+        //captureButton.setTitle("V", for: .normal)
         return captureButton
     }
     
@@ -91,12 +89,14 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         
         // Update UI elements to indicate that we are recording
         if (filterChain.isRecording) {
-            self.captureBtn?.backgroundColor = .green
+            self.captureBtn?.setImage(UIImage(named:"captureBtn_2"), for: UIControlState.normal)
         }
         else {
             // Not recording, but not done saving either...i
             print("Setting video capture button color to yellow")
-            self.captureBtn?.backgroundColor = .yellow
+            self.captureBtn?.setImage(UIImage(named:"captureBtn_1"), for: UIControlState.normal)
+            self.displaySavingIndicator()
+            
         }
         
         // Check if video is done saving
@@ -113,7 +113,9 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
             print("Setting video capture button color to red")
             // Put UI updating on the main queue to prevent a delay
             DispatchQueue.main.async {
-                self.captureBtn?.backgroundColor = .red
+                self.captureBtn?.setImage(UIImage(named:"captureBtn_1"), for: UIControlState.normal)
+                self.loadIndicator?.stopAnimating()
+                self.loadIndicator?.removeFromSuperview()
                 
                 let asset = AVURLAsset(url: fileURL)
                 let imgGenerator = AVAssetImageGenerator(asset: asset)
@@ -140,6 +142,15 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         
         //print("tempFilterNum", tempFilterNum);
         
+    }
+    
+    func displaySavingIndicator() {
+        loadIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
+        loadIndicator?.color = UIColor.white
+        loadIndicator?.center = (captureBtn?.center)!
+        //loadIndicator?.frame = CGRect(x: (loadIndicator?.frame.origin.x)!, y: (loadIndicator?.frame.origin.y)!, width: (loadIndicator?.frame.size.width)!*2, height: (loadIndicator?.frame.size.height)!*2)
+        loadIndicator?.startAnimating()
+        self.view.addSubview(loadIndicator!)
     }
 
     override func didReceiveMemoryWarning() {

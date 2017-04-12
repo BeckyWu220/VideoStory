@@ -35,6 +35,9 @@ class VideoSectionView: UIView {
         videoIcon?.contentMode = .scaleAspectFill
         videoIcon?.clipsToBounds = true
         
+        videoIcon?.layer.borderWidth = 1
+        videoIcon?.layer.borderColor = UIColor.gray.cgColor
+        
         self.addSubview(videoIcon!)
         
         deleteBtn = UIButton.init(frame: CGRect(x: -15, y: -15, width: self.frame.width/1.5, height: self.frame.width/1.5))
@@ -88,6 +91,7 @@ class VideoSectionView: UIView {
         videoURL = nil
         videoPath = nil
         deleteBtn?.isHidden = true
+        self.stopShaking()
     }
     
     func beDragged(gesture: UIPanGestureRecognizer) {

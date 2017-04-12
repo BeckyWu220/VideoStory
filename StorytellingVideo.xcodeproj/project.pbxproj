@@ -14,6 +14,8 @@
 		452247BD1E9D7D5A00487EBF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247B91E9D7D5A00487EBF /* FBSDKCoreKit.framework */; };
 		452247BE1E9D7D5A00487EBF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247BA1E9D7D5A00487EBF /* FBSDKLoginKit.framework */; };
 		452247BF1E9D7D5A00487EBF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247BB1E9D7D5A00487EBF /* FBSDKShareKit.framework */; };
+		452247D01E9DBC2F00487EBF /* captureBtn_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 452247CE1E9DBC2F00487EBF /* captureBtn_1.png */; };
+		452247D11E9DBC2F00487EBF /* captureBtn_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 452247CF1E9DBC2F00487EBF /* captureBtn_2.png */; };
 		45557FF41E01F9EC008714AD /* crossBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45557FF31E01F9EC008714AD /* crossBtn.png */; };
 		45A5B5351E92B9240056825A /* ToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A5B5341E92B9240056825A /* ToyViewController.swift */; };
 		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
@@ -87,6 +89,8 @@
 		452247B91E9D7D5A00487EBF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		452247BA1E9D7D5A00487EBF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		452247BB1E9D7D5A00487EBF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		452247CE1E9DBC2F00487EBF /* captureBtn_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = captureBtn_1.png; sourceTree = "<group>"; };
+		452247CF1E9DBC2F00487EBF /* captureBtn_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = captureBtn_2.png; sourceTree = "<group>"; };
 		45557FF31E01F9EC008714AD /* crossBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossBtn.png; sourceTree = "<group>"; };
 		45A5B5341E92B9240056825A /* ToyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewController.swift; sourceTree = "<group>"; };
 		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				45C569951E086B4F00D9B0A8 /* arrow_0.png */,
 				45C569961E086B4F00D9B0A8 /* arrow_1.png */,
 				45C569971E086B4F00D9B0A8 /* arrow_2.png */,
+				452247CE1E9DBC2F00487EBF /* captureBtn_1.png */,
+				452247CF1E9DBC2F00487EBF /* captureBtn_2.png */,
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
 				45F463361DF8B00000CE87BE /* LaunchScreen.storyboard */,
 				45F463391DF8B00000CE87BE /* Info.plist */,
@@ -306,9 +312,11 @@
 			files = (
 				45557FF41E01F9EC008714AD /* crossBtn.png in Resources */,
 				45C569991E086B4F00D9B0A8 /* arrow_1.png in Resources */,
+				452247D01E9DBC2F00487EBF /* captureBtn_1.png in Resources */,
 				45C5699A1E086B4F00D9B0A8 /* arrow_2.png in Resources */,
 				45F463381DF8B00000CE87BE /* LaunchScreen.storyboard in Resources */,
 				45C569981E086B4F00D9B0A8 /* arrow_0.png in Resources */,
+				452247D11E9DBC2F00487EBF /* captureBtn_2.png in Resources */,
 				45F463351DF8B00000CE87BE /* Assets.xcassets in Resources */,
 				45C569941E08678A00D9B0A8 /* arrow.png in Resources */,
 				45F463421DF8B2C700CE87BE /* videoBg.png in Resources */,

@@ -120,6 +120,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         
         endEditingBtn?.isHidden = true
         
+        self.loadIndicator?.stopAnimating()
+        self.loadIndicator?.removeFromSuperview()
+        
         tipLabel?.text = "Import more videos or export a new video as the videos sequence above."
         
         for i in 0...(self.videoSectionArray.count-1) {
@@ -164,11 +167,13 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             let library = ALAssetsLibrary()
             if library.videoAtPathIs(compatibleWithSavedPhotosAlbum: outputURL){
                 library.writeVideoAtPath(toSavedPhotosAlbum: outputURL, completionBlock: { url, error in
+                    self.view.isUserInteractionEnabled = true
+                    
                     var title = ""
                     var message = ""
                     if error != nil {
                         title = "Error"
-                        message = "Failed to save video"
+                        message = "Failed to save video. \(error)"
                         
                         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
@@ -343,6 +348,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     func mergeVideos() {
         
+        self.view.isUserInteractionEnabled = false
+        
         loadIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         loadIndicator?.color = UIColor.darkGray
         loadIndicator?.center = CGPoint(x: self.view.center.x - (loadIndicator?.frame.size.width)!/2, y: self.view.center.y - 100)
@@ -390,11 +397,17 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         mainComposition.renderSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
         
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let dateFormatter = DateFormatter()
+        
+        /*let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .short
-        let date = dateFormatter.string(from: Date())
-        let savePath = (documentDirectory as NSString).appendingPathComponent("mergeVideo-\(date).mov")
+        let date = dateFormatter.string(from: Date())*/
+        
+        let currentDateTime = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd_hh:mm:ss"
+        
+        let savePath = (documentDirectory as NSString).appendingPathComponent("mergeVideo-\(dateFormatter.string(from: currentDateTime)).mov")
         let url = URL(fileURLWithPath: savePath)
         
         guard let exporter = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)
