@@ -49,16 +49,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.setBackground()
         
         self.navigationItem.title = "Storyboard"
-        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "back", style: .plain, target: self, action: #selector(endEditingMode))
-        
-        let fontFamilies:NSArray = UIFont.familyNames as NSArray
-        
-        for i in 0 ..< fontFamilies.count
-        {
-            let fontFamily: NSString = fontFamilies.object(at: i) as! NSString;
-            let fontNames: NSArray = UIFont.fontNames(forFamilyName: fontFamilies.object(at: i) as! String) as NSArray
-            print("\(fontFamily)  \(fontNames)");
-        }
+        //self.navigationItem.backBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "backBtn"), style: .plain, target: self, action: #selector(endEditingMode))
         
         //self.createVideoSections(number: 3)
         
@@ -89,7 +80,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.navigationController?.isNavigationBarHidden = true;
+        self.navigationController?.isNavigationBarHidden = true;
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

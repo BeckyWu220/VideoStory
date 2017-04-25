@@ -23,6 +23,7 @@ class PreviewViewController: UIViewController {
     
     var fbShareBtn: UIButton?
     var fbLoginBtn: FBSDKLoginButton?
+    var backBtn: UIButton?
     
     init(videoURL: URL, mergedVideo: Bool) {
         
@@ -43,6 +44,11 @@ class PreviewViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Preview"
+        
+        backBtn = UIButton(frame: CGRect(x: 10, y: 40, width: 40, height: 40))
+        backBtn?.setImage(UIImage.init(named: "backBtn"), for: UIControlState.normal)
+        backBtn?.addTarget(self, action: #selector(clickBackBtn), for: .touchUpInside)
+        self.view.addSubview(backBtn!)
         
         thumbnailImageView = UIImageView.init(frame: CGRect(x: (self.view.frame.size.width - 300)/2, y: 100, width: 300, height: 300))
         thumbnailImageView?.image = thumbnailImage
@@ -97,6 +103,10 @@ class PreviewViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func clickBackBtn() -> Void {
+        self.navigationController?.popViewController(animated: true)
     }
     
 

@@ -23,6 +23,7 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     
     public var albumBtn: UIButton?
     var captureBtn : UIButton?
+    var backBtn: UIButton?
     var loadIndicator: UIActivityIndicatorView?
 
     override func viewDidLoad() {
@@ -44,6 +45,11 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         filterChain.start()
         filterChain.startCameraWithView(view: filterView)
         
+        backBtn = UIButton(frame: CGRect(x: 10, y: 40, width: 40, height: 40))
+        backBtn?.setImage(UIImage.init(named: "backBtn"), for: UIControlState.normal)
+        backBtn?.addTarget(self, action: #selector(clickBackBtn), for: .touchUpInside)
+        self.view.addSubview(backBtn!)
+        
         albumBtn = UIButton(frame: CGRect(x: 0, y: self.view.frame.size.height - 30, width: 100, height: 30))
         albumBtn?.setTitle("Album", for: UIControlState.normal)
         albumBtn?.addTarget(self, action: #selector(clickAlbumBtn), for: UIControlEvents.touchUpInside)
@@ -55,6 +61,10 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     func clickAlbumBtn() -> Void {
         print("Click Album Button.")
         switchToMediaBrowser(viewController: self, usingDelegate: self)
+    }
+    
+    func clickBackBtn() -> Void {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func switchToMediaBrowser(viewController: UIViewController, usingDelegate delegate: UINavigationControllerDelegate & UIImagePickerControllerDelegate) -> Bool {
