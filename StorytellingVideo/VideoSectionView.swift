@@ -30,14 +30,13 @@ class VideoSectionView: UIView {
         super.init(frame: frame)
         
         videoIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        //videoIcon?.backgroundColor = UIColor.darkGray
-        videoIcon?.layer.cornerRadius = 4.0
+        //videoIcon?.backgroundColor = UIColor.white
+        videoIcon?.layer.cornerRadius = 10.0
         videoIcon?.contentMode = .scaleAspectFill
         videoIcon?.clipsToBounds = true
         
-        videoIcon?.layer.borderWidth = 1
-        videoIcon?.layer.borderColor = UIColor.gray.cgColor
-        
+        //videoIcon?.layer.borderWidth = 6
+        //videoIcon?.layer.borderColor = UIColor.gray.cgColor
         self.addSubview(videoIcon!)
         
         deleteBtn = UIButton.init(frame: CGRect(x: -15, y: -15, width: self.frame.width/1.5, height: self.frame.width/1.5))

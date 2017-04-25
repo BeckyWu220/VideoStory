@@ -27,8 +27,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     var editingMode: Bool?
     
     var loadIndicator: UIActivityIndicatorView?
-    
     var tipLabel:UILabel?
+    
+    let buttonColor = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -53,17 +54,20 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         
         //self.createVideoSections(number: 3)
         
-        exportBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
+        exportBtn = UIButton.init(frame: CGRect(x: (375-300)/2, y: 500, width: 300, height: 45))
         exportBtn?.setTitle("Export", for: UIControlState.normal)
         exportBtn?.addTarget(self, action: #selector(mergeVideos), for: UIControlEvents.touchUpInside)
-        exportBtn?.backgroundColor = UIColor.gray
+        exportBtn?.backgroundColor = buttonColor
+        exportBtn?.layer.cornerRadius = 6.0
+        exportBtn?.clipsToBounds = true
+        exportBtn?.titleLabel?.font = UIFont(name: "SFUIText-Bold", size: 16)
         self.view.addSubview(exportBtn!)
         exportBtn?.isHidden = true
         
         endEditingBtn = UIButton.init(frame: (exportBtn?.frame)!)
         endEditingBtn?.setTitle("End Editing", for: UIControlState.normal)
         endEditingBtn?.addTarget(self, action: #selector(endEditingMode), for: UIControlEvents.touchUpInside)
-        endEditingBtn?.backgroundColor = UIColor.gray
+        endEditingBtn?.backgroundColor = buttonColor
         self.view.addSubview(endEditingBtn!)
         endEditingBtn?.isHidden = true
         
@@ -71,7 +75,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         
         tipLabel = UILabel.init(frame: CGRect(x: 0, y: self.view.frame.size.height - 100, width: self.view.frame.size.width, height: 100))
         tipLabel?.text = "Click [+] to import video."
-        tipLabel?.textColor = UIColor.darkGray
+        tipLabel?.textColor = buttonColor
         tipLabel?.textAlignment = .center
         tipLabel?.numberOfLines = 0
         self.view.addSubview(tipLabel!)
@@ -79,7 +83,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true;
+        //self.navigationController?.isNavigationBarHidden = true;
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -364,7 +368,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.view.isUserInteractionEnabled = false
         
         loadIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
-        loadIndicator?.color = UIColor.darkGray
+        loadIndicator?.color = buttonColor
         loadIndicator?.center = CGPoint(x: self.view.center.x - (loadIndicator?.frame.size.width)!/2, y: self.view.center.y - 100)
         loadIndicator?.frame = CGRect(x: (loadIndicator?.frame.origin.x)!, y: (loadIndicator?.frame.origin.y)!, width: (loadIndicator?.frame.size.width)!*2, height: (loadIndicator?.frame.size.height)!*2)
         loadIndicator?.startAnimating()

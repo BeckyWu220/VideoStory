@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StorytellingVideo/ViewController.swift"
-            timestampString = "514771180.552204"
+            timestampString = "514785248.6995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
+            startingLineNumber = "366"
+            endingLineNumber = "366"
             landmarkName = "mergeVideos()"
             landmarkType = "7">
          </BreakpointContent>
