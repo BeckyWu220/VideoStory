@@ -51,31 +51,37 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.navigationItem.title = "Storyboard"
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "back", style: .plain, target: self, action: #selector(endEditingMode))
         
+        let fontFamilies:NSArray = UIFont.familyNames as NSArray
+        
+        for i in 0 ..< fontFamilies.count
+        {
+            let fontFamily: NSString = fontFamilies.object(at: i) as! NSString;
+            let fontNames: NSArray = UIFont.fontNames(forFamilyName: fontFamilies.object(at: i) as! String) as NSArray
+            print("\(fontFamily)  \(fontNames)");
+        }
         
         //self.createVideoSections(number: 3)
         
         exportBtn = UIButton.init(frame: CGRect(x: (375-300)/2, y: 500, width: 300, height: 45))
         exportBtn?.setTitle("Export", for: UIControlState.normal)
         exportBtn?.addTarget(self, action: #selector(mergeVideos), for: UIControlEvents.touchUpInside)
-        exportBtn?.backgroundColor = buttonColor
-        exportBtn?.layer.cornerRadius = 6.0
-        exportBtn?.clipsToBounds = true
-        exportBtn?.titleLabel?.font = UIFont(name: "SFUIText-Bold", size: 16)
+        self.setStyleFor(button: exportBtn!)
         self.view.addSubview(exportBtn!)
         exportBtn?.isHidden = true
         
         endEditingBtn = UIButton.init(frame: (exportBtn?.frame)!)
         endEditingBtn?.setTitle("End Editing", for: UIControlState.normal)
         endEditingBtn?.addTarget(self, action: #selector(endEditingMode), for: UIControlEvents.touchUpInside)
-        endEditingBtn?.backgroundColor = buttonColor
+        self.setStyleFor(button: endEditingBtn!)
         self.view.addSubview(endEditingBtn!)
         endEditingBtn?.isHidden = true
         
         editingMode = false
         
-        tipLabel = UILabel.init(frame: CGRect(x: 0, y: self.view.frame.size.height - 100, width: self.view.frame.size.width, height: 100))
+        tipLabel = UILabel.init(frame: CGRect(x: (self.view.frame.size.width-300)/2, y: self.view.frame.size.height - 100, width: 300, height: 100))
         tipLabel?.text = "Click [+] to import video."
         tipLabel?.textColor = buttonColor
+        tipLabel?.font = UIFont(name: "SFUIDisplay-Bold", size: 16)
         tipLabel?.textAlignment = .center
         tipLabel?.numberOfLines = 0
         self.view.addSubview(tipLabel!)
@@ -535,6 +541,13 @@ extension ViewController: UINavigationControllerDelegate{
         whiteLayer.frame = CGRect(x: 8, y: 28, width: self.view.bounds.width - 16.0, height: self.view.bounds.height - 36.0)
         whiteLayer.backgroundColor = UIColor.white.cgColor
         self.view.layer.addSublayer(whiteLayer)
+    }
+    
+    func setStyleFor(button: UIButton) {
+        button.backgroundColor = buttonColor
+        button.layer.cornerRadius = 6.0
+        button.clipsToBounds = true
+        button.titleLabel?.font = UIFont(name: "SFUIDisplay-Semibold", size: 16)//"SFUIDisplay-Bold"
     }
 }
 
