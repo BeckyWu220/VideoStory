@@ -50,6 +50,12 @@ class PreviewViewController: UIViewController {
         backBtn?.addTarget(self, action: #selector(clickBackBtn), for: .touchUpInside)
         self.view.addSubview(backBtn!)
         
+        let titleLabel = UILabel.init(frame: CGRect(x: UIScreen.main.bounds.width*0.1, y: 40, width: UIScreen.main.bounds.width*0.8, height: 24))
+        titleLabel.font = UIFont(name: "SFUIDisplay-Bold", size: 24)
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
+        self.view.addSubview(titleLabel)
+        
         thumbnailImageView = UIImageView.init(frame: CGRect(x: (self.view.frame.size.width - 300)/2, y: 100, width: 300, height: 300))
         thumbnailImageView?.image = thumbnailImage
         thumbnailImageView?.isUserInteractionEnabled = true
@@ -82,7 +88,7 @@ class PreviewViewController: UIViewController {
                 //fbLoginBtn?.readPermissions = ["email"]
                 self.view.addSubview(fbLoginBtn!)
             }
-            
+            titleLabel.text = "Share"
         }else {
             /*If this preview is for unmerged video, show editBtn and deleteBtn*/
             let editBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
@@ -97,6 +103,7 @@ class PreviewViewController: UIViewController {
             deleteBtn.backgroundColor = UIColor.gray
             self.view.addSubview(deleteBtn)
             
+            titleLabel.text = "Edit"
         }
     }
 
