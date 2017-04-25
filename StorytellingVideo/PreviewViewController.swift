@@ -122,9 +122,15 @@ class PreviewViewController: UIViewController {
         
         FBSDKShareAPI.share(with: content, delegate: self)
         
-//        let dialog = FBSDKShareDialog()
-//        dialog.shareContent = content
-//        dialog.show()
+//        let dialog: FBSDKShareDialog = FBSDKShareDialog()
+//        if (dialog.canShow()) {
+//            print("FB Dialog show.")
+//            dialog.shareContent = content
+//            dialog.delegate = self
+//            dialog.show()
+//        } else {
+//            print("FB Dialog cannot show.")
+//        }
     }
 }
 

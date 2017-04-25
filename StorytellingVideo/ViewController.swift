@@ -44,8 +44,12 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.white
+        
+        self.setBackground()
+        
         self.navigationItem.title = "Storyboard"
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "back", style: .plain, target: self, action: #selector(endEditingMode))
+        
         
         //self.createVideoSections(number: 3)
         
@@ -71,6 +75,15 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         tipLabel?.textAlignment = .center
         tipLabel?.numberOfLines = 0
         self.view.addSubview(tipLabel!)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true;
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func tappedVideoSection(videoSection: VideoSectionView) {
@@ -502,5 +515,22 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
 
 extension ViewController: UINavigationControllerDelegate{
     
+    func setBackground() {
+        let gradientLayer = CAGradientLayer.init()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        
+        let color1 = UIColor.init(colorLiteralRed: 144/255, green: 19/255, blue: 254/255, alpha: 1.0)
+        let color2 = UIColor.init(colorLiteralRed: 0/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        gradientLayer.colors = [color1.cgColor, color2.cgColor]
+        gradientLayer.locations = [0.5, 1.0]
+        self.view.layer.addSublayer(gradientLayer)
+        
+        let whiteLayer = CALayer.init()
+        whiteLayer.frame = CGRect(x: 8, y: 28, width: self.view.bounds.width - 16.0, height: self.view.bounds.height - 36.0)
+        whiteLayer.backgroundColor = UIColor.white.cgColor
+        self.view.layer.addSublayer(whiteLayer)
+    }
 }
 
