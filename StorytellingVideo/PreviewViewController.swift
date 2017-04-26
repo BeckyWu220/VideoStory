@@ -24,6 +24,7 @@ class PreviewViewController: UIViewController {
     var fbShareBtn: UIButton?
     var fbLoginBtn: FBSDKLoginButton?
     var backBtn: UIButton?
+    var bottomBorder: UIImageView?
     
     init(videoURL: URL, mergedVideo: Bool) {
         
@@ -69,13 +70,13 @@ class PreviewViewController: UIViewController {
         thumbnailImageView?.clipsToBounds = true
         self.view.addSubview(thumbnailImageView!)
         
-        let playIcon = UIImageView.init(frame: CGRect(x: ((thumbnailImageView?.frame.width)!-100)/2, y: ((thumbnailImageView?.frame.height)!-100)/2, width: 128, height: 128))
+        let playIcon = UIImageView.init(frame: CGRect(x: ((thumbnailImageView?.frame.width)!-128)/2, y: ((thumbnailImageView?.frame.height)!-128)/2, width: 128, height: 128))
         playIcon.image = UIImage.init(named: "playBtn")
         thumbnailImageView?.addSubview(playIcon)
         
-        let bottomBorder = UIImageView(frame: CGRect(x: 8, y: (thumbnailImageView?.frame.origin.y)! + (thumbnailImageView?.frame.size.height)!, width: UIScreen.main.bounds.width-16, height: 11))
-        bottomBorder.image = UIImage.init(named: "bottomBar")?.resizableImage(withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .stretch)
-        self.view.addSubview(bottomBorder)
+        bottomBorder = UIImageView(frame: CGRect(x: 8, y: (thumbnailImageView?.frame.origin.y)! + (thumbnailImageView?.frame.size.height)!, width: UIScreen.main.bounds.width-16, height: 11))
+        bottomBorder?.image = UIImage.init(named: "bottomBar")?.resizableImage(withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .stretch)
+        self.view.addSubview(bottomBorder!)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PreviewViewController.playVideo))
         self.thumbnailImageView?.addGestureRecognizer(tapGesture)
@@ -85,14 +86,14 @@ class PreviewViewController: UIViewController {
             
             if (FBSDKAccessToken.current() != nil) {
                 /*With facebook logged in. Show Share Button directly*/
-                fbShareBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
-                fbShareBtn?.setTitle("Share to Facebook", for: UIControlState.normal)
+                fbShareBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+                fbShareBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
                 fbShareBtn?.addTarget(self, action: #selector(shareVideo), for: UIControlEvents.touchUpInside)
-                fbShareBtn?.backgroundColor = UIColor.gray
                 self.view.addSubview(fbShareBtn!)
             } else {
                 /*Show login button first if no user has logged in Facebook.*/
-                fbLoginBtn = FBSDKLoginButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
+                fbLoginBtn = FBSDKLoginButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+                fbLoginBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
                 fbLoginBtn?.delegate = self
                 fbLoginBtn?.publishPermissions = ["publish_actions"]
                 //fbLoginBtn?.readPermissions = ["email"]
@@ -101,16 +102,14 @@ class PreviewViewController: UIViewController {
             titleLabel.text = "Share"
         }else {
             /*If this preview is for unmerged video, show editBtn and deleteBtn*/
-            let editBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
-            editBtn.setTitle("Edit Video", for: UIControlState.normal)
+            let editBtn = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width/2 - 10 - 70, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
             editBtn.addTarget(self, action: #selector(editVideo), for: UIControlEvents.touchUpInside)
-            editBtn.backgroundColor = UIColor.gray
+            editBtn.setImage(UIImage.init(named: "trimBtn"), for: .normal)
             self.view.addSubview(editBtn)
             
-            let deleteBtn = UIButton.init(frame: CGRect(x: editBtn.frame.origin.x, y: editBtn.frame.origin.y+editBtn.frame.size.height + 10, width: editBtn.frame.size.width, height: editBtn.frame.size.height))
-            deleteBtn.setTitle("Delete", for: UIControlState.normal)
+            let deleteBtn = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width/2 + 10, y: editBtn.frame.origin.y, width: editBtn.frame.size.width, height: editBtn.frame.size.height))
+            deleteBtn.setImage(UIImage.init(named: "deleteBtn"), for: .normal)
             deleteBtn.addTarget(self, action: #selector(deleteVideo), for: UIControlEvents.touchUpInside)
-            deleteBtn.backgroundColor = UIColor.gray
             self.view.addSubview(deleteBtn)
             
             titleLabel.text = "Edit"
@@ -192,10 +191,13 @@ extension PreviewViewController: FBSDKSharingDelegate, FBSDKLoginButtonDelegate 
             print("LOGIN SUCCESS")
             
             fbLoginBtn?.removeFromSuperview()
-            fbShareBtn = UIButton.init(frame: CGRect(x: (375-200)/2, y: 500, width: 200, height: 30))
-            fbShareBtn?.setTitle("Share to Facebook", for: UIControlState.normal)
-            fbShareBtn?.addTarget(self, action: #selector(shareVideo), for: UIControlEvents.touchUpInside)
-            fbShareBtn?.backgroundColor = UIColor.gray
+            
+            if (fbShareBtn == nil) {
+                fbShareBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+                 fbShareBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
+                 fbShareBtn?.addTarget(self, action: #selector(shareVideo), for: UIControlEvents.touchUpInside)
+            }
+            
             self.view.addSubview(fbShareBtn!)
         }else {
             print("LOGIN FAILS WITH ERROR: \(error)")
