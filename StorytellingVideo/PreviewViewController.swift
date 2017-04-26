@@ -172,7 +172,7 @@ class PreviewViewController: UIViewController {
         let loginManager = FBSDKLoginManager.init()
         loginManager.logIn(withPublishPermissions: ["publish_actions"], from: self) { (loginResult, error) in
             if ((error) != nil) {
-                print(error)
+                print(error?.localizedDescription)
             } else if (loginResult?.isCancelled)! {
                 print("Facebook Login Cancelled")
             } else {
