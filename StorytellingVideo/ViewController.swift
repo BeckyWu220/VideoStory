@@ -227,16 +227,16 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             
             switch index {
             case 0:
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: Int(row * (100 + 90) + 100), width: 100, height: 100)
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 128)/2), y: Int(row * (128 + 50) + 128), width: 128, height: 128)
                 break
             case 1:
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 90) + 100, width: 100, height: 100)
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 128)/2 + self.view.frame.width/2), y: row * (128 + 50) + 128, width: 128, height: 128)
                 break
             case 2:
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2 + self.view.frame.width/2), y: row * (100 + 90) + 100, width: 100, height: 100)
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 128)/2 + self.view.frame.width/2), y: row * (128 + 50) + 128, width: 128, height: 128)
                 break
             case 3:
-                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 100)/2), y: row * (100 + 90) + 100, width: 100, height: 100)
+                videoSectionFrame = CGRect(x: Int((self.view.frame.width/2 - 128)/2), y: row * (128 + 50) + 128, width: 128, height: 128)
                 break
             default:
                 break
@@ -253,10 +253,8 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             self.view.addSubview(videoSlot)
             videoSlotArray.add(videoSlot)
             
-            let slotRange = UIView(frame: CGRect(x: 0, y: 0, width: videoSlot.frame.size.width * 1.5, height: videoSlot.frame.size.height * 1.5))
-            slotRange.center = videoSlot.center
-            //slotRange.backgroundColor = UIColor.red
-            //slotRange.alpha = 0.5
+            let slotRange = UIView(frame: CGRect(x: 0, y: 0, width: videoSlot.frame.size.width * 1.4, height: videoSlot.frame.size.height * 1.4))
+            slotRange.alpha = 0.5
             self.view.addSubview(slotRange)
             slotRangeArray.add(slotRange)
             
@@ -275,19 +273,18 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             let videoSection1 = videoSectionArray.object(at: j) as! VideoSectionView
             let videoSection2 = videoSectionArray.object(at: j+1) as! VideoSectionView
             
+            let arrow = UIImageView.init(image: UIImage.init(named: "arrow"))
             if j == 0 {
-                let arrow = UIImageView.init(image: UIImage.init(named: "arrow_0"))
                 arrow.center = CGPoint.init(x: (videoSection1.center.x + videoSection2.center.x)/2, y: videoSection1.center.y)
-                self.view.addSubview(arrow)
+                
             }else if j == 1 {
-                let arrow = UIImageView.init(image: UIImage.init(named: "arrow_1"))
+                arrow.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2));
                 arrow.center = CGPoint.init(x: videoSection1.center.x, y: (videoSection1.center.y + videoSection2.center.y)/2)
-                self.view.addSubview(arrow)
             }else if j == 2 {
-                let arrow = UIImageView.init(image: UIImage.init(named: "arrow_2"))
+                arrow.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI));
                 arrow.center = CGPoint.init(x: (videoSection1.center.x + videoSection2.center.x)/2, y: videoSection1.center.y)
-                self.view.addSubview(arrow)
             }
+            self.view.addSubview(arrow)
         }
     }
     
