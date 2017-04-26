@@ -30,6 +30,8 @@
 		456CA3961EB101DC003E3541 /* timerBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3941EB101DC003E3541 /* timerBg.png */; };
 		456CA39C1EB102A9003E3541 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA39B1EB102A9003E3541 /* TimerView.swift */; };
 		456CA39E1EB115F8003E3541 /* randomBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA39D1EB115F8003E3541 /* randomBtn.png */; };
+		456CA3A01EB13EFF003E3541 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA39F1EB13EFF003E3541 /* splash.png */; };
+		456CA3A21EB13F8B003E3541 /* splash2.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3A11EB13F8B003E3541 /* splash2.png */; };
 		45A5B5351E92B9240056825A /* ToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A5B5341E92B9240056825A /* ToyViewController.swift */; };
 		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
 		45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -115,6 +117,8 @@
 		456CA3941EB101DC003E3541 /* timerBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timerBg.png; sourceTree = "<group>"; };
 		456CA39B1EB102A9003E3541 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		456CA39D1EB115F8003E3541 /* randomBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = randomBtn.png; sourceTree = "<group>"; };
+		456CA39F1EB13EFF003E3541 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		456CA3A11EB13F8B003E3541 /* splash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash2.png; sourceTree = "<group>"; };
 		45A5B5341E92B9240056825A /* ToyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewController.swift; sourceTree = "<group>"; };
 		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		45B3F5C11E7487D7007032E0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = StorytellingVideo/FilterViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				456CA3931EB101DC003E3541 /* redDot.png */,
 				456CA3941EB101DC003E3541 /* timerBg.png */,
 				456CA39D1EB115F8003E3541 /* randomBtn.png */,
+				456CA39F1EB13EFF003E3541 /* splash.png */,
+				456CA3A11EB13F8B003E3541 /* splash2.png */,
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
 				45F463361DF8B00000CE87BE /* LaunchScreen.storyboard */,
 				45F463391DF8B00000CE87BE /* Info.plist */,
@@ -344,6 +350,7 @@
 				456CA39E1EB115F8003E3541 /* randomBtn.png in Resources */,
 				456CA3911EB02C64003E3541 /* fbBtn.png in Resources */,
 				456CA38D1EB02854003E3541 /* trimBtn.png in Resources */,
+				456CA3A01EB13EFF003E3541 /* splash.png in Resources */,
 				452247D01E9DBC2F00487EBF /* captureBtn_1.png in Resources */,
 				456CA3881EB02080003E3541 /* bottomBar.png in Resources */,
 				456CA3961EB101DC003E3541 /* timerBg.png in Resources */,
@@ -351,6 +358,7 @@
 				456CA38F1EB02B66003E3541 /* deleteBtn.png in Resources */,
 				456CA3891EB02080003E3541 /* topBar.png in Resources */,
 				45F463381DF8B00000CE87BE /* LaunchScreen.storyboard in Resources */,
+				456CA3A21EB13F8B003E3541 /* splash2.png in Resources */,
 				452247D11E9DBC2F00487EBF /* captureBtn_2.png in Resources */,
 				45F463351DF8B00000CE87BE /* Assets.xcassets in Resources */,
 				45C569941E08678A00D9B0A8 /* arrow.png in Resources */,
