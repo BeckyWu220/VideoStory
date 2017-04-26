@@ -174,6 +174,8 @@ class PreviewViewController: UIViewController {
                 print("Facebook Login Cancelled")
             } else {
                 print("Facebook Logged In.")
+                
+                self.fbLoginBtn?.removeFromSuperview()
                 if (self.fbShareBtn == nil) {
                     self.fbShareBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((self.bottomBorder?.frame.origin.y)!+(self.bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
                      self.fbShareBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
@@ -204,49 +206,14 @@ class PreviewViewController: UIViewController {
     }
 }
 
-extension PreviewViewController: FBSDKSharingDelegate, FBSDKLoginButtonDelegate {
-    
-    /**
-     Sent to the delegate when the button was used to login.
-     - Parameter loginButton: the sender
-     - Parameter result: The results of the login
-     - Parameter error: The error (if any) from the login
-     */
-    public func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if !(error != nil) {
-            print("LOGIN SUCCESS")
-            
-            //fbLoginBtn?.removeFromSuperview()
-            
-//            if (fbShareBtn == nil) {
-//                fbShareBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
-//                 fbShareBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
-//                 fbShareBtn?.addTarget(self, action: #selector(shareVideo), for: UIControlEvents.touchUpInside)
-//            }
-//            
-//            self.view.addSubview(fbShareBtn!)
-        }else {
-            print("LOGIN FAILS WITH ERROR: \(error)")
-            self.alert(title: "Reminder", message: "Login to Facebook fails. \(error)")
-        }
-    }
-    
-    /**
-     Sent to the delegate when the button was used to logout.
-     - Parameter loginButton: The button that was clicked.
-     */
-    public func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("LOGOUT")
-        self.alert(title: "Reminder", message: "You've logged out from Facebook.")
-    }
-
+extension PreviewViewController: FBSDKSharingDelegate {
     /**
      Sent to the delegate when the sharer is cancelled.
      - Parameter sharer: The FBSDKSharing that completed.
      */
     public func sharerDidCancel(_ sharer: FBSDKSharing!) {
         print("FB CANCEL")
-        self.alert(title: "Reminder", message: "You video posting is canceled.")
+        self.alert(title: "Reminder", message: "You video posting is cancelled.")
     }
     
     /**
