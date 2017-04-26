@@ -22,7 +22,7 @@ class PreviewViewController: UIViewController {
     var delegate: SelectImportVCDelegate!
     
     var fbShareBtn: UIButton?
-    var fbLoginBtn: FBSDKLoginButton?
+    var fbLoginBtn: UIButton?
     var backBtn: UIButton?
     var bottomBorder: UIImageView?
     
@@ -92,12 +92,18 @@ class PreviewViewController: UIViewController {
                 self.view.addSubview(fbShareBtn!)
             } else {
                 /*Show login button first if no user has logged in Facebook.*/
-                fbLoginBtn = FBSDKLoginButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+                
+                fbLoginBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
                 fbLoginBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
-                fbLoginBtn?.delegate = self
-                fbLoginBtn?.publishPermissions = ["publish_actions"]
-                //fbLoginBtn?.readPermissions = ["email"]
+                fbLoginBtn?.addTarget(self, action: #selector(facebookLogin), for: UIControlEvents.touchUpInside)
                 self.view.addSubview(fbLoginBtn!)
+                
+//                fbLoginBtn = FBSDKLoginButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+//                fbLoginBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
+//                fbLoginBtn?.delegate = self
+//                fbLoginBtn?.publishPermissions = ["publish_actions"]
+//                //fbLoginBtn?.readPermissions = ["email"]
+//                self.view.addSubview(fbLoginBtn!)
             }
             titleLabel.text = "Share"
         }else {
@@ -159,6 +165,26 @@ class PreviewViewController: UIViewController {
 //        }
     }
     
+    func facebookLogin() {
+        let loginManager = FBSDKLoginManager.init()
+        loginManager.logIn(withPublishPermissions: ["publish_actions"], from: self) { (loginResult, error) in
+            if ((error) != nil) {
+                print(error)
+            } else if (loginResult?.isCancelled)! {
+                print("Facebook Login Cancelled")
+            } else {
+                print("Facebook Logged In.")
+                if (self.fbShareBtn == nil) {
+                    self.fbShareBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((self.bottomBorder?.frame.origin.y)!+(self.bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+                     self.fbShareBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
+                     self.fbShareBtn?.addTarget(self, action: #selector(self.shareVideo), for: UIControlEvents.touchUpInside)
+                }
+                
+                self.view.addSubview(self.fbShareBtn!)
+            }
+        }
+    }
+    
     func setBackground() {
         let gradientLayer = CAGradientLayer.init()
         gradientLayer.frame = self.view.bounds
@@ -190,15 +216,15 @@ extension PreviewViewController: FBSDKSharingDelegate, FBSDKLoginButtonDelegate 
         if !(error != nil) {
             print("LOGIN SUCCESS")
             
-            fbLoginBtn?.removeFromSuperview()
+            //fbLoginBtn?.removeFromSuperview()
             
-            if (fbShareBtn == nil) {
-                fbShareBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
-                 fbShareBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
-                 fbShareBtn?.addTarget(self, action: #selector(shareVideo), for: UIControlEvents.touchUpInside)
-            }
-            
-            self.view.addSubview(fbShareBtn!)
+//            if (fbShareBtn == nil) {
+//                fbShareBtn = UIButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+//                 fbShareBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
+//                 fbShareBtn?.addTarget(self, action: #selector(shareVideo), for: UIControlEvents.touchUpInside)
+//            }
+//            
+//            self.view.addSubview(fbShareBtn!)
         }else {
             print("LOGIN FAILS WITH ERROR: \(error)")
             self.alert(title: "Reminder", message: "Login to Facebook fails. \(error)")
