@@ -26,6 +26,9 @@
 		456CA38D1EB02854003E3541 /* trimBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA38C1EB02854003E3541 /* trimBtn.png */; };
 		456CA38F1EB02B66003E3541 /* deleteBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA38E1EB02B66003E3541 /* deleteBtn.png */; };
 		456CA3911EB02C64003E3541 /* fbBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3901EB02C64003E3541 /* fbBtn.png */; };
+		456CA3951EB101DC003E3541 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3931EB101DC003E3541 /* redDot.png */; };
+		456CA3961EB101DC003E3541 /* timerBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3941EB101DC003E3541 /* timerBg.png */; };
+		456CA39C1EB102A9003E3541 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA39B1EB102A9003E3541 /* TimerView.swift */; };
 		45A5B5351E92B9240056825A /* ToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A5B5341E92B9240056825A /* ToyViewController.swift */; };
 		45A9879A1E7492AE00934AB4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A987971E74925300934AB4 /* GPUImage.framework */; };
 		45A9879C1E7492F000934AB4 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45A987931E74925300934AB4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -110,6 +113,9 @@
 		456CA38C1EB02854003E3541 /* trimBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trimBtn.png; sourceTree = "<group>"; };
 		456CA38E1EB02B66003E3541 /* deleteBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteBtn.png; sourceTree = "<group>"; };
 		456CA3901EB02C64003E3541 /* fbBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbBtn.png; sourceTree = "<group>"; };
+		456CA3931EB101DC003E3541 /* redDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot.png; sourceTree = "<group>"; };
+		456CA3941EB101DC003E3541 /* timerBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timerBg.png; sourceTree = "<group>"; };
+		456CA39B1EB102A9003E3541 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		45A5B5341E92B9240056825A /* ToyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewController.swift; sourceTree = "<group>"; };
 		45A9878B1E74925300934AB4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../../Downloads/GPUImage2-master 3/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		45B3F5C11E7487D7007032E0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = StorytellingVideo/FilterViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 				450B9E671E02167D0066037E /* SlotView.swift */,
 				45A5B5341E92B9240056825A /* ToyViewController.swift */,
 				45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */,
+				456CA39B1EB102A9003E3541 /* TimerView.swift */,
 				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
 				4505AA831E89D56D00643ACA /* Filterchain.swift */,
 				45F463411DF8B2C700CE87BE /* videoBg.png */,
@@ -218,6 +225,8 @@
 				456CA38C1EB02854003E3541 /* trimBtn.png */,
 				456CA38E1EB02B66003E3541 /* deleteBtn.png */,
 				456CA3901EB02C64003E3541 /* fbBtn.png */,
+				456CA3931EB101DC003E3541 /* redDot.png */,
+				456CA3941EB101DC003E3541 /* timerBg.png */,
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
 				45F463361DF8B00000CE87BE /* LaunchScreen.storyboard */,
 				45F463391DF8B00000CE87BE /* Info.plist */,
@@ -343,6 +352,7 @@
 				45C569991E086B4F00D9B0A8 /* arrow_1.png in Resources */,
 				452247D01E9DBC2F00487EBF /* captureBtn_1.png in Resources */,
 				456CA3881EB02080003E3541 /* bottomBar.png in Resources */,
+				456CA3961EB101DC003E3541 /* timerBg.png in Resources */,
 				45C5699A1E086B4F00D9B0A8 /* arrow_2.png in Resources */,
 				456CA38B1EB022A8003E3541 /* playBtn.png in Resources */,
 				456CA38F1EB02B66003E3541 /* deleteBtn.png in Resources */,
@@ -352,6 +362,7 @@
 				452247D11E9DBC2F00487EBF /* captureBtn_2.png in Resources */,
 				45F463351DF8B00000CE87BE /* Assets.xcassets in Resources */,
 				45C569941E08678A00D9B0A8 /* arrow.png in Resources */,
+				456CA3951EB101DC003E3541 /* redDot.png in Resources */,
 				45F463421DF8B2C700CE87BE /* videoBg.png in Resources */,
 				456CA37C1EAF0287003E3541 /* SF-UI-Display-Bold.otf in Resources */,
 				456CA37F1EAFEDE1003E3541 /* backBtn.png in Resources */,
@@ -420,6 +431,7 @@
 				45F463401DF8B05400CE87BE /* VideoSectionView.swift in Sources */,
 				45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */,
 				4505AA841E89D56D00643ACA /* Filterchain.swift in Sources */,
+				456CA39C1EB102A9003E3541 /* TimerView.swift in Sources */,
 				45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */,
 				45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */,
 				4505AA8B1E89DCA600643ACA /* CameraViewController.swift in Sources */,

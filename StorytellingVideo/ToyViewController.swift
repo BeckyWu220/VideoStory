@@ -25,6 +25,8 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     var captureBtn : UIButton?
     var backBtn: UIButton?
     var loadIndicator: UIActivityIndicatorView?
+    
+    var timerView: TimerView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,9 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         self.navigationItem.title = "Toy"
         
         self.view.addSubview(filterView)
+        
+        timerView = TimerView.init(frame: CGRect(x: (self.view.frame.size.width-88)/2, y: 50, width: 88, height: 24))
+        self.view.addSubview(timerView!)
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchEventRecognizer (_:)))
         self.filterView.addGestureRecognizer(gesture)
@@ -100,11 +105,13 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         // Update UI elements to indicate that we are recording
         if (filterChain.isRecording) {
             self.captureBtn?.setImage(UIImage(named:"captureBtn_2"), for: UIControlState.normal)
+            timerView?.start()
         }
         else {
             // Not recording, but not done saving either...i
             print("Setting video capture button color to yellow")
             self.captureBtn?.setImage(UIImage(named:"captureBtn_1"), for: UIControlState.normal)
+            timerView?.reset()
             self.displaySavingIndicator()
             
         }
