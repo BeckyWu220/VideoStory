@@ -254,7 +254,9 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
             videoSlotArray.add(videoSlot)
             
             let slotRange = UIView(frame: CGRect(x: 0, y: 0, width: videoSlot.frame.size.width * 1.4, height: videoSlot.frame.size.height * 1.4))
-            slotRange.alpha = 0.5
+            slotRange.center = videoSlot.center
+            //slotRange.alpha = 0.5
+            //slotRange.backgroundColor = UIColor.red
             self.view.addSubview(slotRange)
             slotRangeArray.add(slotRange)
             
