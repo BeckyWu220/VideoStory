@@ -26,6 +26,8 @@ class PreviewViewController: UIViewController {
     var backBtn: UIButton?
     var bottomBorder: UIImageView?
     
+    var shareIndicator: UIActivityIndicatorView?
+    
     init(videoURL: URL, mergedVideo: Bool) {
         
         let asset = AVURLAsset(url: videoURL)
@@ -97,13 +99,6 @@ class PreviewViewController: UIViewController {
                 fbLoginBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
                 fbLoginBtn?.addTarget(self, action: #selector(facebookLogin), for: UIControlEvents.touchUpInside)
                 self.view.addSubview(fbLoginBtn!)
-                
-//                fbLoginBtn = FBSDKLoginButton.init(frame: CGRect(x: (UIScreen.main.bounds.width-70)/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
-//                fbLoginBtn?.setImage(UIImage.init(named: "fbBtn"), for: .normal)
-//                fbLoginBtn?.delegate = self
-//                fbLoginBtn?.publishPermissions = ["publish_actions"]
-//                //fbLoginBtn?.readPermissions = ["email"]
-//                self.view.addSubview(fbLoginBtn!)
             }
             titleLabel.text = "Share"
         }else {
@@ -146,6 +141,14 @@ class PreviewViewController: UIViewController {
     
     func shareVideo() {
         print("Share Video to Facebook")
+        
+        shareIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        shareIndicator?.color = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
+        shareIndicator?.center = (self.fbShareBtn?.center)!
+        shareIndicator?.frame = (self.fbShareBtn?.frame)!
+        shareIndicator?.startAnimating()
+        self.view.addSubview(shareIndicator!)
+        fbShareBtn?.isHidden = true
         
         let video: FBSDKShareVideo = FBSDKShareVideo()
         video.videoURL = self.videoURL
@@ -214,6 +217,9 @@ extension PreviewViewController: FBSDKSharingDelegate {
     public func sharerDidCancel(_ sharer: FBSDKSharing!) {
         print("FB CANCEL")
         self.alert(title: "Reminder", message: "You video posting is cancelled.")
+        fbShareBtn?.isHidden = false
+        self.shareIndicator?.stopAnimating()
+        self.shareIndicator?.removeFromSuperview()
     }
     
     /**
@@ -224,6 +230,9 @@ extension PreviewViewController: FBSDKSharingDelegate {
     public func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
         print("FB FAIL WITH ERROR: \(error)")
         self.alert(title: "Reminder", message: "We have error while posting your video. \(error)")
+        fbShareBtn?.isHidden = false
+        self.shareIndicator?.stopAnimating()
+        self.shareIndicator?.removeFromSuperview()
     }
     
     /**
@@ -235,6 +244,9 @@ extension PreviewViewController: FBSDKSharingDelegate {
         //
         print("FB SUCCESS")
         self.alert(title: "Reminder", message: "Your video has been posted successfully to Facebook.")
+        fbShareBtn?.isHidden = false
+        self.shareIndicator?.stopAnimating()
+        self.shareIndicator?.removeFromSuperview()
     }
     
     func alert(title: String, message: String){
