@@ -45,7 +45,9 @@ class PreviewViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Preview"
         
-        backBtn = UIButton(frame: CGRect(x: 10, y: 40, width: 40, height: 40))
+        self.setBackground()
+        
+        backBtn = UIButton(frame: CGRect(x: 10, y: 30, width: 40, height: 40))
         backBtn?.setImage(UIImage.init(named: "backBtn"), for: UIControlState.normal)
         backBtn?.addTarget(self, action: #selector(clickBackBtn), for: .touchUpInside)
         self.view.addSubview(backBtn!)
@@ -56,16 +58,24 @@ class PreviewViewController: UIViewController {
         titleLabel.textColor = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
         self.view.addSubview(titleLabel)
         
-        thumbnailImageView = UIImageView.init(frame: CGRect(x: (self.view.frame.size.width - 300)/2, y: 100, width: 300, height: 300))
+        let topBorder = UIImageView(frame: CGRect(x: 8, y: titleLabel.frame.origin.y + titleLabel.frame.size.height + 50, width: UIScreen.main.bounds.width-16, height: 11))
+        topBorder.image = UIImage.init(named: "topBar")?.resizableImage(withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .stretch)
+        self.view.addSubview(topBorder)
+        
+        thumbnailImageView = UIImageView.init(frame: CGRect(x: 8, y: topBorder.frame.origin.y+topBorder.frame.size.height, width: topBorder.frame.width, height: topBorder.frame.width))
         thumbnailImageView?.image = thumbnailImage
         thumbnailImageView?.isUserInteractionEnabled = true
         thumbnailImageView?.contentMode = .scaleAspectFill
         thumbnailImageView?.clipsToBounds = true
-        
-        thumbnailImageView?.layer.borderWidth = 3
-        thumbnailImageView?.layer.borderColor = UIColor.gray.cgColor
-        
         self.view.addSubview(thumbnailImageView!)
+        
+        let playIcon = UIImageView.init(frame: CGRect(x: ((thumbnailImageView?.frame.width)!-100)/2, y: ((thumbnailImageView?.frame.height)!-100)/2, width: 128, height: 128))
+        playIcon.image = UIImage.init(named: "playBtn")
+        thumbnailImageView?.addSubview(playIcon)
+        
+        let bottomBorder = UIImageView(frame: CGRect(x: 8, y: (thumbnailImageView?.frame.origin.y)! + (thumbnailImageView?.frame.size.height)!, width: UIScreen.main.bounds.width-16, height: 11))
+        bottomBorder.image = UIImage.init(named: "bottomBar")?.resizableImage(withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .stretch)
+        self.view.addSubview(bottomBorder)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PreviewViewController.playVideo))
         self.thumbnailImageView?.addGestureRecognizer(tapGesture)
@@ -148,6 +158,24 @@ class PreviewViewController: UIViewController {
 //        } else {
 //            print("FB Dialog cannot show.")
 //        }
+    }
+    
+    func setBackground() {
+        let gradientLayer = CAGradientLayer.init()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        
+        let color1 = UIColor.init(colorLiteralRed: 144/255, green: 19/255, blue: 254/255, alpha: 1.0)
+        let color2 = UIColor.init(colorLiteralRed: 0/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        gradientLayer.colors = [color1.cgColor, color2.cgColor]
+        gradientLayer.locations = [0.5, 1.0]
+        self.view.layer.addSublayer(gradientLayer)
+        
+        let whiteLayer = CALayer.init()
+        whiteLayer.frame = CGRect(x: 8, y: 28, width: self.view.bounds.width - 16.0, height: self.view.bounds.height - 36.0)
+        whiteLayer.backgroundColor = UIColor.white.cgColor
+        self.view.layer.addSublayer(whiteLayer)
     }
 }
 
