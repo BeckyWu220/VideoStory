@@ -281,7 +281,7 @@
 				TargetAttributes = {
 					45F463291DF8B00000CE87BE = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2P73JXLGWC;
+						DevelopmentTeam = ESDVLEEEJP;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -551,7 +551,7 @@
 			baseConfigurationReference = 2F2A967603077E52DA680B99 /* Pods-StorytellingVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2P73JXLGWC;
+				DEVELOPMENT_TEAM = ESDVLEEEJP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -559,7 +559,7 @@
 				INFOPLIST_FILE = StorytellingVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Wanqiao-Wu.StorytellingVideo";
+				PRODUCT_BUNDLE_IDENTIFIER = StorytellingVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -570,7 +570,7 @@
 			baseConfigurationReference = 9110DF711EBB24DDCF57484E /* Pods-StorytellingVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2P73JXLGWC;
+				DEVELOPMENT_TEAM = ESDVLEEEJP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -578,7 +578,7 @@
 				INFOPLIST_FILE = StorytellingVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Wanqiao-Wu.StorytellingVideo";
+				PRODUCT_BUNDLE_IDENTIFIER = StorytellingVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
