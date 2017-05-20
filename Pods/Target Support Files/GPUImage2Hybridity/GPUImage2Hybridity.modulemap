@@ -1,6 +1,0 @@
-framework module GPUImage2Hybridity {
-  umbrella header "GPUImage2Hybridity-umbrella.h"
-
-  export *
-  module * { export * }
-}

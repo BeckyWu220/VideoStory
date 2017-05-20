@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GPUImage2Hybridity.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-StorytellingVideo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8FBA1B82378BCE8B3C0582C4712E8679</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9338CDB2B48167F4EB2BEC5DDA38B78A</key>
+		<key>790574ED3453FF9B56F26C41D74B82E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
