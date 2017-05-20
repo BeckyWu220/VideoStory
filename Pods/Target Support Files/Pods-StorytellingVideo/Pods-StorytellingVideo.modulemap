@@ -1,6 +1,0 @@
-framework module Pods_StorytellingVideo {
-  umbrella header "Pods-StorytellingVideo-umbrella.h"
-
-  export *
-  module * { export * }
-}

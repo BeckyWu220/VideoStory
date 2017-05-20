@@ -9,8 +9,8 @@
 /*Deprecated*/
 
 import UIKit
-//import Filterchain
-import GPUImage2Hybridity
+import Filterchain
+import GPUImage
 
 class CameraViewController: UIViewController {
     

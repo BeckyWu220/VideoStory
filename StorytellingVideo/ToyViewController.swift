@@ -9,10 +9,10 @@
 import UIKit
 import MediaPlayer
 import MobileCoreServices
-//import GPUImage
+import GPUImage
 import AssetsLibrary
 import AVFoundation
-import GPUImage2Hybridity
+import Filterchain
 
 class ToyViewController: UIViewController, UINavigationControllerDelegate {
     
