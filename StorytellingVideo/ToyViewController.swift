@@ -60,42 +60,31 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         captureBtn?.addTarget(self, action: #selector(videoCaptureButtonAction(sender:)), for: .touchUpInside)
         self.view.addSubview(captureBtn!)
         
-        let randomizeBtn = UIButton(frame: CGRect(x: self.view.frame.size.width - 8 - 70, y: self.view.frame.size.height - 60 - 8, width: 70, height: 60))
+        let randomizeBtn = UIButton(frame: CGRect(x: self.view.frame.size.width - 8 - 60, y: self.view.frame.size.height - 60 - 8, width: 60, height: 60))
         randomizeBtn.setImage(UIImage.init(named: "randomBtn"), for: .normal)
         randomizeBtn.addTarget(self, action: #selector(randomizeFilter), for: UIControlEvents.touchUpInside)
         self.view.addSubview(randomizeBtn)
         
-        albumBtn = UIButton(frame: CGRect(x: 0, y: self.view.frame.size.height - 30, width: 100, height: 30))
-        albumBtn?.setTitle("Album", for: UIControlState.normal)
+        albumBtn = UIButton(frame: CGRect(x: 8, y: randomizeBtn.frame.origin.y, width: 60, height: 60))
+        albumBtn?.setImage(UIImage.init(named: "albumBtn"), for: .normal)
         albumBtn?.addTarget(self, action: #selector(clickAlbumBtn), for: UIControlEvents.touchUpInside)
-        albumBtn?.backgroundColor = UIColor.gray
-        //self.view.addSubview(albumBtn!)
+        self.view.addSubview(albumBtn!)
         
     }
     
     func clickAlbumBtn() -> Void {
         print("Click Album Button.")
-        switchToMediaBrowser(viewController: self, usingDelegate: self)
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) == false{
+            return
+        }
+        filterChain.picker.allowsEditing = false
+        filterChain.picker.sourceType = .savedPhotosAlbum //.photoLibrary
+        filterChain.picker.mediaTypes = [kUTTypeMovie as NSString as String]
+        present(filterChain.picker, animated: true, completion: nil)
     }
     
     func clickBackBtn() -> Void {
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    func switchToMediaBrowser(viewController: UIViewController, usingDelegate delegate: UINavigationControllerDelegate & UIImagePickerControllerDelegate) -> Bool {
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) == false{
-            return false
-        }
-        
-        let mediaUI = UIImagePickerController()
-        mediaUI.sourceType = .savedPhotosAlbum
-        mediaUI.mediaTypes = [kUTTypeMovie as NSString as String]
-        mediaUI.allowsEditing = true
-        mediaUI.delegate = delegate
-        
-        //self.navigationController?.pushViewController(mediaUI, animated: true)
-        present(mediaUI, animated: true, completion: nil)
-        return true
     }
     
     func createVideoCaptureButton() -> UIButton{
