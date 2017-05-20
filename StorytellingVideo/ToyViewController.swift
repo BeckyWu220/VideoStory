@@ -22,9 +22,10 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     var delegate: SelectImportVCDelegate!
     
     public var albumBtn: UIButton?
-    var captureBtn : UIButton?
+    var captureBtn: UIButton?
     var backBtn: UIButton?
     var loadIndicator: UIActivityIndicatorView?
+    var flipCameraBtn: UIButton?
     
     var timerView: TimerView?
 
@@ -36,8 +37,36 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         
         self.view.addSubview(filterView)
         
-        timerView = TimerView.init(frame: CGRect(x: (self.view.frame.size.width-88)/2, y: 50, width: 88, height: 24))
-        self.view.addSubview(timerView!)
+        let topToolBoxView = UIView.init(frame: CGRect(x: 8, y: 28, width: self.view.frame.size.width-16, height: 80))
+        topToolBoxView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.25)
+        self.view.addSubview(topToolBoxView)
+        
+        timerView = TimerView.init(frame: CGRect(x: (topToolBoxView.frame.size.width-88)/2, y: 22, width: 88, height: 24))
+        topToolBoxView.addSubview(timerView!)
+        
+        backBtn = UIButton(frame: CGRect(x: 4, y: 12, width: 40, height: 40))
+        backBtn?.setImage(UIImage.init(named: "backBtn"), for: UIControlState.normal)
+        backBtn?.addTarget(self, action: #selector(clickBackBtn), for: .touchUpInside)
+        topToolBoxView.addSubview(backBtn!)
+        
+        flipCameraBtn = UIButton(frame: CGRect(x: topToolBoxView.frame.size.width - 50, y: 12, width: 40, height: 40))
+        flipCameraBtn?.setImage(UIImage.init(named: "flipCameraBtn"), for: .normal)
+        flipCameraBtn?.addTarget(self, action: #selector(clickFlipCameraBtn), for: UIControlEvents.touchUpInside)
+        topToolBoxView.addSubview(flipCameraBtn!)
+        
+        let bottomToolBoxView = UIView.init(frame: CGRect(x: 8, y: self.view.frame.size.height-8-180, width: self.view.frame.size.width-16, height: 180))
+        bottomToolBoxView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.25)
+        self.view.addSubview(bottomToolBoxView)
+        
+        let randomizeBtn = UIButton(frame: CGRect(x: bottomToolBoxView.frame.size.width - 60, y: bottomToolBoxView.frame.size.height - 60, width: 60, height: 60))
+        randomizeBtn.setImage(UIImage.init(named: "randomBtn"), for: .normal)
+        randomizeBtn.addTarget(self, action: #selector(randomizeFilter), for: UIControlEvents.touchUpInside)
+        bottomToolBoxView.addSubview(randomizeBtn)
+        
+        albumBtn = UIButton(frame: CGRect(x: 0, y: randomizeBtn.frame.origin.y, width: 60, height: 60))
+        albumBtn?.setImage(UIImage.init(named: "albumBtn"), for: .normal)
+        albumBtn?.addTarget(self, action: #selector(clickAlbumBtn), for: UIControlEvents.touchUpInside)
+        bottomToolBoxView.addSubview(albumBtn!)
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchEventRecognizer (_:)))
         self.filterView.addGestureRecognizer(gesture)
@@ -45,30 +74,10 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         filterChain.start()
         filterChain.startCameraWithView(view: filterView)
         
-        backBtn = UIButton(frame: CGRect(x: 10, y: 40, width: 40, height: 40))
-        backBtn?.setImage(UIImage.init(named: "backBtn"), for: UIControlState.normal)
-        backBtn?.addTarget(self, action: #selector(clickBackBtn), for: .touchUpInside)
-        self.view.addSubview(backBtn!)
-        
-        let toolboxView = UIView.init(frame: CGRect(x: 8, y: self.view.frame.size.height-8-180, width: self.view.frame.size.width-16, height: 180))
-        toolboxView.backgroundColor = UIColor.black
-        toolboxView.alpha = 0.25
-        self.view.addSubview(toolboxView)
-        
         captureBtn = createVideoCaptureButton()
         captureBtn?.setImage(UIImage(named:"captureBtn_1"), for: UIControlState.normal)
         captureBtn?.addTarget(self, action: #selector(videoCaptureButtonAction(sender:)), for: .touchUpInside)
         self.view.addSubview(captureBtn!)
-        
-        let randomizeBtn = UIButton(frame: CGRect(x: self.view.frame.size.width - 8 - 60, y: self.view.frame.size.height - 60 - 8, width: 60, height: 60))
-        randomizeBtn.setImage(UIImage.init(named: "randomBtn"), for: .normal)
-        randomizeBtn.addTarget(self, action: #selector(randomizeFilter), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(randomizeBtn)
-        
-        albumBtn = UIButton(frame: CGRect(x: 8, y: randomizeBtn.frame.origin.y, width: 60, height: 60))
-        albumBtn?.setImage(UIImage.init(named: "albumBtn"), for: .normal)
-        albumBtn?.addTarget(self, action: #selector(clickAlbumBtn), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(albumBtn!)
         
     }
     
@@ -85,6 +94,10 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     
     func clickBackBtn() -> Void {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func clickFlipCameraBtn() -> Void {
+        filterChain.flipCamera()
     }
     
     func createVideoCaptureButton() -> UIButton{

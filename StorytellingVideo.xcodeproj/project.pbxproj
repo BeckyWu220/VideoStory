@@ -44,6 +44,7 @@
 		45DCAB871ED0FE2800510B81 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DCAB7F1ED0FE2800510B81 /* Info.plist */; };
 		45DCAB881ED0FE2800510B81 /* UIImageNormalizeOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DCAB801ED0FE2800510B81 /* UIImageNormalizeOrientation.swift */; };
 		45DCAB8A1ED1020200510B81 /* albumBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DCAB891ED1020200510B81 /* albumBtn.png */; };
+		45DCAB8C1ED1081F00510B81 /* flipCameraBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DCAB8B1ED1081F00510B81 /* flipCameraBtn.png */; };
 		45E535301DFB2AA10047FA9C /* SelectImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */; };
 		45E535321DFF7D100047FA9C /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E535311DFF7D100047FA9C /* PreviewViewController.swift */; };
 		45F4632E1DF8B00000CE87BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4632D1DF8B00000CE87BE /* AppDelegate.swift */; };
@@ -152,6 +153,7 @@
 		45DCAB7F1ED0FE2800510B81 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45DCAB801ED0FE2800510B81 /* UIImageNormalizeOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageNormalizeOrientation.swift; sourceTree = "<group>"; };
 		45DCAB891ED1020200510B81 /* albumBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = albumBtn.png; sourceTree = "<group>"; };
+		45DCAB8B1ED1081F00510B81 /* flipCameraBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flipCameraBtn.png; sourceTree = "<group>"; };
 		45E5352F1DFB2AA10047FA9C /* SelectImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectImportViewController.swift; path = StorytellingVideo/SelectImportViewController.swift; sourceTree = "<group>"; };
 		45E535311DFF7D100047FA9C /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		45F4632A1DF8B00000CE87BE /* StorytellingVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorytellingVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +268,7 @@
 				456CA3941EB101DC003E3541 /* timerBg.png */,
 				456CA39D1EB115F8003E3541 /* randomBtn.png */,
 				45DCAB891ED1020200510B81 /* albumBtn.png */,
+				45DCAB8B1ED1081F00510B81 /* flipCameraBtn.png */,
 				456CA39F1EB13EFF003E3541 /* splash.png */,
 				456CA3A11EB13F8B003E3541 /* splash2.png */,
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
@@ -397,6 +400,7 @@
 				45C569941E08678A00D9B0A8 /* arrow.png in Resources */,
 				456CA3951EB101DC003E3541 /* redDot.png in Resources */,
 				45F463421DF8B2C700CE87BE /* videoBg.png in Resources */,
+				45DCAB8C1ED1081F00510B81 /* flipCameraBtn.png in Resources */,
 				456CA37C1EAF0287003E3541 /* SF-UI-Display-Bold.otf in Resources */,
 				456CA37F1EAFEDE1003E3541 /* backBtn.png in Resources */,
 				456CA3761EAF0086003E3541 /* SF-UI-Display-Semibold.otf in Resources */,
