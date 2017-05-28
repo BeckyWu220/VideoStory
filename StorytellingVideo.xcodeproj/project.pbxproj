@@ -19,7 +19,6 @@
 		456CA3761EAF0086003E3541 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3751EAF0086003E3541 /* SF-UI-Display-Semibold.otf */; };
 		456CA37C1EAF0287003E3541 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 456CA37B1EAF0287003E3541 /* SF-UI-Display-Bold.otf */; };
 		456CA39C1EB102A9003E3541 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA39B1EB102A9003E3541 /* TimerView.swift */; };
-		456CA3A21EB13F8B003E3541 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3A11EB13F8B003E3541 /* splash.png */; };
 		45A5B5351E92B9240056825A /* ToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A5B5341E92B9240056825A /* ToyViewController.swift */; };
 		45B3F5C21E7487D7007032E0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3F5C11E7487D7007032E0 /* FilterViewController.swift */; };
 		45DCAB821ED0FE2800510B81 /* AVAssetNormalizeOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DCAB791ED0FE2800510B81 /* AVAssetNormalizeOrientation.swift */; };
@@ -110,7 +109,6 @@
 		456CA3751EAF0086003E3541 /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
 		456CA37B1EAF0287003E3541 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
 		456CA39B1EB102A9003E3541 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		456CA3A11EB13F8B003E3541 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		45A5B5341E92B9240056825A /* ToyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyViewController.swift; sourceTree = "<group>"; };
 		45B3F5C11E7487D7007032E0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = StorytellingVideo/FilterViewController.swift; sourceTree = "<group>"; };
 		45DCAB791ED0FE2800510B81 /* AVAssetNormalizeOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetNormalizeOrientation.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				45F4633F1DF8B05400CE87BE /* VideoSectionView.swift */,
 				456CA39B1EB102A9003E3541 /* TimerView.swift */,
 				45E535311DFF7D100047FA9C /* PreviewViewController.swift */,
-				456CA3A11EB13F8B003E3541 /* splash.png */,
 				45F463341DF8B00000CE87BE /* Assets.xcassets */,
 				4540DCB31EDA7FE000855BC8 /* Images.xcassets */,
 				45F463361DF8B00000CE87BE /* LaunchScreen.storyboard */,
@@ -332,7 +329,6 @@
 				4540DCB41EDA7FE000855BC8 /* Images.xcassets in Resources */,
 				45DCAB871ED0FE2800510B81 /* Info.plist in Resources */,
 				45F463381DF8B00000CE87BE /* LaunchScreen.storyboard in Resources */,
-				456CA3A21EB13F8B003E3541 /* splash.png in Resources */,
 				45F463351DF8B00000CE87BE /* Assets.xcassets in Resources */,
 				456CA37C1EAF0287003E3541 /* SF-UI-Display-Bold.otf in Resources */,
 				456CA3761EAF0086003E3541 /* SF-UI-Display-Semibold.otf in Resources */,
