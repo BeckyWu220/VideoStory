@@ -103,15 +103,20 @@ class PreviewViewController: UIViewController {
             titleLabel.text = "Share"
         }else {
             /*If this preview is for unmerged video, show editBtn and deleteBtn*/
-            let editBtn = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width/2 - 10 - 70, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
+            let editBtn = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width/2 - 70/2, y: (UIScreen.main.bounds.height + ((bottomBorder?.frame.origin.y)!+(bottomBorder?.frame.size.height)!) - 70)/2, width: 70, height: 70))
             editBtn.addTarget(self, action: #selector(editVideo), for: UIControlEvents.touchUpInside)
             editBtn.setImage(UIImage.init(named: "trimBtn"), for: .normal)
             self.view.addSubview(editBtn)
             
-            let deleteBtn = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width/2 + 10, y: editBtn.frame.origin.y, width: editBtn.frame.size.width, height: editBtn.frame.size.height))
+            let deleteBtn = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width/2 + editBtn.frame.size.width/2 + 20, y: editBtn.frame.origin.y, width: editBtn.frame.size.width, height: editBtn.frame.size.height))
             deleteBtn.setImage(UIImage.init(named: "deleteBtn"), for: .normal)
             deleteBtn.addTarget(self, action: #selector(deleteVideo), for: UIControlEvents.touchUpInside)
             self.view.addSubview(deleteBtn)
+            
+            let filterBtn = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width/2 - editBtn.frame.size.width/2*3 - 20, y: editBtn.frame.origin.y, width: editBtn.frame.size.width, height: editBtn.frame.size.height))
+            filterBtn.setImage(UIImage.init(named: "filterBtn"), for: .normal)
+            filterBtn.addTarget(self, action: #selector(remixVideo), for: UIControlEvents.touchUpInside)
+            self.view.addSubview(filterBtn)
             
             titleLabel.text = "Edit"
         }
@@ -137,6 +142,13 @@ class PreviewViewController: UIViewController {
         print("Delete Video & Return to ViewController")
         self.delegate.resetVideoSection()
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func remixVideo() {
+        print("Remix Video")
+        let importController : ToyViewController = ToyViewController.init(videoURL: videoURL!)
+        importController.delegate = self
+        self.navigationController?.pushViewController(importController, animated: true)
     }
     
     func shareVideo() {
@@ -300,5 +312,12 @@ extension PreviewViewController: UIVideoEditorControllerDelegate, UINavigationCo
         thumbnailImageView?.image = thumbnailImage
         self.videoURL = videoURL
         self.delegate.setThumbnailForVideoSection(image: image, videoURL: videoURL, videoPath: videoURL.path)
+    }
+}
+
+extension PreviewViewController: SelectImportVCDelegate {
+    
+    func resetVideoSection() {
+    
     }
 }

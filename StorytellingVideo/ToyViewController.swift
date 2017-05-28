@@ -28,6 +28,22 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     var flipCameraBtn: UIButton?
     
     var timerView: TimerView?
+    
+    var videoURL: URL?
+    
+    init(videoURL: URL) {
+        super.init(nibName: nil, bundle: nil)
+        self.videoURL = videoURL
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.videoURL = nil
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +88,23 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         self.filterView.addGestureRecognizer(gesture)
         
         filterChain.start()
+        //Shoot from camera.
         filterChain.startCameraWithView(view: filterView)
+        if self.videoURL != nil {
+            //Remix based on existing video
+            var asset: AVAsset?
+            asset = AVURLAsset(url: self.videoURL!)
+            if asset != nil {
+                filterChain.teardownChain()
+                filterChain.currentInput = .LibraryVideo
+                filterChain.videoAsset = AVURLAsset.init(url: self.videoURL!)
+                filterChain.videoPreProcess(videoAsset: filterChain.videoAsset!)
+            } else {
+                print("Asset Nil")
+            }
+            
+        }
+        
         
         captureBtn = createVideoCaptureButton()
         captureBtn?.setImage(UIImage(named:"captureBtn_1"), for: UIControlState.normal)
@@ -86,7 +118,7 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) == false{
             return
         }
-        filterChain.picker.allowsEditing = false
+        filterChain.picker.allowsEditing = true
         filterChain.picker.sourceType = .savedPhotosAlbum //.photoLibrary
         filterChain.picker.mediaTypes = [kUTTypeMovie as NSString as String]
         present(filterChain.picker, animated: true, completion: nil)
@@ -209,72 +241,6 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-}
-
-extension ToyViewController: UIImagePickerControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        let mediaType = info[UIImagePickerControllerMediaType] as! NSString
-        
-        dismiss(animated: true, completion: {
-            
-            if mediaType == kUTTypeMovie {
-            
-                guard let path = (info[UIImagePickerControllerMediaURL] as! NSURL).path else {
-                    return
-                }
-                
-                var videoAsset: AVAsset?
-                videoAsset = AVURLAsset(url: info[UIImagePickerControllerMediaURL] as! URL)
-                let videoTrack = videoAsset?.tracks(withMediaType: AVMediaTypeVideo).first
-                let videoSize = videoTrack?.naturalSize
-                var renderOrientation = ImageOrientation.portrait
-                self.orientationFor(track: videoTrack!, renderOrientation: &renderOrientation)
-                
-                var renderView = RenderView(frame: CGRect(x: 0, y: 60, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width*(videoSize?.height)!/(videoSize?.width)!))
-                renderView.orientation = renderOrientation
-                print("Orientation: \(renderView.orientation)")
-                self.view.addSubview(renderView)
-                
-                do {
-                    let movie = try MovieInput(asset: videoAsset!, playAtActualSpeed: true, loop: true)
-                    
-                    let filter = Pixellate()
-                    movie --> filter --> renderView
-                    movie.start()
-                    print("RenderView Sources: \(renderView)")
-                } catch {
-                    fatalError("Could not initialize rendering pipeline: \(error)")
-                }
-                
-            }
-            
-        });
-    }
-
-    
-    func orientationFor(track: AVAssetTrack, renderOrientation: inout ImageOrientation) -> Void {
-        var videoSize = track.naturalSize
-        let videoTransform = track.preferredTransform
-        
-        if videoSize.width == videoTransform.tx && videoSize.height == videoTransform.ty {
-            print("Landscape Right")
-            renderOrientation = ImageOrientation.portraitUpsideDown
-        }else if videoTransform.tx == 0 && videoTransform.ty == 0 {
-            print("Landscape Left")
-            renderOrientation = ImageOrientation.portrait
-        }else if videoTransform.tx == 0 && videoTransform.ty == videoSize.width {
-            videoSize = CGSize(width: track.naturalSize.height, height: track.naturalSize.width)
-            print("Portrait Upsidedown")
-            renderOrientation = ImageOrientation.landscapeRight
-        }else {
-            videoSize = CGSize(width: track.naturalSize.height, height: track.naturalSize.width)
-            print("Portrait")
-            renderOrientation = ImageOrientation.landscapeLeft
-        }
     }
 
 }
