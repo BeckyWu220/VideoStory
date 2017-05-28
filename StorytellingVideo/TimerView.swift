@@ -23,7 +23,7 @@ class TimerView: UIImageView {
         timeLabel = UILabel.init(frame: CGRect(x: self.frame.size.width*0.2, y: 0, width: self.frame.size.width*0.8, height: self.frame.size.height))
         timeLabel?.text = "00:00:00"
         timeLabel?.font = UIFont(name: "SFUIDisplay-Bold", size: 12)
-        timeLabel?.textColor = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
+        timeLabel?.textColor = (UIApplication.shared.delegate as! AppDelegate).brandColor1
         timeLabel?.textAlignment = .center
         self.addSubview(timeLabel!)
         

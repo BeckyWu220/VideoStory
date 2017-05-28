@@ -58,7 +58,7 @@ class PreviewViewController: UIViewController {
         let titleLabel = UILabel.init(frame: CGRect(x: UIScreen.main.bounds.width*0.1, y: 40, width: UIScreen.main.bounds.width*0.8, height: 24))
         titleLabel.font = UIFont(name: "SFUIDisplay-Bold", size: 24)
         titleLabel.textAlignment = .center
-        titleLabel.textColor = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
+        titleLabel.textColor = (UIApplication.shared.delegate as! AppDelegate).brandColor1
         self.view.addSubview(titleLabel)
         
         let topBorder = UIImageView(frame: CGRect(x: 8, y: titleLabel.frame.origin.y + titleLabel.frame.size.height + 50, width: UIScreen.main.bounds.width-16, height: 11))
@@ -155,7 +155,7 @@ class PreviewViewController: UIViewController {
         print("Share Video to Facebook")
         
         shareIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
-        shareIndicator?.color = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
+        shareIndicator?.color = (UIApplication.shared.delegate as! AppDelegate).brandColor1
         shareIndicator?.center = (self.fbShareBtn?.center)!
         shareIndicator?.frame = (self.fbShareBtn?.frame)!
         shareIndicator?.startAnimating()
