@@ -224,8 +224,8 @@ class ToyViewController: UIViewController, UINavigationControllerDelegate {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         
-        let color1 = UIColor.init(colorLiteralRed: 144/255, green: 19/255, blue: 254/255, alpha: 1.0)
-        let color2 = UIColor.init(colorLiteralRed: 0/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        let color1 = (UIApplication.shared.delegate as! AppDelegate).brandColor1
+        let color2 = (UIApplication.shared.delegate as! AppDelegate).brandColor2
         gradientLayer.colors = [color1.cgColor, color2.cgColor]
         gradientLayer.locations = [0.5, 1.0]
         self.view.layer.addSublayer(gradientLayer)

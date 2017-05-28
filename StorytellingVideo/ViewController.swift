@@ -29,8 +29,6 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
     var loadIndicator: UIActivityIndicatorView?
     var tipLabel:UILabel?
     
-    let buttonColor = UIColor.init(colorLiteralRed: 144.0/255.0, green: 18.0/255.0, blue: 254.0/255.0, alpha: 1.0)
-    
     init() {
         super.init(nibName: nil, bundle: nil)
         self.createVideoSections(number: 4)
@@ -71,7 +69,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         
         tipLabel = UILabel.init(frame: CGRect(x: (self.view.frame.size.width-300)/2, y: self.view.frame.size.height - 100, width: 300, height: 100))
         tipLabel?.text = "Click [+] to import video."
-        tipLabel?.textColor = buttonColor
+        tipLabel?.textColor = (UIApplication.shared.delegate as! AppDelegate).brandColor1
         tipLabel?.font = UIFont(name: "SFUIDisplay-Bold", size: 16)
         tipLabel?.textAlignment = .center
         tipLabel?.numberOfLines = 0
@@ -364,7 +362,7 @@ class ViewController: UIViewController, VideoSectionDelegate, SelectImportVCDele
         self.view.isUserInteractionEnabled = false
         
         loadIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
-        loadIndicator?.color = buttonColor
+        loadIndicator?.color = (UIApplication.shared.delegate as! AppDelegate).brandColor1
         loadIndicator?.center = CGPoint(x: self.view.center.x - (loadIndicator?.frame.size.width)!/2, y: self.view.center.y - 100)
         loadIndicator?.frame = CGRect(x: (loadIndicator?.frame.origin.x)!, y: (loadIndicator?.frame.origin.y)!, width: (loadIndicator?.frame.size.width)!*2, height: (loadIndicator?.frame.size.height)!*2)
         loadIndicator?.startAnimating()
@@ -521,8 +519,8 @@ extension ViewController: UINavigationControllerDelegate{
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         
-        let color1 = UIColor.init(colorLiteralRed: 144/255, green: 19/255, blue: 254/255, alpha: 1.0)
-        let color2 = UIColor.init(colorLiteralRed: 0/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        let color1 = (UIApplication.shared.delegate as! AppDelegate).brandColor1
+        let color2 = (UIApplication.shared.delegate as! AppDelegate).brandColor2
         gradientLayer.colors = [color1.cgColor, color2.cgColor]
         gradientLayer.locations = [0.5, 1.0]
         self.view.layer.addSublayer(gradientLayer)
@@ -534,7 +532,7 @@ extension ViewController: UINavigationControllerDelegate{
     }
     
     func setStyleFor(button: UIButton) {
-        button.backgroundColor = buttonColor
+        button.backgroundColor = (UIApplication.shared.delegate as! AppDelegate).brandColor1
         button.layer.cornerRadius = 6.0
         button.clipsToBounds = true
         button.titleLabel?.font = UIFont(name: "SFUIDisplay-Semibold", size: 16)//"SFUIDisplay-Bold"

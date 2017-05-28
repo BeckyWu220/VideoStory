@@ -14,6 +14,8 @@ import FBSDKShareKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var brandColor1: UIColor = UIColor.init(colorLiteralRed: 41/255, green: 52/255, blue: 204/255, alpha: 1.0)
+    var brandColor2: UIColor = UIColor.init(colorLiteralRed: 255/255, green: 187/255, blue: 48/255, alpha: 1.0)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
