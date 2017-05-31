@@ -15,7 +15,6 @@
 		452247BF1E9D7D5A00487EBF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452247BB1E9D7D5A00487EBF /* FBSDKShareKit.framework */; };
 		4540DCB41EDA7FE000855BC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4540DCB31EDA7FE000855BC8 /* Images.xcassets */; };
 		4543E8DC1ED0F87000802F9E /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4543E8B01ED0E8DD00802F9E /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4543E8E01ED0F87000802F9E /* Filterchain.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4543E8D31ED0F01800802F9E /* Filterchain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		456CA3761EAF0086003E3541 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 456CA3751EAF0086003E3541 /* SF-UI-Display-Semibold.otf */; };
 		456CA37C1EAF0287003E3541 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 456CA37B1EAF0287003E3541 /* SF-UI-Display-Bold.otf */; };
 		456CA39C1EB102A9003E3541 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CA39B1EB102A9003E3541 /* TimerView.swift */; };
@@ -89,7 +88,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4543E8E01ED0F87000802F9E /* Filterchain.framework in CopyFiles */,
 				4543E8DC1ED0F87000802F9E /* GPUImage.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +103,6 @@
 		452247BB1E9D7D5A00487EBF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		4540DCB31EDA7FE000855BC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4543E8A41ED0E8DD00802F9E /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage2/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
-		4543E8D31ED0F01800802F9E /* Filterchain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Filterchain.framework; sourceTree = "<group>"; };
 		456CA3751EAF0086003E3541 /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
 		456CA37B1EAF0287003E3541 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
 		456CA39B1EB102A9003E3541 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -148,7 +145,6 @@
 		0F4FCBC1AFCD649125425ACF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4543E8D31ED0F01800802F9E /* Filterchain.framework */,
 				452247B81E9D7D5A00487EBF /* Bolts.framework */,
 				452247B91E9D7D5A00487EBF /* FBSDKCoreKit.framework */,
 				452247BA1E9D7D5A00487EBF /* FBSDKLoginKit.framework */,
@@ -493,7 +489,7 @@
 					"$(PROJECT_DIR)/FilterChain-INTERNAL",
 				);
 				INFOPLIST_FILE = StorytellingVideo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,7 +513,7 @@
 					"$(PROJECT_DIR)/FilterChain-INTERNAL",
 				);
 				INFOPLIST_FILE = StorytellingVideo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
